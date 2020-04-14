@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsps.assessment.dao.SelfAssessmentNoteMapper">
+  <resultMap id="BaseResultMap" type="com.tsps.assessment.entity.SelfAssessmentNote">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="assessment_id" jdbcType="INTEGER" property="assessmentId" />
+    <result column="assessment_item_id" jdbcType="INTEGER" property="assessmentItemId" />
+    <result column="self_assessment_note" jdbcType="VARCHAR" property="selfAssessmentNote" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, assessment_id, assessment_item_id, self_assessment_note
+  </sql>
+
+  <select id="getSelfAssessmentNotes" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select self_assessment_note
+    from self_assessment_note
+    where assessment_id = #{assessmentId,jdbcType=INTEGER}
+    order by assessment_item_id asc
+  </select>
+
+  <update id="updateSelfAssessmentNotes" parameterType="java.util.Map">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update self_assessment_note
+      set self_assessment_note = #{item.selfAssessmentNote,jdbcType=VARCHAR}
+      where assessment_id = #{assessmentId,jdbcType=INTEGER} and assessment_item_id = #{item.assessmentItemId,jdbcType=INTEGER}
+    </foreach>
+  </update>
+
+  <insert id="insertSelfAssessmentNotes" parameterType="java.util.Map">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      insert into self_assessment_note (assessment_id, assessment_item_id,
+      self_assessment_note)
+      values (#{assessmentId,jdbcType=INTEGER}, #{item.assessmentItemId,jdbcType=INTEGER},
+      #{item.selfAssessmentNote,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+</mapper>

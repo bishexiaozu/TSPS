@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsps.authority.dao.CompanyEmployeeMapper">
+
+<!--  自定义分页查询-->
+  <resultMap id="LimitSelect" type="com.tsps.authority.vo.EmployeeListVO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="employee_account" jdbcType="VARCHAR" property="account" />
+    <result column="employee_pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="employee_name" jdbcType="VARCHAR" property="name" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="position" jdbcType="VARCHAR" property="post" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+  </resultMap>
+  <sql id="Limit_Select_Column">
+    id, employee_account, employee_pwd, employee_name, department, position, state
+  </sql>
+  <select id="getEmployeeList" parameterType="java.lang.Integer" resultMap="LimitSelect">
+
+    select
+    <include refid="Limit_Select_Column" />
+    from
+    company_employee
+    where
+    company_id = #{companyId,jdbcType=INTEGER}
+    order by
+    id
+    limit 10
+    offset #{page, jdbcType=INTEGER}
+  </select>
+
+
+
+  <resultMap id="BaseResultMap" type="com.tsps.authority.entity.CompanyEmployee">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="employee_account" jdbcType="VARCHAR" property="employeeAccount" />
+    <result column="employee_pwd" jdbcType="VARCHAR" property="employeePwd" />
+    <result column="employee_name" jdbcType="VARCHAR" property="employeeName" />
+    <result column="company_id" jdbcType="INTEGER" property="companyId" />
+    <result column="state" jdbcType="CHAR" property="state" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, employee_account, employee_pwd, employee_name, company_id, state, department, 
+    position
+  </sql>
+  <select id="selectByExample" parameterType="com.tsps.authority.entity.CompanyEmployeeExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from company_employee
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company_employee
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from company_employee
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tsps.authority.entity.CompanyEmployeeExample">
+    delete from company_employee
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tsps.authority.entity.CompanyEmployee">
+    insert into company_employee (id, employee_account, employee_pwd, 
+      employee_name, company_id, state, 
+      department, position)
+    values (#{id,jdbcType=INTEGER}, #{employeeAccount,jdbcType=VARCHAR}, #{employeePwd,jdbcType=VARCHAR}, 
+      #{employeeName,jdbcType=VARCHAR}, #{companyId,jdbcType=INTEGER}, #{state,jdbcType=CHAR}, 
+      #{department,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tsps.authority.entity.CompanyEmployee">
+    insert into company_employee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="employeeAccount != null">
+        employee_account,
+      </if>
+      <if test="employeePwd != null">
+        employee_pwd,
+      </if>
+      <if test="employeeName != null">
+        employee_name,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="position != null">
+        position,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="employeeAccount != null">
+        #{employeeAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="employeePwd != null">
+        #{employeePwd,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tsps.authority.entity.CompanyEmployeeExample" resultType="java.lang.Long">
+    select count(*) from company_employee
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update company_employee
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.employeeAccount != null">
+        employee_account = #{record.employeeAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.employeePwd != null">
+        employee_pwd = #{record.employeePwd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.employeeName != null">
+        employee_name = #{record.employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyId != null">
+        company_id = #{record.companyId,jdbcType=INTEGER},
+      </if>
+      <if test="record.state != null">
+        state = #{record.state,jdbcType=CHAR},
+      </if>
+      <if test="record.department != null">
+        department = #{record.department,jdbcType=VARCHAR},
+      </if>
+      <if test="record.position != null">
+        position = #{record.position,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update company_employee
+    set id = #{record.id,jdbcType=INTEGER},
+      employee_account = #{record.employeeAccount,jdbcType=VARCHAR},
+      employee_pwd = #{record.employeePwd,jdbcType=VARCHAR},
+      employee_name = #{record.employeeName,jdbcType=VARCHAR},
+      company_id = #{record.companyId,jdbcType=INTEGER},
+      state = #{record.state,jdbcType=CHAR},
+      department = #{record.department,jdbcType=VARCHAR},
+      position = #{record.position,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tsps.authority.entity.CompanyEmployee">
+    update company_employee
+    <set>
+      <if test="employeeAccount != null">
+        employee_account = #{employeeAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="employeePwd != null">
+        employee_pwd = #{employeePwd,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        employee_name = #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=CHAR},
+      </if>
+      <if test="department != null">
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tsps.authority.entity.CompanyEmployee">
+    update company_employee
+    set employee_account = #{employeeAccount,jdbcType=VARCHAR},
+      employee_pwd = #{employeePwd,jdbcType=VARCHAR},
+      employee_name = #{employeeName,jdbcType=VARCHAR},
+      company_id = #{companyId,jdbcType=INTEGER},
+      state = #{state,jdbcType=CHAR},
+      department = #{department,jdbcType=VARCHAR},
+      position = #{position,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

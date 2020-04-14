@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsps.assessment.dao.AssessmentDetailMapper">
+  <resultMap id="BaseResultMap" type="com.tsps.assessment.entity.AssessmentDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="assessment_id" jdbcType="INTEGER" property="assessmentId" />
+    <result column="assessment_item_id" jdbcType="INTEGER" property="assessmentItemId" />
+    <result column="assessment_element_id" jdbcType="INTEGER" property="assessmentElementId" />
+    <result column="self_assessment_score" jdbcType="INTEGER" property="selfAssessmentScore" />
+    <result column="assessment_score" jdbcType="INTEGER" property="assessmentScore" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, assessment_id, assessment_item_id, assessment_element_id, self_assessment_score, 
+    assessment_score
+  </sql>
+
+  <select id="getAssessmentElementDetailVOs" resultType="com.tsps.assessment.vo.AssessmentElementDetailVO">
+    select assessment_element.assessment_item_id,assessment_element.id as assessment_element_id,assessment_element_name,score
+    <if test="assessmentId != null">
+      ,self_assessment_score,assessment_score
+    </if>
+    from assessment_element
+    <if test="assessmentId != null">
+      left join assessment_detail on (assessment_element.id = assessment_detail.assessment_element_id)
+    </if>
+    where assessment_element.assessment_item_id = #{assessmentItemId,jdbcType=INTEGER}
+    <if test="assessmentId != null">
+      and assessment_detail.assessment_id = #{assessmentId,jdbcType=INTEGER}
+    </if>
+  </select>
+
+  <update id="updateAssessmentDetails" parameterType="java.util.Map">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update assessment_detail
+        set self_assessment_score = #{item.selfAssessmentScore,jdbcType=INTEGER}
+        where assessment_id = #{assessmentId,jdbcType=INTEGER} and assessment_item_id = #{item.assessmentItemId,jdbcType=INTEGER}
+        and assessment_element_id = #{item.assessmentElementId,jdbcType=INTEGER}
+    </foreach>
+  </update>
+
+  <insert id="insertAssessmentDetails" parameterType="java.util.Map">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      insert into assessment_detail (assessment_id, assessment_item_id,assessment_element_id, self_assessment_score)
+      values (#{assessmentId,jdbcType=INTEGER}, #{item.assessmentItemId,jdbcType=INTEGER},
+      #{item.assessmentElementId,jdbcType=INTEGER}, #{item.selfAssessmentScore,jdbcType=INTEGER})
+    </foreach>
+  </insert>
+
+  <update id="updateAssessmentScore" parameterType="java.util.List">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update assessment_detail
+      set assessment_score = #{item.assessmentScore,jdbcType=INTEGER}
+      where assessment_id = #{item.assessmentId,jdbcType=INTEGER} and assessment_element_id = #{item.assessmentElementId,jdbcType=INTEGER}
+    </foreach>
+  </update>
+
+</mapper>

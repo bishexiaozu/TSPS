@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TSPS:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="43" column="46" lean-forward="true" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/QueryAssessmentDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Tag Library Descriptor" />
+        <option value="Interface" />
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>company_address_shengfen</find>
+      <find>companyAddressXianqu</find>
+      <find>companyCreditcode</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>company_address_province</replace>
+      <replace>companyAddressTown</replace>
+      <replace>companyCreditCode</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/entity/SelfAssessmentNote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/PreviousAssessmentVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentDetailMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentElementMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentElementMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentElementMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentElementMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentItemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/SelfAssessmentNoteMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Mybatis-Config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/dto/SelfAssessmentElementDetailDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/vo/BasicInformationVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/dto/BasicInformationVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/service/CompanyInformationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/dao/CompanyInformationMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/dto/CompanyInformationDTO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/task/AssessmentTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/task/service/AssessmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/task/service/impl/AssessmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentTaskService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/vo/CompanyInformationVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/dto/CompanyRegisterDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/task/AssessmentTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/filter/CrossingFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/ledger/dao/DocDao.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="TSPS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="TSPS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="y" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectId" id="1aA0LTFjn66gt1Q7TTUGKCfTDjd" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586866106952" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ledger" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tsps.assessment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\qq下载\TSPS\TSPS\src\main\resources\mapper\ledger" />
+      <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps" />
+      <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\dto" />
+      <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\vo" />
+      <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tsps.filter" />
+      <recent name="com.tsps.assessment.service.impl" />
+      <recent name="com.tsps.assessment.service" />
+      <recent name="com.tsps.task.service.impl" />
+      <recent name="com.tsps.task.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/training" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/content" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/authority" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tsps" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/exam" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat7.0.94">
+    <configuration name="exerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TSPS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="exerciseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exerciseTest.addExam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TSPS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="exerciseTest" />
+      <option name="METHOD_NAME" value="addExam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exerciseTest.testDeleteExercise" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TSPS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="exerciseTest" />
+      <option name="METHOD_NAME" value="testDeleteExercise" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exerciseTest.testGetExerciseList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TSPS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="exerciseTest" />
+      <option name="METHOD_NAME" value="testGetExerciseList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.testd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TSPS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="testd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TSPS [mybatis-generator:generate,-e]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat7.0.94" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.94" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/TSPS/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="TSPS:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/TSPS" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_TSPS_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61334" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="TSPS:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.exerciseTest.testGetExerciseList" />
+      <item itemvalue="JUnit.exerciseTest.testDeleteExercise" />
+      <item itemvalue="JUnit.test.testd" />
+      <item itemvalue="JUnit.exerciseTest" />
+      <item itemvalue="JUnit.exerciseTest.addExam" />
+      <item itemvalue="Maven.TSPS [mybatis-generator:generate,-e]" />
+      <item itemvalue="Tomcat Server.Tomcat7.0.94" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.exerciseTest.addExam" />
+        <item itemvalue="JUnit.exerciseTest.testDeleteExercise" />
+        <item itemvalue="JUnit.exerciseTest.testGetExerciseList" />
+        <item itemvalue="JUnit.exerciseTest" />
+        <item itemvalue="JUnit.test.testd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="" />
+      <created>1586163034500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586163034500</updated>
+      <workItem from="1586163038237" duration="12329000" />
+      <workItem from="1586328391884" duration="7600000" />
+      <workItem from="1586409707416" duration="1084000" />
+      <workItem from="1586411475429" duration="18419000" />
+      <workItem from="1586436455203" duration="6964000" />
+      <workItem from="1586444519104" duration="205000" />
+      <workItem from="1586444820066" duration="58603000" />
+      <workItem from="1586593719492" duration="31219000" />
+      <workItem from="1586761272165" duration="21362000" />
+      <workItem from="1586851998563" duration="2822000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="24184000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25134048" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Alibaba Cloud Explorer" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4582744" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44978783" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="15" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Alibaba Log Console" order="10" />
+      <window_info anchor="right" id="CDI" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="82" key="#Project_Structure" timestamp="1586507687313">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="82" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1586507687313" />
+    <state x="320" y="97" key="#Project_Structure/0.23.1440.815@0.23.1440.815" timestamp="1586417092141" />
+    <state x="320" y="97" key="#Project_Structure/0.23.1440.817@0.23.1440.817" timestamp="1586174214274" />
+    <state x="320" y="115" key="#SQL_Dialects" timestamp="1586449381025">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1586449381025" />
+    <state x="278" y="48" key="#TSPS_[mybatis-generator:generate,-e]" timestamp="1586330707638">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="278" y="48" key="#TSPS_[mybatis-generator:generate,-e]/0.0.1440.900@0.0.1440.900" timestamp="1586330707638" />
+    <state x="319" y="136" key="#Tomcat_Server" timestamp="1586419952977">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="319" y="136" key="#Tomcat_Server/0.23.1440.815@0.23.1440.815" timestamp="1586419952977" />
+    <state x="497" y="203" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586431126064">
+      <screen x="0" y="23" width="1440" height="817" />
+    </state>
+    <state x="497" y="203" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.817@0.23.1440.817" timestamp="1586431126064" />
+    <state x="184" y="112" width="1071" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586446697705">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" width="1071" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1586446697705" />
+    <state x="184" y="124" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.815@0.23.1440.815" timestamp="1586419985589" />
+    <state x="184" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.828@0.23.1440.828" timestamp="1586435883863" />
+    <state x="184" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1586435685938" />
+    <state x="449" y="240" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586406295112">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="449" y="240" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.813@0.23.1440.813" timestamp="1586406295112" />
+    <state x="449" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.815@0.23.1440.815" timestamp="1586171217027" />
+    <state x="519" y="315" width="675" height="232" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1586166047097">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="519" y="315" width="675" height="232" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/0.23.1440.815@0.23.1440.815" timestamp="1586166047097" />
+    <state x="348" y="126" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1586172054096">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="348" y="126" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1440.815@0.23.1440.815" timestamp="1586172054096" />
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1586606514986">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.812@0.23.1440.812" timestamp="1586595227392" />
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.815@0.23.1440.815" timestamp="1586606514986" />
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.817@0.23.1440.817" timestamp="1586602654465" />
+    <state x="533" y="123" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821@0.23.1440.821" timestamp="1586523089608" />
+    <state x="533" y="123" key="#com.intellij.ide.util.MemberChooser/0.23.1440.823@0.23.1440.823" timestamp="1586591506446" />
+    <state x="533" y="123" key="#com.intellij.ide.util.MemberChooser/0.23.1440.824@0.23.1440.824" timestamp="1586516612292" />
+    <state x="533" y="123" key="#com.intellij.ide.util.MemberChooser/0.23.1440.825@0.23.1440.825" timestamp="1586529569892" />
+    <state x="563" y="364" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586516915439">
+      <screen x="0" y="23" width="1440" height="824" />
+    </state>
+    <state x="563" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.817@0.23.1440.817" timestamp="1586430615995" />
+    <state x="563" y="363" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.821@0.23.1440.821" timestamp="1586427326313" />
+    <state x="563" y="364" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.824@0.23.1440.824" timestamp="1586516915439" />
+    <state x="533" y="297" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586428517559">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="533" y="297" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.821@0.23.1440.821" timestamp="1586428517559" />
+    <state x="440" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586584878881">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="440" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1586498319732" />
+    <state x="440" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.815@0.23.1440.815" timestamp="1586172622096" />
+    <state x="440" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.821@0.23.1440.821" timestamp="1586584878881" />
+    <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586533316457">
+      <screen x="0" y="23" width="1440" height="824" />
+    </state>
+    <state x="350" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1586438302015" />
+    <state x="350" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.817@0.23.1440.817" timestamp="1586431388216" />
+    <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.821@0.23.1440.821" timestamp="1586428512422" />
+    <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1586533213791" />
+    <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.824@0.23.1440.824" timestamp="1586533316457" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom" timestamp="1586681672893">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839561" />
+    <state width="1398" height="229" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586446062354" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616369031" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441841" />
+    <state width="1173" height="195" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676962115" />
+    <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079807" />
+    <state width="800" height="282" key="GridCell.Tab.0.center" timestamp="1586681672892">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839558" />
+    <state width="1398" height="229" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1586446062352" />
+    <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.815@0.23.1440.815" timestamp="1586616369030" />
+    <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441838" />
+    <state width="1173" height="195" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672892" />
+    <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1586676962114" />
+    <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079806" />
+    <state width="800" height="282" key="GridCell.Tab.0.left" timestamp="1586681672892">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839557" />
+    <state width="1398" height="229" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1586446062351" />
+    <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.815@0.23.1440.815" timestamp="1586616369029" />
+    <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441837" />
+    <state width="1173" height="195" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1586522979720" />
+    <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672892" />
+    <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1586676962113" />
+    <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079806" />
+    <state width="800" height="282" key="GridCell.Tab.0.right" timestamp="1586681672893">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839560" />
+    <state width="1398" height="229" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1586446062353" />
+    <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.815@0.23.1440.815" timestamp="1586616369030" />
+    <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441840" />
+    <state width="1173" height="195" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
+    <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1586676962115" />
+    <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079807" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom" timestamp="1586681672896">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839332" />
+    <state width="958" height="244" key="GridCell.Tab.1.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586444485969" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616368840" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441845" />
+    <state width="800" height="284" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586521017337" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672896" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676961971" />
+    <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079682" />
+    <state width="800" height="282" key="GridCell.Tab.1.center" timestamp="1586681672895">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839327" />
+    <state width="958" height="244" key="GridCell.Tab.1.center/0.23.1440.813@0.23.1440.813" timestamp="1586444485968" />
+    <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.815@0.23.1440.815" timestamp="1586616368838" />
+    <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441843" />
+    <state width="800" height="284" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1586521017336" />
+    <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672895" />
+    <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.824@0.23.1440.824" timestamp="1586676961970" />
+    <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079681" />
+    <state width="800" height="282" key="GridCell.Tab.1.left" timestamp="1586681672895">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839326" />
+    <state width="958" height="244" key="GridCell.Tab.1.left/0.23.1440.813@0.23.1440.813" timestamp="1586444485968" />
+    <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.815@0.23.1440.815" timestamp="1586616368837" />
+    <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441842" />
+    <state width="800" height="284" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1586521017336" />
+    <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672895" />
+    <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.824@0.23.1440.824" timestamp="1586676961969" />
+    <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079681" />
+    <state width="800" height="282" key="GridCell.Tab.1.right" timestamp="1586681672896">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839329" />
+    <state width="958" height="244" key="GridCell.Tab.1.right/0.23.1440.813@0.23.1440.813" timestamp="1586444485969" />
+    <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.815@0.23.1440.815" timestamp="1586616368839" />
+    <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441844" />
+    <state width="800" height="284" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1586521017337" />
+    <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672896" />
+    <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.824@0.23.1440.824" timestamp="1586676961971" />
+    <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079682" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom" timestamp="1586681672894">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839357" />
+    <state width="958" height="244" key="GridCell.Tab.2.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586444485971" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616368844" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441849" />
+    <state width="800" height="284" key="GridCell.Tab.2.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586521017339" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676961968" />
+    <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079686" />
+    <state width="800" height="282" key="GridCell.Tab.2.center" timestamp="1586681672894">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839346" />
+    <state width="958" height="244" key="GridCell.Tab.2.center/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
+    <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.815@0.23.1440.815" timestamp="1586616368842" />
+    <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441847" />
+    <state width="800" height="284" key="GridCell.Tab.2.center/0.23.1440.821@0.23.1440.821" timestamp="1586521017338" />
+    <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
+    <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.824@0.23.1440.824" timestamp="1586676961967" />
+    <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079685" />
+    <state width="800" height="282" key="GridCell.Tab.2.left" timestamp="1586681672893">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839343" />
+    <state width="958" height="244" key="GridCell.Tab.2.left/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
+    <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.815@0.23.1440.815" timestamp="1586616368841" />
+    <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441846" />
+    <state width="800" height="284" key="GridCell.Tab.2.left/0.23.1440.821@0.23.1440.821" timestamp="1586521017338" />
+    <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
+    <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.824@0.23.1440.824" timestamp="1586676961964" />
+    <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079684" />
+    <state width="800" height="282" key="GridCell.Tab.2.right" timestamp="1586681672894">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state width="958" height="284" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839351" />
+    <state width="958" height="244" key="GridCell.Tab.2.right/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
+    <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.815@0.23.1440.815" timestamp="1586616368843" />
+    <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441848" />
+    <state width="800" height="284" key="GridCell.Tab.2.right/0.23.1440.821@0.23.1440.821" timestamp="1586521017339" />
+    <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
+    <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.824@0.23.1440.824" timestamp="1586676961968" />
+    <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079686" />
+    <state x="258" y="93" key="Maven.ArtifactSearchDialog" timestamp="1586415720987">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="258" y="93" key="Maven.ArtifactSearchDialog/0.23.1440.815@0.23.1440.815" timestamp="1586415720987" />
+    <state x="208" y="23" key="SettingsEditor" timestamp="1586416548061">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="208" y="23" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1586411442952" />
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.815@0.23.1440.815" timestamp="1586416548061" />
+    <state x="399" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1586411474581">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1586409726840" />
+    <state x="399" y="278" key="com.intellij.ide.util.TipDialog/0.23.1440.815@0.23.1440.815" timestamp="1586411474581" />
+    <state x="432" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586411239693">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="432" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1440.900@0.0.1440.900" timestamp="1586411239693" />
+    <state x="497" y="201" key="extract.method.dialog" timestamp="1586431259111">
+      <screen x="0" y="23" width="1440" height="817" />
+    </state>
+    <state x="497" y="201" key="extract.method.dialog/0.23.1440.817@0.23.1440.817" timestamp="1586431259111" />
+    <state x="459" y="162" width="670" height="676" key="search.everywhere.popup" timestamp="1586604586240">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="459" y="162" width="670" height="676" key="search.everywhere.popup/0.23.1440.815@0.23.1440.815" timestamp="1586604586240" />
+    <state x="401" y="122" key="spring file set editor" timestamp="1586174162094">
+      <screen x="0" y="23" width="1440" height="815" />
+    </state>
+    <state x="401" y="122" key="spring file set editor/0.23.1440.815@0.23.1440.815" timestamp="1586174162094" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dao/AssessmentMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/vo/AssessmentVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dao/SelfAssessmentNoteMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/SelfAssessmentItemDetailDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/entity/SelfAssessmentNote.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/vo/PreviousAssessmentVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/ListPreviousAssessmentDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/SelfAssessmentElementDetailDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/CompanyInformationVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/BasicInformationVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/controller/GovernmentFileManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="33" column="99" selection-start-line="33" selection-start-column="99" selection-end-line="33" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformationExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2354">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/task/service/impl/AssessmentServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/task/service/AssessmentService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="270" column="11" selection-start-line="270" selection-start-column="11" selection-end-line="270" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+          <folding>
+            <element signature="n#mvc:annotation-driven#0;n#beans#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/vo/BasicInformationVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/vo/CompanyInformationVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/BasicInformationDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/CompanyInformationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/dao/CompanyInformationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="681" column="88" selection-start-line="681" selection-start-column="88" selection-end-line="681" selection-end-column="88" />
+          <folding>
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+            <element signature="n#sql#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#update#4;n#mapper#0;n#!!top" />
+            <element signature="n#update#5;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/CompanyRegisterDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="45" column="101" selection-start-line="45" selection-start-column="101" selection-end-line="45" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentTaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/task/AssessmentTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/filter/CrossingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListPreviousAssessmentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/CompanyInformationDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/EmployeeManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/CompanyManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/QueryAssessmentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ledger/ledger/dao/DocDao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ledger/ImgMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/ledger/dao/DocDao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/ledger/LedgerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="43" column="46" lean-forward="true" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>TSPS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TSPS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

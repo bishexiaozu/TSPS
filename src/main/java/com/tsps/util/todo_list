@@ -1,0 +1,26 @@
+1 exercise
+delete(id) return status
+modify(exercise) return status
+add(exercise) return status
+get(employee_id) return List
+
+2 employee
+delete(id) return status
+add(employee) return status
+get(company_id) return List
+modify(employee) return status
+
+3 assessment_file
+指派负责人 AssessmentFile company employee
+修改负责人
+获取负责人列表
+负责人上传文件
+
+4 government_file
+upload(file)->String url
+add
+delete
+getlist
+getcontent
+
+5

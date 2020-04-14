@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsps.content.dao.AssessmentFileMapper">
+
+  <resultMap id="FileList" type="com.tsps.content.vo.AssessmentFileListVO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="amt_file_title" jdbcType="VARCHAR" property="title" />
+    <result column="amt_file_path" jdbcType="VARCHAR" property="path" />
+    <result column="amt_file_upload_time" jdbcType="TIMESTAMP" property="time" />
+  </resultMap>
+  <select id="getAssessmentFileList" resultMap="FileList">
+    select id, amt_file_title, amt_file_path, amt_file_upload_time
+    from assessment_file
+    where assessment_element_id = #{elementId,jdbcType=INTEGER}
+    order by id
+    limit 10
+    offset #{page,jdbcType=INTEGER}
+  </select>
+
+
+
+ <select id="getFileID" resultType="java.lang.Integer">
+   select LAST_INSERT_ID()
+ </select>
+
+  <resultMap id="BaseResultMap" type="com.tsps.content.entity.AssessmentFile">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="amt_file_title" jdbcType="VARCHAR" property="amtFileTitle" />
+    <result column="amt_file_path" jdbcType="VARCHAR" property="amtFilePath" />
+    <result column="amt_file_upload_time" jdbcType="TIMESTAMP" property="amtFileUploadTime" />
+    <result column="assessment_element_id" jdbcType="INTEGER" property="assessmentElementId" />
+    <result column="employee_id" jdbcType="INTEGER" property="employeeId" />
+    <result column="company_id" jdbcType="INTEGER" property="companyId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, amt_file_title, amt_file_path, amt_file_upload_time, assessment_element_id, employee_id, 
+    company_id
+  </sql>
+  <select id="selectByExample" parameterType="com.tsps.content.entity.AssessmentFileExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from assessment_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from assessment_file
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from assessment_file
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tsps.content.entity.AssessmentFileExample">
+    delete from assessment_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tsps.content.entity.AssessmentFile">
+    insert into assessment_file (id, amt_file_title, amt_file_path, 
+      amt_file_upload_time, assessment_element_id, 
+      employee_id, company_id)
+    values (#{id,jdbcType=INTEGER}, #{amtFileTitle,jdbcType=VARCHAR}, #{amtFilePath,jdbcType=VARCHAR}, 
+      #{amtFileUploadTime,jdbcType=TIMESTAMP}, #{assessmentElementId,jdbcType=INTEGER}, 
+      #{employeeId,jdbcType=INTEGER}, #{companyId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tsps.content.entity.AssessmentFile">
+    insert into assessment_file
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="amtFileTitle != null">
+        amt_file_title,
+      </if>
+      <if test="amtFilePath != null">
+        amt_file_path,
+      </if>
+      <if test="amtFileUploadTime != null">
+        amt_file_upload_time,
+      </if>
+      <if test="assessmentElementId != null">
+        assessment_element_id,
+      </if>
+      <if test="employeeId != null">
+        employee_id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="amtFileTitle != null">
+        #{amtFileTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="amtFilePath != null">
+        #{amtFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="amtFileUploadTime != null">
+        #{amtFileUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assessmentElementId != null">
+        #{assessmentElementId,jdbcType=INTEGER},
+      </if>
+      <if test="employeeId != null">
+        #{employeeId,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tsps.content.entity.AssessmentFileExample" resultType="java.lang.Long">
+    select count(*) from assessment_file
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update assessment_file
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.amtFileTitle != null">
+        amt_file_title = #{record.amtFileTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amtFilePath != null">
+        amt_file_path = #{record.amtFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amtFileUploadTime != null">
+        amt_file_upload_time = #{record.amtFileUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.assessmentElementId != null">
+        assessment_element_id = #{record.assessmentElementId,jdbcType=INTEGER},
+      </if>
+      <if test="record.employeeId != null">
+        employee_id = #{record.employeeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.companyId != null">
+        company_id = #{record.companyId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update assessment_file
+    set id = #{record.id,jdbcType=INTEGER},
+      amt_file_title = #{record.amtFileTitle,jdbcType=VARCHAR},
+      amt_file_path = #{record.amtFilePath,jdbcType=VARCHAR},
+      amt_file_upload_time = #{record.amtFileUploadTime,jdbcType=TIMESTAMP},
+      assessment_element_id = #{record.assessmentElementId,jdbcType=INTEGER},
+      employee_id = #{record.employeeId,jdbcType=INTEGER},
+      company_id = #{record.companyId,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tsps.content.entity.AssessmentFile">
+    update assessment_file
+    <set>
+      <if test="amtFileTitle != null">
+        amt_file_title = #{amtFileTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="amtFilePath != null">
+        amt_file_path = #{amtFilePath,jdbcType=VARCHAR},
+      </if>
+      <if test="amtFileUploadTime != null">
+        amt_file_upload_time = #{amtFileUploadTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="assessmentElementId != null">
+        assessment_element_id = #{assessmentElementId,jdbcType=INTEGER},
+      </if>
+      <if test="employeeId != null">
+        employee_id = #{employeeId,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tsps.content.entity.AssessmentFile">
+    update assessment_file
+    set amt_file_title = #{amtFileTitle,jdbcType=VARCHAR},
+      amt_file_path = #{amtFilePath,jdbcType=VARCHAR},
+      amt_file_upload_time = #{amtFileUploadTime,jdbcType=TIMESTAMP},
+      assessment_element_id = #{assessmentElementId,jdbcType=INTEGER},
+      employee_id = #{employeeId,jdbcType=INTEGER},
+      company_id = #{companyId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="assessmentFileNameList" resultType="java.lang.String">
+    select amt_file_title
+    from assessment_file
+    where company_id = #{companyId, jdbcType=INTEGER}
+  </select>
+</mapper>

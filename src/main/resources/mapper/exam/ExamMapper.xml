@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsps.exam.dao.ExamMapper">
+  <resultMap id="BaseResultMap" type="com.tsps.exam.entity.Exam">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="exam_begin" jdbcType="TIMESTAMP" property="examBegin" />
+    <result column="exam_time" jdbcType="TIMESTAMP" property="examTime" />
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+  </resultMap>
+
+  <insert id="selectLatest" parameterType="com.tsps.exam.dto.ExamDTO">
+    insert into exam (exam_begin, exam_time, driver_id) values
+    (#{beginTime},#{endTime},#{driverId})
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      select LAST_INSERT_ID()
+    </selectKey>
+
+  </insert>
+
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, exam_begin, exam_time, driver_id, score
+  </sql>
+  
+  <select id="getExamList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from exam
+    where driver_id = #{driverId,jdbcType=INTEGER}
+    limit 10
+    offset #{page,jdbcType=INTEGER}
+  </select>
+  
+  
+  <select id="selectByExample" parameterType="com.tsps.exam.entity.ExamExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from exam
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from exam
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from exam
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tsps.exam.entity.ExamExample">
+    delete from exam
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tsps.exam.entity.Exam">
+    insert into exam (id, exam_begin, exam_time, 
+      driver_id, score)
+    values (#{id,jdbcType=INTEGER}, #{examBegin,jdbcType=TIMESTAMP}, #{examTime,jdbcType=TIMESTAMP}, 
+      #{driverId,jdbcType=INTEGER}, #{score,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tsps.exam.entity.Exam">
+    insert into exam
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="examBegin != null">
+        exam_begin,
+      </if>
+      <if test="examTime != null">
+        exam_time,
+      </if>
+      <if test="driverId != null">
+        driver_id,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="examBegin != null">
+        #{examBegin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="examTime != null">
+        #{examTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverId != null">
+        #{driverId,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tsps.exam.entity.ExamExample" resultType="java.lang.Long">
+    select count(*) from exam
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update exam
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.examBegin != null">
+        exam_begin = #{record.examBegin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.examTime != null">
+        exam_time = #{record.examTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.driverId != null">
+        driver_id = #{record.driverId,jdbcType=INTEGER},
+      </if>
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update exam
+    set id = #{record.id,jdbcType=INTEGER},
+      exam_begin = #{record.examBegin,jdbcType=TIMESTAMP},
+      exam_time = #{record.examTime,jdbcType=TIMESTAMP},
+      driver_id = #{record.driverId,jdbcType=INTEGER},
+      score = #{record.score,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tsps.exam.entity.Exam">
+    update exam
+    <set>
+      <if test="examBegin != null">
+        exam_begin = #{examBegin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="examTime != null">
+        exam_time = #{examTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="driverId != null">
+        driver_id = #{driverId,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tsps.exam.entity.Exam">
+    update exam
+    set exam_begin = #{examBegin,jdbcType=TIMESTAMP},
+      exam_time = #{examTime,jdbcType=TIMESTAMP},
+      driver_id = #{driverId,jdbcType=INTEGER},
+      score = #{score,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

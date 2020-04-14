@@ -1,0 +1,39 @@
+package com.tsps.content.dao;
+
+import com.tsps.content.entity.AssessmentFile;
+import com.tsps.content.entity.AssessmentFileExample;
+import com.tsps.content.vo.AssessmentFileListVO;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface AssessmentFileMapper {
+    long countByExample(AssessmentFileExample example);
+
+    int deleteByExample(AssessmentFileExample example);
+
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(AssessmentFile record);
+
+    int insertSelective(AssessmentFile record);
+
+    List<AssessmentFileListVO> getAssessmentFileList(@Param("elementId") Integer elementId,@Param("page" )Integer page);
+    List<AssessmentFile> selectByExample(AssessmentFileExample example);
+
+    AssessmentFile selectByPrimaryKey(Integer id);
+
+    int updateByExampleSelective(@Param("record") AssessmentFile record, @Param("example") AssessmentFileExample example);
+
+    int updateByExample(@Param("record") AssessmentFile record, @Param("example") AssessmentFileExample example);
+
+    int updateByPrimaryKeySelective(AssessmentFile record);
+
+    int updateByPrimaryKey(AssessmentFile record);
+
+    int getFileID();
+
+    List<String> assessmentFileNameList(Integer companyId);
+}

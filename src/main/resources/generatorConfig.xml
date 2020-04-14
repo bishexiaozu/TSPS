@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+<!--    <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />-->
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/xitong?useSSL=false&amp;Encoding=utf8mb4"
+                        driverClass="com.mysql.jdbc.Driver"
+                        userId="root"
+                        password="3359125">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.tsps.content.entity" targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"  targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tsps.content.dao" targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+<!--        <table tableName="element_employee" domainObjectName="ElementEmployee"/>-->
+<!--        <table  tableName="assessment" domainObjectName="Assessment" ></table>-->
+<!--        <table  tableName="assessment_detail" domainObjectName="AssessmentDetail" ></table>-->
+<!--        <table  tableName="assessment_element" domainObjectName="AssessmentElement" ></table>-->
+<!--        <table  tableName="assessment_file" domainObjectName="AssessmentFile" ></table>-->
+<!--        <table  tableName="assessment_item" domainObjectName="AssessmentItem" ></table>-->
+<!--        <table  tableName="car" domainObjectName="Car" ></table>-->
+<!--        <table  tableName="check_bean" domainObjectName="CheckBean">-->
+<!--            <columnOverride column="handle_status" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+<!--        <table  tableName="check_record" domainObjectName="CheckRecord" ></table>-->
+<!--        <table  tableName="company_employee" domainObjectName="CompanyEmployee" ></table>-->
+<!--        <table  tableName="company_information" domainObjectName="CompanyInformation" ></table>-->
+<!--        <table  tableName="driver_information" domainObjectName="DriverInformation" ></table>-->
+<!--        <table  tableName="driving_log" domainObjectName="DrivingLog" ></table>-->
+<!--        <table  tableName="driving_record" domainObjectName="DrivingRecord" >-->
+<!--            <columnOverride column="other_question" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+<!--        <table  tableName="exam" domainObjectName="Exam" ></table>-->
+<!--        <table  tableName="exercise" domainObjectName="Exercise" >-->
+<!--            <columnOverride column="exercise_content" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_optionA" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_optionB" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_optionC" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_optionD" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_answer" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="exercise_explain" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+<!--        <table  tableName="government_file" domainObjectName="GovernmentFile" ></table>-->
+<!--        <table  tableName="inspect_bean" domainObjectName="InspectBean" ></table>-->
+<!--        <table  tableName="institution" domainObjectName="Institution" >-->
+<!--            <columnOverride column="content" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+<!--        <table  tableName="ledge_document" domainObjectName="LedgeDocument" ></table>-->
+<!--        <table  tableName="ledge_image" domainObjectName="LedgeImage" ></table>-->
+        <table  tableName="practice" domainObjectName="Practice" ></table>
+<!--        <table  tableName="regulator_information" domainObjectName="RegulatorInformation" ></table>-->
+<!--        <table  tableName="self_assessment_note" domainObjectName="SelfAssessment_note" >-->
+<!--            <columnOverride column="self_assessment_note" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+<!--        <table  tableName="station" domainObjectName="Station" ></table>-->
+<!--        <table  tableName="station_check" domainObjectName="StationCheck" ></table>-->
+
+
+
+
+
+    </context>
+</generatorConfiguration>
