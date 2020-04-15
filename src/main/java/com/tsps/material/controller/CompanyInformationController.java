@@ -5,7 +5,6 @@ import com.tsps.common.ErrorCodeEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.material.dto.BasicInformationDTO;
 import com.tsps.material.dto.CompanyInformationDTO;
-import com.tsps.material.dto.CompanyRegisterDTO;
 import com.tsps.material.service.CompanyInformationService;
 import com.tsps.util.upload.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,16 +60,6 @@ public class CompanyInformationController {
             return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
         }
         companyInformationService.updateCompanyInformation(companyInformationDTO);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
-    }
-
-    @PostMapping(value = "/companyRegister")
-    @ResponseBody
-    public ResultBean companyRegister(@RequestBody @Valid CompanyRegisterDTO companyRegisterDTO, BindingResult bindingResult){
-        if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
-        }
-        companyInformationService.companyRegister(companyRegisterDTO);
         return ErrorCodeEnum.SUCCESS.toReturnValue();
     }
 

@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.text.ParseException;
 
 /**
  * @author : YongBiao Liao
@@ -40,7 +41,7 @@ public class AssessmentController {
     //自评信息
     @PostMapping(value = "/selfAssessmentDetails")
     @ResponseBody
-    public ResultBean getSelfAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult){
+    public ResultBean getSelfAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
         if(bindingResult.hasErrors()){
             return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
         }
@@ -50,7 +51,7 @@ public class AssessmentController {
     //上月考评信息
     @PostMapping(value = "/assessmentDetails")
     @ResponseBody
-    public ResultBean getAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult){
+    public ResultBean getAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
         if(bindingResult.hasErrors()){
             return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
         }

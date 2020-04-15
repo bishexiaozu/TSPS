@@ -5,7 +5,7 @@ import com.tsps.authority.entity.CompanyInformationExample;
 import com.tsps.authority.vo.CompanyListVO;
 import com.tsps.material.dto.BasicInformationDTO;
 import com.tsps.material.dto.CompanyInformationDTO;
-import com.tsps.material.dto.CompanyRegisterDTO;
+import com.tsps.register.dto.CompanyRegisterDTO;
 import com.tsps.material.vo.BasicInformationVO;
 import com.tsps.material.vo.CompanyInformationVO;
 import org.apache.ibatis.annotations.Param;

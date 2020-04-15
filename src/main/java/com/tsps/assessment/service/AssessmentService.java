@@ -4,6 +4,8 @@ import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.common.ResultBean;
 
+import java.text.ParseException;
+
 /**
  * @author : YongBiao Liao
  * @date : 2020/4/7 21:45
@@ -30,7 +32,7 @@ public interface AssessmentService {
      * @param       queryAssessmentDTO
      * @return     : com.test.common.ResultBean
      */
-    ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO);
+    ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO) throws ParseException;
 
     /*
      *  自评

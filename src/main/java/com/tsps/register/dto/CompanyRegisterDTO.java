@@ -1,4 +1,4 @@
-package com.tsps.material.dto;
+package com.tsps.register.dto;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.NotBlank;

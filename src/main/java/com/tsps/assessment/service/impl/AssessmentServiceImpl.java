@@ -3,7 +3,10 @@ package com.tsps.assessment.service.impl;
 import com.tsps.assessment.dao.AssessmentDetailMapper;
 import com.tsps.assessment.dao.AssessmentMapper;
 import com.tsps.assessment.dao.SelfAssessmentNoteMapper;
-import com.tsps.assessment.dto.*;
+import com.tsps.assessment.dto.QueryAssessmentDTO;
+import com.tsps.assessment.dto.SelfAssessmentDTO;
+import com.tsps.assessment.dto.SelfAssessmentElementDetailDTO;
+import com.tsps.assessment.dto.SelfAssessmentItemDetailDTO;
 import com.tsps.assessment.entity.Assessment;
 import com.tsps.assessment.entity.AssessmentDetail;
 import com.tsps.assessment.entity.SelfAssessmentNote;
@@ -15,6 +18,7 @@ import com.tsps.common.ErrorCodeEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dao.AssessmentItemMapper;
 import com.tsps.content.entity.AssessmentItem;
+import com.tsps.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,13 +75,12 @@ public class AssessmentServiceImpl implements AssessmentService {
     }
 
     @Override
-    public ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO) {
+    public ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO){
         AssessmentVO assessmentVO = new AssessmentVO();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(queryAssessmentDTO.getDate());
-        int dayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        Date firstDay = new Date(calendar.get(Calendar.YEAR) - 1900, calendar.get(Calendar.MONTH) ,1);
-        Date lastDay = new Date(calendar.get(Calendar.YEAR) - 1900 , calendar.get(Calendar.MONTH),dayOfMonth);
+        Date firstDay = DateUtil.toDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1,1);
+        Date lastDay = DateUtil.toDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1,calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
         Assessment assessment = assessmentMapper.getAssessment(queryAssessmentDTO.getCompanyId(), firstDay, lastDay);
         Integer assessmentId = assessment == null ? null : assessment.getId();
         List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
@@ -132,6 +135,15 @@ public class AssessmentServiceImpl implements AssessmentService {
 
         Map<String, Object> selfAssessmentNoteMap = new HashMap<>();
         selfAssessmentNoteMap.put("list",selfAssessmentNoteList);
+
+        if(assessmentId == null) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(selfAssessmentDTO.getSelfAssessmentTime());
+            Date firstDay = DateUtil.toDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, 1);
+            Date lastDay = DateUtil.toDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+            Assessment assessment = assessmentMapper.getAssessment(selfAssessmentDTO.getCompanyId(), firstDay, lastDay);
+            assessmentId = assessment == null ? null : assessment.getId();
+        }
 
         if(assessmentId != null){
             assessmentMapper.updateSelfAssessmentTotalScore(assessmentId, selfTotalScore);
