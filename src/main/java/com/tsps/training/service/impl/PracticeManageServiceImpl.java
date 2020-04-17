@@ -1,6 +1,6 @@
 package com.tsps.training.service.impl;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.exam.dao.ExamMapper;
 import com.tsps.exam.entity.Exam;
@@ -42,7 +42,7 @@ public class PracticeManageServiceImpl implements PracticeManageService {
         List<Practice> list = practiceMapper.getWrong(driverId,state,page);
         List<MarkedExerciseVO> markedExerciseVO = new ArrayList<>();
         int size = list.size();
-        if(size<=0) return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(size<=0) return ErrorStatusEnum.SUCCESS.toReturnValue();
         for(int i=0;i<size;i++){
             MarkedExerciseVO vo = new MarkedExerciseVO();
             Exercise exercise = exerciseMapper.selectByPrimaryKey(list.get(i).getExerciseId());
@@ -60,7 +60,7 @@ public class PracticeManageServiceImpl implements PracticeManageService {
             vo.setScore(list.get(i).getScore());
             markedExerciseVO.add(vo);
         }
-        return ErrorCodeEnum.SUCCESS.toReturnValue(markedExerciseVO);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(markedExerciseVO);
 
     }
 
@@ -71,7 +71,7 @@ public class PracticeManageServiceImpl implements PracticeManageService {
         List<Practice> list = practiceMapper.getCollect(driverId,collect,page);
         List<MarkedExerciseVO> markedExerciseVO = new ArrayList<>();
         int size = list.size();
-        if(size<=0) return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(size<=0) return ErrorStatusEnum.SUCCESS.toReturnValue();
         for(int i=0;i<size;i++){
             MarkedExerciseVO vo = new MarkedExerciseVO();
             Exercise exercise = exerciseMapper.selectByPrimaryKey(list.get(i).getExerciseId());
@@ -89,7 +89,7 @@ public class PracticeManageServiceImpl implements PracticeManageService {
             vo.setScore(list.get(i).getScore());
             markedExerciseVO.add(vo);
         }
-        return ErrorCodeEnum.SUCCESS.toReturnValue(markedExerciseVO);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(markedExerciseVO);
     }
 
     @Override
@@ -102,8 +102,8 @@ public class PracticeManageServiceImpl implements PracticeManageService {
         criteria.andCollectEqualTo("3");
         Long part = practiceMapper.countByExample(example);
         Integer result = new Integer(all.intValue() - part.intValue());
-        if(result>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(result);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(result>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
     @Override
@@ -114,8 +114,8 @@ public class PracticeManageServiceImpl implements PracticeManageService {
         criteria.andCollectEqualTo("1");
         Long all = practiceMapper.countByExample(example);
         Integer result = new Integer(all.intValue());
-        if(result>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(result);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(result>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
     @Override
@@ -136,7 +136,7 @@ public class PracticeManageServiceImpl implements PracticeManageService {
         exam.setId(scoreDTO.getList().get(1).getExamId());
         exam.setScore(total);
         int result = examMapper.updateByPrimaryKeySelective(exam);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override

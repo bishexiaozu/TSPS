@@ -3,7 +3,7 @@ package com.tsps.authority.controller;
 import com.tsps.authority.dto.AddEmployeeDTO;
 import com.tsps.authority.dto.ModifyEmployeeDTO;
 import com.tsps.authority.service.EmployeeManageService;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,7 +41,7 @@ public class EmployeeManageController {
     @ResponseBody
     public ResultBean addEmployee(@RequestBody @Valid AddEmployeeDTO addEmployeeDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         return employeeManageService.addEmployee(addEmployeeDTO);
     }
@@ -56,7 +56,7 @@ public class EmployeeManageController {
     @ResponseBody
     public ResultBean modifyEmployee(@RequestBody @Valid ModifyEmployeeDTO modifyEmployeeDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-        return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);}
+        return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);}
         return employeeManageService.modifyEmployee(modifyEmployeeDTO);
     }
 }

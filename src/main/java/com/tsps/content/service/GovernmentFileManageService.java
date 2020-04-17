@@ -7,6 +7,6 @@ public interface GovernmentFileManageService {
 
     ResultBean addGovernmentFile(AddGovernmentFileDTO addGovernmentFileDTO);
     ResultBean deleteGovernmentFile(Integer id);
-    ResultBean getGovernmentFileList(String type);
-
+    ResultBean getGovernmentFileList(String type, Integer page);
+    ResultBean getTotalGovernmentFile(String type);
 }

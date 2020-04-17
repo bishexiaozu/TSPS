@@ -64,7 +64,9 @@ public class AssessmentTaskServiceImpl implements AssessmentTaskService {
                     }
                     assessmentList.get(i).setAssessmentStatus(1);
                     assessmentList.get(i).setAssessmentTotalScore(assessmentScore);
-                    assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
+                    if(!CollectionUtils.isEmpty(assessmentDetailList)) {
+                        assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
+                    }
                 }
             }
             assessmentMapper.updateAssessmentTotalScore(assessmentList);

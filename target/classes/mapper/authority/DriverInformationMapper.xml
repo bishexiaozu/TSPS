@@ -9,6 +9,13 @@
     <result column="driver_tel" jdbcType="CHAR" property="driverTel" />
     <result column="company_id" jdbcType="INTEGER" property="companyId" />
   </resultMap>
+  <select id="login" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from driver_information
+    where driver_account = #{account,jdbcType=VARCHAR}
+    and driver_pwd = #{pwd,jdbcType=VARCHAR}
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

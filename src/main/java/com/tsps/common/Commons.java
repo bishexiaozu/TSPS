@@ -13,11 +13,19 @@ import java.text.SimpleDateFormat;
 
 @Data
 public class Commons {
-    public static final String GOVERNMENT_FILE_DIRECTORY_URL = "E:\\government_file\\";
-    public static final String ASSESSMENT_FILE_DIRECTORY_URL = "E:\\assessment_file\\";
-    public static final String IDENTITY_PHOTOS_DIRECTORY_URL = "E:\\identity_photos\\";
-    public static final String BUSINESS_LICENSE_PHOTO_DIRECTORY_URL = "E:\\business_license_photos\\";
-    public static final String COMPANY_SIGNATURE_DIRECTORY_URL = "E:\\company_signature\\";
+    public static final String GOVERNMENT_FILE_DIRECTORY_URL = "/usr/local/src/TSPS/government_file/";
+    public static final String ASSESSMENT_FILE_DIRECTORY_URL = "/usr/local/src/TSPS/assessment_file/";
+    public static final String IDENTITY_PHOTOS_DIRECTORY_URL = "/usr/local/src/TSPS/identity_photos/";
+    public static final String BUSINESS_LICENSE_PHOTO_DIRECTORY_URL = "/usr/local/src/TSPS/business_license_photos/";
+    public static final String COMPANY_SIGNATURE_DIRECTORY_URL = "/usr/local/src/TSPS/company_signature/";
+
+    public static final String PNG = ".png";
+    public static final String JPG = ".jpg";
+    public static final String JPEG = ".jpeg";
+
+    public static final String IMAGE_URL = "/images";
+
+    public static final String FILE_URL = "http://47.112.249.166:8081/";
 
     public static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat ("yyyy-MM-dd");
 

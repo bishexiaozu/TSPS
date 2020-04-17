@@ -5,7 +5,7 @@ import com.tsps.authority.entity.CompanyInformation;
 import com.tsps.authority.entity.CompanyInformationExample;
 import com.tsps.authority.service.CompanyManageService;
 import com.tsps.authority.vo.CompanyListVO;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +28,7 @@ public class CompanyManageServiceImpl implements CompanyManageService {
     @Override
     public ResultBean deleteCompany(Integer id) {
 
-        return ErrorCodeEnum.SUCCESS.toReturnValue(mapper.deleteByPrimaryKey(id));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(mapper.deleteByPrimaryKey(id));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class CompanyManageServiceImpl implements CompanyManageService {
         CompanyInformation companyInformation = new CompanyInformation();
         companyInformation.setId(id);
         companyInformation.setState("1");
-        return ErrorCodeEnum.SUCCESS.toReturnValue(mapper.updateByPrimaryKey(companyInformation));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(mapper.updateByPrimaryKeySelective(companyInformation));
     }
 
     @Override
@@ -45,7 +45,7 @@ public class CompanyManageServiceImpl implements CompanyManageService {
         p*=10;
         page = new Integer(p);
         List<CompanyListVO> list = mapper.getCompanyList(state, page);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class CompanyManageServiceImpl implements CompanyManageService {
         criteria.andStateEqualTo(state);
         Long count = mapper.countByExample(example);
         Integer totalCompany = new Integer(count.intValue());
-        if(totalCompany>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(totalCompany);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(totalCompany>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(totalCompany);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 }

@@ -1,6 +1,6 @@
 package com.tsps.training.controller;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.training.dto.AddExerciseDTO;
 import com.tsps.training.dto.ModifyExerciseDTO;
@@ -29,14 +29,14 @@ public class ExerciseManageController {
     @ResponseBody
     public ResultBean addExercise(@RequestBody@Valid AddExerciseDTO addExerciseDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors())
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return exerciseManageService.addExercise(addExerciseDTO);
     }
     @PostMapping("/modifyExercise")
     @ResponseBody
     public ResultBean modifyExercise(@RequestBody@Valid ModifyExerciseDTO modifyExerciseDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors())
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return exerciseManageService.modifyExercise(modifyExerciseDTO);
     }
     @PostMapping("/deleteExercise/{id}")

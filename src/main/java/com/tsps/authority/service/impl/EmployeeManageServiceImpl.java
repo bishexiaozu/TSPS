@@ -7,7 +7,7 @@ import com.tsps.authority.entity.CompanyEmployee;
 import com.tsps.authority.entity.CompanyEmployeeExample;
 import com.tsps.authority.service.EmployeeManageService;
 import com.tsps.authority.vo.EmployeeListVO;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,8 +34,8 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
         Long count = mapper.countByExample(example);
         Integer totalEmployee = new Integer(count.intValue());
         if(totalEmployee.intValue()>=0)
-            return ErrorCodeEnum.SUCCESS.toReturnValue(totalEmployee);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+            return ErrorStatusEnum.SUCCESS.toReturnValue(totalEmployee);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
     @Override
@@ -50,10 +50,10 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
         //处理返回信息
         //如果为空，直接返回
         if(list.isEmpty()) {
-            return ErrorCodeEnum.SUCCESS.toReturnValue();
+            return ErrorStatusEnum.SUCCESS.toReturnValue();
         }
         //如果不为空，包装返回数据
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 
     @Override
@@ -67,7 +67,7 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
         companyEmployee.setPosition(modifyEmployeeDTO.getPost());
         companyEmployee.setEmployeePwd(modifyEmployeeDTO.getPwd());
         int result = mapper.updateByPrimaryKeySelective(companyEmployee);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
 
         int result = mapper.deleteByPrimaryKey(employeeId);
 
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
@@ -90,6 +90,6 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
         companyEmployee.setState(addEmployeeDTO.getState());
         int result = mapper.insertSelective(companyEmployee);
 
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 }

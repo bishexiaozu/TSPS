@@ -1,7 +1,7 @@
 package com.tsps.content.controller;
 
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dto.AddAssessmentFileDTO;
 import com.tsps.content.dto.AssessmentEmployeeDTO;
@@ -32,7 +32,7 @@ public class AssessmentFileManageController {
     @PostMapping("/upload")
     @ResponseBody
     public ResultBean uploadAssessmentFile(MultipartFile multipartFile){
-        return ErrorCodeEnum.SUCCESS.toReturnValue(uploadService.uploadFile(multipartFile, Commons.ASSESSMENT_FILE_DIRECTORY_URL));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(uploadService.uploadFile(multipartFile, Commons.ASSESSMENT_FILE_DIRECTORY_URL));
     }
 
     @Autowired
@@ -41,21 +41,40 @@ public class AssessmentFileManageController {
     @ResponseBody
     public ResultBean addAssessmentFile(@RequestBody@Valid AddAssessmentFileDTO addAssessmentFileDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors())
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return service.addAssessmentFile(addAssessmentFileDTO);
     }
+    @PostMapping("/getHead/{companyId}/{itemId}")
+    @ResponseBody
+    public ResultBean getHead(@PathVariable Integer companyId, @PathVariable Integer itemId){
+        return service.getHead(companyId,itemId);
+    }
+
+    @PostMapping("/getEmployeeAssessmentFile/{employeeId}/{elementId}")
+    @ResponseBody
+    public ResultBean getEmployeeAssessmentFile(@PathVariable Integer employeeId,@PathVariable Integer elementId){
+        return service.getEmployeeAssessmentFile(employeeId,elementId);
+    }
+
+    @PostMapping("/getItemByEmployeeId/{id}")
+    @ResponseBody
+    public ResultBean getItemByEmployeeId(@PathVariable Integer id){
+        return service.getItemByEmployeeId(id);
+    }
+
+
     @PostMapping("/addAssessmentEmployee")
     @ResponseBody
     public ResultBean addAssessmentEmployee(@RequestBody@Valid AssessmentEmployeeDTO assessmentEmployeeDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors())
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return service.addAssessmentEmployee(assessmentEmployeeDTO);
     }
     @PostMapping("/modifyAssessmentEmployee")
     @ResponseBody
     public ResultBean modifyAssessmentEmployee(@RequestBody@Valid AssessmentEmployeeDTO assessmentEmployeeDTO,BindingResult bindingResult){
         if(bindingResult.hasErrors())
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return service.modifyAssessmentEmployee(assessmentEmployeeDTO);
     }
     @PostMapping("/getAssessmentItem")

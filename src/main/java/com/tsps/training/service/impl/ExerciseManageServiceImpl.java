@@ -1,6 +1,6 @@
 package com.tsps.training.service.impl;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.training.dao.ExerciseMapper;
 import com.tsps.training.dto.AddExerciseDTO;
@@ -42,7 +42,7 @@ public class ExerciseManageServiceImpl implements ExerciseManageService {
         exercise.setExerciseOptionc(addExerciseDTO.getOptionC());
         exercise.setExerciseOptiond(addExerciseDTO.getOptionD());
         int result = mapper.insertSelective(exercise);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
@@ -59,20 +59,20 @@ public class ExerciseManageServiceImpl implements ExerciseManageService {
         exercise.setExerciseOptionc(modifyExerciseDTO.getOptionC());
         exercise.setExerciseOptiond(modifyExerciseDTO.getOptionD());
         int result = mapper.updateByPrimaryKeySelective(exercise);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
     public ResultBean deleteExercise(Integer id) {
-        return ErrorCodeEnum.SUCCESS.toReturnValue(mapper.deleteByPrimaryKey(id));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(mapper.deleteByPrimaryKey(id));
     }
 
     @Override
     public ResultBean getExerciseList(Integer employeeId, Integer page) {
         page = (page - 1) * 10;
         List<ExerciseListVO> list = mapper.getExerciseList(employeeId,page);
-        if(list.isEmpty()) return ErrorCodeEnum.SUCCESS.toReturnValue();
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 
     @Override
@@ -82,27 +82,27 @@ public class ExerciseManageServiceImpl implements ExerciseManageService {
         criteria.andEmployeeIdEqualTo(employeeId);
         Long result = mapper.countByExample(exerciseExample);
         Integer total = new Integer(result.intValue());
-        if(result>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(result);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(result>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
     @Override
     public ResultBean getTwentyExercise() {
         List<ExerciseVO> list = mapper.getTwentyExercise();
-        if(list.isEmpty()) return ErrorCodeEnum.SUCCESS.toReturnValue();
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 
     @Override
     public ResultBean getTotal() {
-        return ErrorCodeEnum.SUCCESS.toReturnValue(new Integer(mapper.getTotal().intValue()));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(new Integer(mapper.getTotal().intValue()));
     }
 
     @Override
     public ResultBean getList(Integer page) {
         page = (page - 1) * 10;
         List<ExerciseVO> list = mapper.getList(page);
-        if(list.isEmpty()) return ErrorCodeEnum.FAIL.toReturnValue();
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        if(list.isEmpty()) return ErrorStatusEnum.FAIL.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 }

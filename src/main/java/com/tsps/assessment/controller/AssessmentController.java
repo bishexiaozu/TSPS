@@ -3,7 +3,7 @@ package com.tsps.assessment.controller;
 import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.assessment.service.AssessmentService;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,7 +43,7 @@ public class AssessmentController {
     @ResponseBody
     public ResultBean getSelfAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         return assessmentService.getSelfAssessmentDetails(queryAssessmentDTO);
     }
@@ -53,7 +53,7 @@ public class AssessmentController {
     @ResponseBody
     public ResultBean getAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         return assessmentService.getSelfAssessmentDetails(queryAssessmentDTO);
     }
@@ -62,7 +62,7 @@ public class AssessmentController {
     @ResponseBody
     public ResultBean selfAssessment(@Valid @RequestBody SelfAssessmentDTO selfAssessmentDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         return assessmentService.selfAssessment(selfAssessmentDTO);
     }

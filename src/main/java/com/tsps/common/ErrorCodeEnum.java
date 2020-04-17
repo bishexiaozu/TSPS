@@ -10,46 +10,46 @@ import org.springframework.validation.BindingResult;
  */
 public enum ErrorCodeEnum {
 
-    FAIL(404,"fail"),
-    SUCCESS(200,"success"),
+    FAIL(-1,"fail"),
+    SUCCESS(0,"success"),
 
     FILE_IS_EMPTY(400,"文件不能为空，请选择文件"),
 
     ;
 
-    private Integer status ;
+    private Integer code ;
 
     private String msg;
 
-    ErrorCodeEnum(Integer status, String msg) {
+    ErrorCodeEnum(Integer code, String msg) {
         this.msg = msg;
-        this.status = status;
+        this.code = code;
     }
 
-    public ResultBean toReturnValue(){
-        ResultBean resultBean = new ResultBean();
-        resultBean.setStatus(this.status);
-        resultBean.setMsg(this.msg);
-        return resultBean;
+    public ResultBeanCode toReturnValue(){
+        ResultBeanCode resultBeanCode = new ResultBeanCode();
+        resultBeanCode.setCode(this.code);
+        resultBeanCode.setMsg(this.msg);
+        return resultBeanCode;
     }
 
-    public ResultBean toReturnValue(Object data){
-        ResultBean resultBean = new ResultBean();
-        resultBean.setStatus(this.status);
-        resultBean.setMsg(this.msg);
-        resultBean.setData(data);
-        return resultBean;
+    public ResultBeanCode toReturnValue(Object data){
+        ResultBeanCode resultBeanCode = new ResultBeanCode();
+        resultBeanCode.setCode(this.code);
+        resultBeanCode.setMsg(this.msg);
+        resultBeanCode.setData(data);
+        return resultBeanCode;
     }
 
-    public ResultBean toReturnValue(BindingResult bindingResult){
-        ResultBean resultBean = new ResultBean();
-        resultBean.setStatus(this.status);
-        resultBean.setMsg(this.msg);
-        resultBean.setData(bindingResult.getAllErrors().get(0).getDefaultMessage());
-        return resultBean;
+    public ResultBeanCode toReturnValue(BindingResult bindingResult){
+        ResultBeanCode resultBeanCode = new ResultBeanCode();
+        resultBeanCode.setCode(this.code);
+        resultBeanCode.setMsg(this.msg);
+        resultBeanCode.setData(bindingResult.getAllErrors().get(0).getDefaultMessage());
+        return resultBeanCode;
     }
 
     public String getMsg() {
         return this.msg;
     }
-    }
+}

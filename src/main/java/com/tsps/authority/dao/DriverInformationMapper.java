@@ -9,6 +9,8 @@ import java.util.List;
 public interface DriverInformationMapper {
     long countByExample(DriverInformationExample example);
 
+    List<DriverInformation> login(@Param("account")String account,@Param("pwd")String pwd);
+
     int deleteByExample(DriverInformationExample example);
 
     int deleteByPrimaryKey(Integer id);

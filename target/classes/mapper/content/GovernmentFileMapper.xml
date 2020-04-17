@@ -69,6 +69,16 @@
   <sql id="Base_Column_List">
     id, gov_file_type, gov_file_title, gov_file_path, gov_file_upload_time
   </sql>
+  <select id="getGovernmentFileList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from government_file
+    where gov_file_type = #{type,jdbcType=CHAR}
+    order by id
+    limit 10
+    offset #{page,jdbcType=INTEGER }
+  </select>
+
   <select id="selectByExample" parameterType="com.tsps.content.entity.GovernmentFileExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

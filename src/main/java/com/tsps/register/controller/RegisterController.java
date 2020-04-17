@@ -1,6 +1,6 @@
 package com.tsps.register.controller;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.register.dto.CompanyRegisterDTO;
 import com.tsps.material.service.CompanyInformationService;
@@ -29,10 +29,10 @@ public class RegisterController {
     @ResponseBody
     public ResultBean companyRegister(@RequestBody @Valid CompanyRegisterDTO companyRegisterDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         companyInformationService.companyRegister(companyRegisterDTO);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
 }

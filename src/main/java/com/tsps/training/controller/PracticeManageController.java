@@ -1,6 +1,6 @@
 package com.tsps.training.controller;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.training.dto.ScoreDTO;
 import com.tsps.training.service.PracticeManageService;
@@ -28,7 +28,7 @@ public class PracticeManageController {
     @PostMapping("/setScore")
     @ResponseBody
     public ResultBean setScore(@RequestBody@Valid ScoreDTO scoreDTO, BindingResult bindingResult){
-        if(bindingResult.hasErrors()) return ErrorCodeEnum.FAIL.toReturnValue();
+        if(bindingResult.hasErrors()) return ErrorStatusEnum.FAIL.toReturnValue();
 
         return service.setScore(scoreDTO);
     }

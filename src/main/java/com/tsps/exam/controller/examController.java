@@ -1,6 +1,6 @@
 package com.tsps.exam.controller;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.exam.dto.ExamDTO;
 import com.tsps.exam.service.ExamService;
@@ -25,7 +25,7 @@ public class examController {
     @PostMapping("/addExam")
     @ResponseBody
     public ResultBean addExam(@RequestBody @Valid ExamDTO examDTO, BindingResult bindingResult){
-        if(bindingResult.hasErrors())return ErrorCodeEnum.FAIL.toReturnValue();
+        if(bindingResult.hasErrors())return ErrorStatusEnum.FAIL.toReturnValue();
         return examService.addExam(examDTO);
     }
     @PostMapping("/getScore/{examId}")

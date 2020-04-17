@@ -1,6 +1,6 @@
 package com.tsps.exam.service.impl;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.exam.dao.ExamMapper;
 import com.tsps.exam.dto.ExamDTO;
@@ -22,15 +22,15 @@ public class ExamServiceImpl implements ExamService {
     public ResultBean addExam(ExamDTO examDTO) {
 
         int result = examMapper.selectLatest(examDTO);
-        if(result>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(examDTO.getId());
-        return ErrorCodeEnum.FAIL.toReturnValue();
+        if(result>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(examDTO.getId());
+        return ErrorStatusEnum.FAIL.toReturnValue();
     }
 
     @Override
     public ResultBean getScore(Integer examId) {
         Exam exam = examMapper.selectByPrimaryKey(examId);
-        if(exam!=null) return ErrorCodeEnum.SUCCESS.toReturnValue(exam.getScore());
-        return ErrorCodeEnum.FAIL.toReturnValue();
+        if(exam!=null) return ErrorStatusEnum.SUCCESS.toReturnValue(exam.getScore());
+        return ErrorStatusEnum.FAIL.toReturnValue();
 
     }
 
@@ -38,8 +38,8 @@ public class ExamServiceImpl implements ExamService {
     public ResultBean getExamList(Integer driverId, Integer page) {
         page = (page - 1)*10;
         List<Exam> list = examMapper.getExamList(driverId,page);
-        if(list.isEmpty()) return ErrorCodeEnum.FAIL.toReturnValue();
-        return ErrorCodeEnum.SUCCESS.toReturnValue(list);
+        if(list.isEmpty()) return ErrorStatusEnum.FAIL.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 
     @Override
@@ -49,8 +49,8 @@ public class ExamServiceImpl implements ExamService {
         criteria.andDriverIdEqualTo(driverId);
         Long result = examMapper.countByExample(examExample);
         Integer all = new Integer(result.intValue());
-        if(all>=0) return ErrorCodeEnum.SUCCESS.toReturnValue(all);
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        if(all>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(all);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
 

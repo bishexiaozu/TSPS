@@ -1,6 +1,6 @@
 package com.tsps.content.controller;
 import com.tsps.common.Commons;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dto.AddGovernmentFileDTO;
 import com.tsps.content.service.GovernmentFileManageService;
@@ -31,13 +31,13 @@ public class GovernmentFileManageController {
     @PostMapping("/upload")
     @ResponseBody
     public ResultBean uploadGovernmentFile(MultipartFile multipartFile){
-        return ErrorCodeEnum.SUCCESS.toReturnValue(uploadService.uploadFile(multipartFile, Commons.GOVERNMENT_FILE_DIRECTORY_URL));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(uploadService.uploadFile(multipartFile, Commons.GOVERNMENT_FILE_DIRECTORY_URL));
     }
     @PostMapping("/addGovernmentFile")
     @ResponseBody
     public ResultBean addGovernmentFile(@RequestBody @Valid AddGovernmentFileDTO addGovernmentFileDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return ErrorCodeEnum.FAIL.toReturnValue();
+            return ErrorStatusEnum.FAIL.toReturnValue();
         }
         return governmentFileManageService.addGovernmentFile(addGovernmentFileDTO);
     }
@@ -46,10 +46,15 @@ public class GovernmentFileManageController {
     public ResultBean deleteGovernmentFile(@PathVariable Integer id){
         return governmentFileManageService.deleteGovernmentFile(id);
     }
-    @PostMapping("/getGovernmentFileList/{type}")
+    @PostMapping("/getGovernmentFileList/{type}/{page}")
     @ResponseBody
-    public ResultBean getGovernmentFileList(@PathVariable String type){
-        return governmentFileManageService.getGovernmentFileList(type);
+    public ResultBean getGovernmentFileList(@PathVariable String type,@PathVariable Integer page){
+        return governmentFileManageService.getGovernmentFileList(type,page);
+    }
+    @PostMapping("/getTotalGovernmentFile/{type}")
+    @ResponseBody
+    public ResultBean getTotalGovernmentFile(@PathVariable String type){
+        return governmentFileManageService.getTotalGovernmentFile(type);
     }
 
 }

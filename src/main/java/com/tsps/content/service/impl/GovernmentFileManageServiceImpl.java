@@ -1,6 +1,6 @@
 package com.tsps.content.service.impl;
 
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dao.GovernmentFileMapper;
 import com.tsps.content.dto.AddGovernmentFileDTO;
@@ -34,22 +34,20 @@ public class GovernmentFileManageServiceImpl implements GovernmentFileManageServ
         governmentFile.setGovFileTitle(addGovernmentFileDTO.getTitle());
         governmentFile.setGovFileType(addGovernmentFileDTO.getType());
         int result = mapper.insertSelective(governmentFile);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
     public ResultBean deleteGovernmentFile(Integer id) {
         int result = mapper.deleteByPrimaryKey(id);
-        return ErrorCodeEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
     @Override
-    public ResultBean getGovernmentFileList(String type) {
-        GovernmentFileExample example = new GovernmentFileExample();
-        GovernmentFileExample.Criteria criteria = example.createCriteria();
-        criteria.andGovFileTypeEqualTo(type);
-        List<GovernmentFile> list = mapper.selectByExample(example);
-        if(list.isEmpty()) return ErrorCodeEnum.SUCCESS.toReturnValue();
+    public ResultBean getGovernmentFileList(String type, Integer page) {
+        page = (page-1)*10;
+        List<GovernmentFile> list = mapper.getGovernmentFileList(type,page);
+        if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
         ArrayList<GovernmentFileListVO> vo = new ArrayList<>();
         for(int i=0;i<list.size();i++){
             GovernmentFileListVO o = new GovernmentFileListVO();
@@ -59,6 +57,17 @@ public class GovernmentFileManageServiceImpl implements GovernmentFileManageServ
             o.setTitle(list.get(i).getGovFileTitle());
             vo.add(o);
         }
-        return ErrorCodeEnum.SUCCESS.toReturnValue(vo);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(vo);
+    }
+
+    @Override
+    public ResultBean getTotalGovernmentFile(String type) {
+        GovernmentFileExample example = new GovernmentFileExample();
+        GovernmentFileExample.Criteria criteria = example.createCriteria();
+        criteria.andGovFileTypeEqualTo(type);
+        Long count = mapper.countByExample(example);
+        Integer total = new Integer(count.intValue());
+        if(total>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(total);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 }

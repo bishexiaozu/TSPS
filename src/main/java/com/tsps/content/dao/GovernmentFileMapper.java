@@ -2,8 +2,9 @@ package com.tsps.content.dao;
 
 import com.tsps.content.entity.GovernmentFile;
 import com.tsps.content.entity.GovernmentFileExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface GovernmentFileMapper {
     long countByExample(GovernmentFileExample example);
@@ -17,6 +18,8 @@ public interface GovernmentFileMapper {
     int insertSelective(GovernmentFile record);
 
     List<GovernmentFile> selectByExample(GovernmentFileExample example);
+
+    List<GovernmentFile> getGovernmentFileList(@Param("type")String type,@Param("page")Integer page);
 
     GovernmentFile selectByPrimaryKey(Integer id);
 

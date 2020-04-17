@@ -14,7 +14,7 @@ import com.tsps.assessment.service.AssessmentService;
 import com.tsps.assessment.vo.AssessmentItemDetailVO;
 import com.tsps.assessment.vo.AssessmentVO;
 import com.tsps.assessment.vo.PreviousAssessmentVO;
-import com.tsps.common.ErrorCodeEnum;
+import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dao.AssessmentItemMapper;
 import com.tsps.content.entity.AssessmentItem;
@@ -49,14 +49,14 @@ public class AssessmentServiceImpl implements AssessmentService {
 
     @Override
     public ResultBean getAssessmentNumber(Integer companyId) {
-        return ErrorCodeEnum.SUCCESS.toReturnValue(assessmentMapper.getAssessmentNumber(companyId));
+        return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentMapper.getAssessmentNumber(companyId));
     }
 
     @Override
     public ResultBean getPreviousAssessments(Integer companyId) {
         List<Assessment> assessmentList = assessmentMapper.getPreviousAssessments(companyId);
         if(CollectionUtils.isEmpty(assessmentList)){
-            return ErrorCodeEnum.SUCCESS.toReturnValue();
+            return ErrorStatusEnum.SUCCESS.toReturnValue();
         }
         List<PreviousAssessmentVO> previousAssessmentVOList = new ArrayList<>();
         int size = assessmentList.size();
@@ -71,7 +71,7 @@ public class AssessmentServiceImpl implements AssessmentService {
             previousAssessmentVO.setAssessmentTotalScore(assessmentList.get(i).getAssessmentTotalScore());
             previousAssessmentVOList.add(previousAssessmentVO);
         }
-        return ErrorCodeEnum.SUCCESS.toReturnValue(previousAssessmentVOList);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(previousAssessmentVOList);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class AssessmentServiceImpl implements AssessmentService {
         assessmentVO.setAssessmentId(assessmentId);
         assessmentVO.setAssessmentItemDetailVOList(assessmentItemDetailVOList);
         assessmentVO.setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月");
-        return ErrorCodeEnum.SUCCESS.toReturnValue(assessmentVO);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
     @Transactional
@@ -163,6 +163,6 @@ public class AssessmentServiceImpl implements AssessmentService {
             selfAssessmentNoteMap.put("assessmentId",assessment.getId());
             selfAssessmentNoteMapper.insertSelfAssessmentNotes(selfAssessmentNoteMap);
         }
-        return ErrorCodeEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 }
