@@ -1,11 +1,15 @@
 package com.tsps.assessment.dao;
 
+import com.tsps.assessment.dto.ListUnAssessmentDTO;
 import com.tsps.assessment.entity.Assessment;
+import com.tsps.assessment.vo.UnAssessmentVO;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
 
+@Repository
 public interface AssessmentMapper {
 
     int insertAssessment(Assessment assessment);
@@ -22,5 +26,12 @@ public interface AssessmentMapper {
 
     int updateAssessmentTotalScore(@Param("list") List<Assessment> list);
 
+    int getUnAssessmentTotalNumber(ListUnAssessmentDTO listUnAssessmentDTO);
+
+    List<UnAssessmentVO> listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
+
+    Assessment selectById(Integer id);
+
+    int updateAssessment(Assessment assessment);
 
 }

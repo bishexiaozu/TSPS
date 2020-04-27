@@ -17,7 +17,7 @@ public class AssessmentTask {
     @Autowired
     private AssessmentTaskService assessmentTaskService;
 
-    @Scheduled(cron = "0 0 0 * * ?")
+    @Scheduled(cron = "0 0 0 28 * ?")
     public void assessment(){
         System.out.println("定时考核开始");
         try {

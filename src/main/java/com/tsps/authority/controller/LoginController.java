@@ -9,10 +9,7 @@ import com.tsps.common.ResultBeanCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -31,6 +28,7 @@ public class LoginController {
 
     @PostMapping("/company")
     @ResponseBody
+    @CrossOrigin
     public ResultBean companyLogin(@RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()) return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         return loginService.companyLogin(loginDTO);

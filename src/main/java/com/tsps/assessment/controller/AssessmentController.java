@@ -1,5 +1,6 @@
 package com.tsps.assessment.controller;
 
+import com.tsps.assessment.dto.ListUnAssessmentDTO;
 import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.assessment.service.AssessmentService;
@@ -11,7 +12,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.text.ParseException;
 
 /**
  * @author : YongBiao Liao
@@ -41,7 +41,7 @@ public class AssessmentController {
     //自评信息
     @PostMapping(value = "/selfAssessmentDetails")
     @ResponseBody
-    public ResultBean getSelfAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
+    public ResultBean getSelfAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
@@ -51,11 +51,11 @@ public class AssessmentController {
     //上月考评信息
     @PostMapping(value = "/assessmentDetails")
     @ResponseBody
-    public ResultBean getAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult) throws ParseException {
+    public ResultBean getLastMonthAssessmentDetails(@Valid @RequestBody QueryAssessmentDTO queryAssessmentDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
-        return assessmentService.getSelfAssessmentDetails(queryAssessmentDTO);
+        return assessmentService.getLastMonthAssessmentDetails(queryAssessmentDTO);
     }
 
     @PostMapping(value = "/selfAssessment")
@@ -65,6 +65,24 @@ public class AssessmentController {
             return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
         return assessmentService.selfAssessment(selfAssessmentDTO);
+    }
+
+    @PostMapping(value = "/listUnAssessment")
+    @ResponseBody
+    public ResultBean listUnAssessment(@Valid @RequestBody ListUnAssessmentDTO listUnAssessmentDTO, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
+        }
+        return assessmentService.listUnAssessment(listUnAssessmentDTO);
+    }
+
+    @GetMapping(value = "/assessment/{id}")
+    @ResponseBody
+    public ResultBean assessment(@PathVariable Integer id){
+        if(id == null){
+            return ErrorStatusEnum.ID_IS_EMPTY.toReturnValue();
+        }
+        return assessmentService.assessment(id);
     }
 
 

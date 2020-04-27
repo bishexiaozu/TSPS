@@ -1,10 +1,9 @@
 package com.tsps.assessment.service;
 
+import com.tsps.assessment.dto.ListUnAssessmentDTO;
 import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.common.ResultBean;
-
-import java.text.ParseException;
 
 /**
  * @author : YongBiao Liao
@@ -26,13 +25,22 @@ public interface AssessmentService {
     ResultBean getPreviousAssessments(Integer companyId);
 
     /*
-     * 查看自评信息,查看上月考评结果
+     * 查看自评信息
      * @author     ：YongBiao Liao
      * @date       ：Created in 2020/4/8 17:46
      * @param       queryAssessmentDTO
      * @return     : com.test.common.ResultBean
      */
-    ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO) throws ParseException;
+    ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO);
+
+    /*
+     * 查看上月考评结果
+     * @author     ：YongBiao Liao
+     * @date       ：Created in 2020/4/20 0:56
+     * @param       queryAssessmentDTO
+     * @return     : com.tsps.common.ResultBean
+     */
+    ResultBean getLastMonthAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO);
 
     /*
      *  自评
@@ -42,4 +50,8 @@ public interface AssessmentService {
      * @return     : com.test.common.ResultBean
      */
     ResultBean selfAssessment(SelfAssessmentDTO selfAssessmentDTO);
+
+    ResultBean listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
+
+    ResultBean assessment(Integer id);
 }

@@ -4,9 +4,11 @@ import com.tsps.content.entity.AssessmentItem;
 import com.tsps.content.entity.AssessmentItemExample;
 import com.tsps.content.vo.AssessmentItemVO;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface AssessmentItemMapper {
     long countByExample(AssessmentItemExample example);
 
