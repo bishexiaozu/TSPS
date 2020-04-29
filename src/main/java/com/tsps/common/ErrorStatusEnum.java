@@ -10,16 +10,17 @@ import org.springframework.validation.BindingResult;
  */
 public enum ErrorStatusEnum {
 
-    SYSTEM_ERROR(2,"系统异常"),
+    SYSTEM_ERROR(2,"系统异常！"),
 
     FAIL(404,"fail"),
     SUCCESS(200,"success"),
 
-    FILE_IS_EMPTY(500,"文件不能为空，请选择文件"),
-    FILE_TYPE_ERROR(501,"文件格式错误"),
+    FILE_IS_EMPTY(500,"文件不能为空，请选择文件！"),
+    FILE_TYPE_ERROR(501,"文件格式错误！"),
 
-    LAST_MONTH_ASSESSMENT_IS_EMPTY(600,"上月没有进行自评和考评"),
-    ID_IS_EMPTY(601,"id不能为空")
+    LAST_MONTH_ASSESSMENT_IS_EMPTY(600,"上月没有进行自评和考评！"),
+    ID_IS_EMPTY(601,"id不能为空！"),
+    UN_SELF_ASSESSMENT(602,"未自评，不能申请考评！"),
     ;
 
     private Integer status ;

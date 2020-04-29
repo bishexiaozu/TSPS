@@ -65,7 +65,7 @@
   <select id="getUnAssessmentTotalNumber" resultType="java.lang.Integer" parameterType="com.tsps.assessment.dto.ListUnAssessmentDTO">
     select count(assessment.id)
     from assessment left join company_information on (assessment.company_id = company_information.id)
-    where assessment_status = 0
+    where assessment_status = 2
     <if test="companyFullName != '' and companyFullName != null">
       and company_full_name like concat(concat('%',#{companyFullName}),'%')
     </if>
@@ -74,7 +74,7 @@
   <select id="listUnAssessment" resultType="com.tsps.assessment.vo.UnAssessmentVO" parameterType="com.tsps.assessment.dto.ListUnAssessmentDTO">
     select assessment.id,assessment_status, self_assessment_total_score,assessment.create_time,company_full_name
     from assessment left join company_information on (assessment.company_id = company_information.id)
-    where assessment_status = 0
+    where assessment_status = 2
     <if test="companyFullName != '' and companyFullName != null">
      and company_full_name like concat(concat('%',#{companyFullName}),'%')
     </if>
@@ -93,6 +93,11 @@
      update assessment
      set assessment_total_score = #{assessmentTotalScore,jdbcType=INTEGER},assessment_status = #{assessmentStatus,jdbcType=INTEGER}
      where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="applyForAssessment">
+    update assessment
+    set assessment_status = #{assessmentStatus,jdbcType=INTEGER}
+    where id = #{assessmentId,jdbcType=INTEGER}
   </update>
 
 </mapper>

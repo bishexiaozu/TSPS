@@ -26,15 +26,15 @@ public class AssessmentController {
     @Autowired
     private AssessmentService assessmentService;
 
-    @GetMapping(value = "/assessmentNumber/{companyId}")
+    @GetMapping(value = {"/assessmentNumber/{companyId}", "/assessmentNumber/"})
     @ResponseBody
-    public ResultBean getAssessmentNumber(@PathVariable Integer companyId){
+    public ResultBean getAssessmentNumber(@PathVariable(required = false) Integer companyId){
         return assessmentService.getAssessmentNumber(companyId);
     }
 
-    @GetMapping(value = "/previousAssessments/{companyId}")
+    @GetMapping(value = {"/previousAssessments/{companyId}", "/previousAssessments/"})
     @ResponseBody
-    public ResultBean getPreviousAssessments(@PathVariable Integer companyId){
+    public ResultBean getPreviousAssessments(@PathVariable(required = false) Integer companyId){
         return assessmentService.getPreviousAssessments(companyId);
     }
 
@@ -76,13 +76,22 @@ public class AssessmentController {
         return assessmentService.listUnAssessment(listUnAssessmentDTO);
     }
 
-    @GetMapping(value = "/assessment/{id}")
+    @GetMapping(value = {"/assessment/{id}", "/assessment/"})
     @ResponseBody
-    public ResultBean assessment(@PathVariable Integer id){
+    public ResultBean assessment(@PathVariable(required = false) Integer id){
         if(id == null){
             return ErrorStatusEnum.ID_IS_EMPTY.toReturnValue();
         }
         return assessmentService.assessment(id);
+    }
+
+    @GetMapping(value = {"/applyForAssessment/{assessmentId}", "/applyForAssessment/"})
+    @ResponseBody
+    public ResultBean applyForAssessment(@PathVariable(required = false) Integer assessmentId){
+        if(assessmentId == null){
+            return ErrorStatusEnum.UN_SELF_ASSESSMENT.toReturnValue();
+        }
+        return assessmentService.applyForAssessment(assessmentId);
     }
 
 

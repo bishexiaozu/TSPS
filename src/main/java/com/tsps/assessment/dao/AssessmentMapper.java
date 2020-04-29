@@ -34,4 +34,6 @@ public interface AssessmentMapper {
 
     int updateAssessment(Assessment assessment);
 
+    int applyForAssessment(@Param("assessmentId") Integer assessmentId, @Param("assessmentStatus") Integer assessmentStatus );
+
 }

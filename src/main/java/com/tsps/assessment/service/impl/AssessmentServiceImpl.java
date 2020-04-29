@@ -7,6 +7,7 @@ import com.tsps.assessment.dto.*;
 import com.tsps.assessment.entity.Assessment;
 import com.tsps.assessment.entity.AssessmentDetail;
 import com.tsps.assessment.entity.SelfAssessmentNote;
+import com.tsps.assessment.enums.AssessmentStatusEnum;
 import com.tsps.assessment.service.AssessmentService;
 import com.tsps.assessment.vo.*;
 import com.tsps.common.ErrorStatusEnum;
@@ -157,7 +158,7 @@ public class AssessmentServiceImpl implements AssessmentService {
         }else {
             Assessment assessment = new Assessment();
             assessment.setCompanyId(selfAssessmentDTO.getCompanyId());
-            assessment.setAssessmentStatus(0);
+            assessment.setAssessmentStatus(AssessmentStatusEnum.SELF_ASSESSMENT.getStatus());
             assessment.setSelfAssessmentTotalScore(selfTotalScore);
             assessment.setCreateTime(selfAssessmentDTO.getSelfAssessmentTime());
             assessmentMapper.insertAssessment(assessment);
@@ -212,13 +213,19 @@ public class AssessmentServiceImpl implements AssessmentService {
                     fileNameList.remove(fileNameList.indexOf(assessmentElementList.get(i).getAssessmentElementName()));
                 }
             }
-            assessment.setAssessmentStatus(1);
+            assessment.setAssessmentStatus(AssessmentStatusEnum.ASSESSMENT.getStatus());
             assessment.setAssessmentTotalScore(assessmentScore);
             if(!CollectionUtils.isEmpty(assessmentDetailList)) {
                 assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
             }
         }
         assessmentMapper.updateAssessment(assessment);
+        return ErrorStatusEnum.SUCCESS.toReturnValue();
+    }
+
+    @Override
+    public ResultBean applyForAssessment(Integer assessmentId) {
+        assessmentMapper.applyForAssessment(assessmentId, AssessmentStatusEnum.APPLY_FOR_ASSESSMENT.getStatus());
         return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 

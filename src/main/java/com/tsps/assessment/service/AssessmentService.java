@@ -54,4 +54,6 @@ public interface AssessmentService {
     ResultBean listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
 
     ResultBean assessment(Integer id);
+
+    ResultBean applyForAssessment(Integer assessmentId);
 }
