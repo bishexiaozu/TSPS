@@ -37,9 +37,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="添加删除标准文件接口，修改修改负责人接口">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="添加删除标准文件接口，修改修改负责人接口" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -336,7 +334,7 @@
       <workItem from="1587313068991" duration="27618000" />
       <workItem from="1588242146114" duration="5211000" />
       <workItem from="1588330446422" duration="535000" />
-      <workItem from="1588343229548" duration="508000" />
+      <workItem from="1588343229548" duration="883000" />
     </task>
     <task id="LOCAL-00001" summary="登录">
       <created>1587136408520</created>
@@ -373,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588343768699</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加删除标准文件接口，修改修改负责人接口">
+      <created>1588344019793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588344019793</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,10 +657,11 @@
       <screen x="0" y="23" width="1440" height="815" />
     </state>
     <state x="258" y="93" key="Maven.ArtifactSearchDialog/0.23.1440.815@0.23.1440.815" timestamp="1586415720987" />
-    <state x="208" y="23" key="SettingsEditor" timestamp="1588344005847">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="208" y="44" key="SettingsEditor" timestamp="1588344438992">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="208" y="23" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1588344005847" />
+    <state x="208" y="44" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1588344438992" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.815@0.23.1440.815" timestamp="1586416548061" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1588343305296">
       <screen x="0" y="0" width="1440" height="900" />
