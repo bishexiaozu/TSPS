@@ -40,7 +40,9 @@ public class GovernmentFileManageServiceImpl implements GovernmentFileManageServ
     @Override
     public ResultBean deleteGovernmentFile(Integer id) {
         int result = mapper.deleteByPrimaryKey(id);
-        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+        if(result>0)
+            return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+        return ErrorStatusEnum.FAIL.toReturnValue();
     }
 
     @Override

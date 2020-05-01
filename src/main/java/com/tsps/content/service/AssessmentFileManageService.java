@@ -22,6 +22,7 @@ public interface AssessmentFileManageService {
     ResultBean getItemByEmployeeId(Integer id);
     ResultBean getTotalAssessmentFile(Integer elementId);
     ResultBean getEmployeeAssessmentFile(Integer employeeId,Integer elementId);
+    ResultBean deleteAssessmentFile(Integer id);
 
 
 

@@ -35,6 +35,7 @@ public class AssessmentFileManageController {
         return ErrorStatusEnum.SUCCESS.toReturnValue(uploadService.uploadFile(multipartFile, Commons.ASSESSMENT_FILE_DIRECTORY_URL));
     }
 
+
     @Autowired
     private AssessmentFileManageService service;
     @PostMapping("/addAssessmentFile")
@@ -48,6 +49,12 @@ public class AssessmentFileManageController {
     @ResponseBody
     public ResultBean getHead(@PathVariable Integer companyId, @PathVariable Integer itemId){
         return service.getHead(companyId,itemId);
+    }
+
+    @PostMapping("/deleteAssessmentFile/{id}")
+    @ResponseBody
+    public ResultBean deleteAssessmentFile(@PathVariable Integer id){
+        return service.deleteAssessmentFile(id);
     }
 
     @PostMapping("/getEmployeeAssessmentFile/{employeeId}/{elementId}")

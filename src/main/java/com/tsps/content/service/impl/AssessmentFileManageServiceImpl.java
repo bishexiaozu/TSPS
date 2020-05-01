@@ -96,7 +96,7 @@ public class AssessmentFileManageServiceImpl implements AssessmentFileManageServ
         elementEmployee.setCompanyId(assessmentEmployeeDTO.getCompanyId());
         ElementEmployeeExample example = new ElementEmployeeExample();
         ElementEmployeeExample.Criteria criteria = example.createCriteria();
-        criteria.andElementIdEqualTo(assessmentEmployeeDTO.getEmployeeId());
+        criteria.andElementIdEqualTo(assessmentEmployeeDTO.getItemId());
         criteria.andCompanyIdEqualTo(assessmentEmployeeDTO.getCompanyId());
         int result = elementEmployeeMapper.updateByExample(elementEmployee,example);
         return ErrorStatusEnum.SUCCESS.toReturnValue(result);
@@ -153,5 +153,13 @@ public class AssessmentFileManageServiceImpl implements AssessmentFileManageServ
         Integer all = new Integer(total.intValue());
         if(total>=0) return ErrorStatusEnum.SUCCESS.toReturnValue(all);
         return ErrorStatusEnum.SUCCESS.toReturnValue();
+    }
+
+    @Override
+    public ResultBean deleteAssessmentFile(Integer id) {
+        int result = assessmentFileMapper.deleteByPrimaryKey(id);
+        if(result > 0)
+            return ErrorStatusEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.FAIL.toReturnValue();
     }
 }
