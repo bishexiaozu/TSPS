@@ -1,6 +1,8 @@
 package com.tsps.authority.entity;
 
-public class RegulatorInformation {
+import java.io.Serializable;
+
+public class RegulatorInformation implements Serializable {
     private Integer id;
 
     private String regulatorAccount;

@@ -1,6 +1,8 @@
 package com.tsps.authority.entity;
 
-public class CompanyEmployee {
+import java.io.Serializable;
+
+public class CompanyEmployee implements Serializable {
     private Integer id;
 
     private String employeeAccount;

@@ -2,10 +2,11 @@ package com.tsps.authority.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class CompanyInformation {
+public class CompanyInformation implements Serializable {
     private Integer id;
 
     private String companyAccount;

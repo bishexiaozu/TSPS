@@ -15,6 +15,8 @@ public enum ErrorStatusEnum {
     FAIL(404,"fail"),
     SUCCESS(200,"success"),
 
+    ACCOUNT_OR_PASSWORD_ERROR(300,"账号或密码错误！"),
+
     FILE_IS_EMPTY(500,"文件不能为空，请选择文件！"),
     FILE_TYPE_ERROR(501,"文件格式错误！"),
 

@@ -3,6 +3,8 @@ package com.tsps.common;
 import lombok.Data;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *  *@author : luxinnan
@@ -29,4 +31,6 @@ public class Commons {
 
     public static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat ("yyyy-MM-dd");
 
+    public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPS/login/company", "/TSPS/login/employee",
+            "/TSPS/login/driver", "/TSPS/login/regulator", "/TSPS/companyRegister"));
 }

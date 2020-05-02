@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 /**
@@ -29,26 +30,26 @@ public class LoginController {
     @PostMapping("/company")
     @ResponseBody
     @CrossOrigin
-    public ResultBean companyLogin(@RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
+    public ResultBean companyLogin(HttpServletRequest request, @RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()) return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
-        return loginService.companyLogin(loginDTO);
+        return loginService.companyLogin(request, loginDTO);
     }
     @PostMapping("/employee")
     @ResponseBody
-    public ResultBean employeeLogin(@RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
+    public ResultBean employeeLogin(HttpServletRequest request, @RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()) return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
-        return loginService.employeeLogin(loginDTO);
+        return loginService.employeeLogin(request, loginDTO);
     }
     @PostMapping("/driver")
     @ResponseBody
-    public ResultBeanCode driverLogin(@RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
+    public ResultBeanCode driverLogin(HttpServletRequest request, @RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()) return ErrorCodeEnum.FAIL.toReturnValue(bindingResult);
-        return loginService.driverLogin(loginDTO);
+        return loginService.driverLogin(request, loginDTO);
     }
     @PostMapping("/regulator")
     @ResponseBody
-    public ResultBean regulatorLogin(@RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
+    public ResultBean regulatorLogin(HttpServletRequest request, @RequestBody @Valid LoginDTO loginDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()) return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
-        return loginService.regulatorLogin(loginDTO);
+        return loginService.regulatorLogin(request, loginDTO);
     }
 }

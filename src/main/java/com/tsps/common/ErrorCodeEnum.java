@@ -13,6 +13,8 @@ public enum ErrorCodeEnum {
     FAIL(-1,"fail"),
     SUCCESS(0,"success"),
 
+    ACCOUNT_OR_PASSWORD_ERROR(300,"账号或密码错误！"),
+
     FILE_IS_EMPTY(400,"文件不能为空，请选择文件"),
 
     ;

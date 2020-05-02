@@ -1,6 +1,8 @@
 package com.tsps.authority.entity;
 
-public class DriverInformation {
+import java.io.Serializable;
+
+public class DriverInformation implements Serializable {
     private Integer id;
 
     private String driverAccount;
