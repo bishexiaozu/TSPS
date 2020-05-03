@@ -31,6 +31,12 @@ public class Commons {
 
     public static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat ("yyyy-MM-dd");
 
+    public static final String SELF_ASSESSMENT_DETAILS = "selfAssessmentDetails:";
+
+    public static final String LAST_MONTH_ASSESSMENT_DETAILS = "lastMonthSelfAssessmentDetails:";
+
+    public static final int REDIS_TIME = 60 * 60 * 24 * 15;
+
     public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPS/login/company", "/TSPS/login/employee",
             "/TSPS/login/driver", "/TSPS/login/regulator", "/TSPS/companyRegister"));
 }

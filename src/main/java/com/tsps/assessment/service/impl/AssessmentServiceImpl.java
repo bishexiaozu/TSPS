@@ -10,6 +10,7 @@ import com.tsps.assessment.entity.SelfAssessmentNote;
 import com.tsps.assessment.enums.AssessmentStatusEnum;
 import com.tsps.assessment.service.AssessmentService;
 import com.tsps.assessment.vo.*;
+import com.tsps.common.Commons;
 import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dao.AssessmentElementMapper;
@@ -18,6 +19,7 @@ import com.tsps.content.dao.AssessmentItemMapper;
 import com.tsps.content.entity.AssessmentElement;
 import com.tsps.content.entity.AssessmentItem;
 import com.tsps.util.DateUtil;
+import com.tsps.util.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,6 +53,9 @@ public class AssessmentServiceImpl implements AssessmentService {
 
     @Autowired
     private AssessmentElementMapper assessmentElementMapper;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
     @Override
     public ResultBean getAssessmentNumber(Integer companyId) {
@@ -88,7 +93,17 @@ public class AssessmentServiceImpl implements AssessmentService {
         Date lastDay = DateUtil.toDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1,dayOfMonth);
         Assessment assessment = assessmentMapper.getAssessment(queryAssessmentDTO.getCompanyId(), firstDay, lastDay);
         Integer assessmentId = assessment == null ? null : assessment.getId();
-        AssessmentVO assessmentVO = setAssessmentVO(assessmentId, calendar);
+        AssessmentVO assessmentVO = null;
+        if(assessmentId != null){
+            assessmentVO = (AssessmentVO) redisUtils.get(Commons.SELF_ASSESSMENT_DETAILS + assessmentId);
+        }
+        if(assessmentVO != null){
+            return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+        }
+        assessmentVO = setAssessmentVO(assessmentId, calendar);
+        if(assessmentId != null){
+            redisUtils.set(Commons.SELF_ASSESSMENT_DETAILS + assessmentId, assessmentVO,Commons.REDIS_TIME);
+        }
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
@@ -105,7 +120,12 @@ public class AssessmentServiceImpl implements AssessmentService {
         if(assessment == null){
             return ErrorStatusEnum.LAST_MONTH_ASSESSMENT_IS_EMPTY.toReturnValue();
         }
-        AssessmentVO assessmentVO = setAssessmentVO(assessment.getId(), calendar);
+        AssessmentVO assessmentVO = (AssessmentVO) redisUtils.get(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId());
+        if(assessmentVO != null){
+            return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+        }
+        assessmentVO = setAssessmentVO(assessment.getId(), calendar);
+        redisUtils.set(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId(), assessmentVO, Commons.REDIS_TIME);
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
@@ -155,6 +175,10 @@ public class AssessmentServiceImpl implements AssessmentService {
             assessmentDetailMapper.updateAssessmentDetails(assessmentDetailMap);
             selfAssessmentNoteMap.put("assessmentId",assessmentId);
             selfAssessmentNoteMapper.updateSelfAssessmentNotes(selfAssessmentNoteMap);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(selfAssessmentDTO.getSelfAssessmentTime());
+            AssessmentVO assessmentVO = setAssessmentVO(assessmentId, calendar);
+            redisUtils.set(Commons.SELF_ASSESSMENT_DETAILS + assessmentId, assessmentVO, Commons.REDIS_TIME);
         }else {
             Assessment assessment = new Assessment();
             assessment.setCompanyId(selfAssessmentDTO.getCompanyId());

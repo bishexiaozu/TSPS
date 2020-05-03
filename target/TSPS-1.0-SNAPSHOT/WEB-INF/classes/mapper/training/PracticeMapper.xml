@@ -12,7 +12,7 @@
   </resultMap>
 
   <select id="getWrong" resultMap="BaseResultMap">
-    select
+    select distinct
     <include refid="Base_Column_List" />
     from practice
     where driver_id = #{driverId,jdbcType=INTEGER}
@@ -23,7 +23,7 @@
     offset #{page,jdbcType=INTEGER}
   </select>
   <select id="getCollect" resultMap="BaseResultMap">
-    select
+    select distinct
     <include refid="Base_Column_List" />
     from practice
     where driver_id = #{driverId,jdbcType=INTEGER}

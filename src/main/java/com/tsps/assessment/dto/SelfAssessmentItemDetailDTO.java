@@ -23,7 +23,6 @@ public class SelfAssessmentItemDetailDTO implements Serializable{
         @NotNull(message = "每项考核项目对应的考核要素自评情况不能为空")
         private List<SelfAssessmentElementDetailDTO> selfAssessmentElementDetailDTOList;
 
-        @NotNull(message = "自评描述不能为空")
         private String selfAssessmentNote;
 
 }

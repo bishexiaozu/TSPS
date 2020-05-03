@@ -11,17 +11,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="添加删除标准文件接口，修改修改负责人接口">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tsps/configuration/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tsps/util/RedisUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/EmployeeManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/EmployeeManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/ElementEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/ElementEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/GovernmentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/GovernmentFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/exam/entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/exam/entity/Exam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-session.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-session.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/Commons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/Commons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/AssessmentItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/ElementEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/ElementEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/GovernmentFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/entity/GovernmentFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/exam/entity/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/exam/entity/Exam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/training/entity/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/training/entity/Exercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/training/entity/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/training/entity/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/training/PracticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/training/PracticeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/common/Commons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/common/Commons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/AssessmentItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/ElementEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/ElementEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/GovernmentFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/entity/GovernmentFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/exam/entity/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/exam/entity/Exam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/training/entity/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/training/entity/Exercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/training/entity/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/training/entity/Practice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/training/PracticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/training/PracticeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +57,78 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TSPS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/RedisUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+              <folding>
+                <element signature="n#bean#2;n#beans#0;n#!!top" />
+                <element signature="n#bean#3;n#beans#0;n#!!top" />
+                <element signature="n#bean#4;n#beans#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="51" column="44" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="180" column="89" selection-start-line="180" selection-start-column="89" selection-end-line="180" selection-end-column="89" />
+              <folding>
+                <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+                <element signature="e#5460#6628#1" />
+                <element signature="method#listUnAssessment#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#applyForAssessment#0;class#AssessmentServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-132" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="37" column="58" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,6 +147,8 @@
       <find>companyAddressXianqu</find>
       <find>companyCreditcode</find>
       <find>getHead</find>
+      <find>redisUtils.set</find>
+      <find>Time</find>
     </findStrings>
     <replaceStrings>
       <replace>company_address_province</replace>
@@ -65,9 +166,128 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1048" />
+  </component>
   <component name="ProjectId" id="1aA0LTFjn66gt1Q7TTUGKCfTDjd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+              <item name="authority" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -96,22 +316,8 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper/training" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper/content" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper/authority" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/tsps" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper/exam" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.tsps.assessment" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tsps.interceptor" />
-      <recent name="com.tsps.filter" />
-      <recent name="com.tsps.assessment.service.impl" />
-      <recent name="com.tsps.assessment.service" />
-      <recent name="com.tsps.task.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\liaoyongbiao\Desktop\毕业设计\TSPS\src\main\resources" />
@@ -120,6 +326,32 @@
       <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\dto" />
       <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\vo" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tsps.interceptor" />
+      <recent name="com.tsps.filter" />
+      <recent name="com.tsps.assessment.service.impl" />
+      <recent name="com.tsps.assessment.service" />
+      <recent name="com.tsps.task.service.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/training" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/content" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/authority" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tsps" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper/exam" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat8">
     <configuration name="TSPS [mybatis-generator:generate,-e]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
@@ -368,6 +600,54 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="357000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
+      <window_info id="Capture Tool" />
+      <window_info id="Web" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
+      <window_info id="Alibaba Cloud Explorer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.22386059" />
+      <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
+      <window_info anchor="bottom" id="Application Servers" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Java Enterprise" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3286119" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5609065" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="JSF" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="CDI" weight="0.3297587" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Alibaba Log Console" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -376,7 +656,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -395,7 +690,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="登录" />
@@ -701,9 +995,46 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java</url>
           <line>86</line>
+          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="37" column="58" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="180" column="89" selection-start-line="180" selection-start-column="89" selection-end-line="180" selection-end-column="89" />
+          <folding>
+            <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+            <element signature="e#5460#6628#1" />
+            <element signature="method#listUnAssessment#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#applyForAssessment#0;class#AssessmentServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/training/dao/PracticeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132" />
+      </provider>
+    </entry>
   </component>
 </project>

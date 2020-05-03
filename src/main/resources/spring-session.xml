@@ -12,8 +12,7 @@
 
     <context:annotation-config />
 
-    <bean id="redisHttpSessionConfiguration"
-          class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
+    <bean id="redisHttpSessionConfiguration" class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
         <property name="maxInactiveIntervalInSeconds" value="3600" />
     </bean>
 
@@ -24,22 +23,26 @@
         <property name="database" value="${redis.db}" />
         <property name="password" value="${redis.password}"/>
         <property name="timeout" value="${redis.timeout}"/>
+        <property name="poolConfig" ref="poolConfig"/>
     </bean>
 
-    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
-        <property name="connectionFactory" ref="jedisConnectionFactory"></property>
-        <property name="keySerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
-        </property>
-        <property name="valueSerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
-        </property>
-        <property name="hashKeySerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
-        </property>
-        <property name="hashValueSerializer">
-            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
-        </property>
+    <!--<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">-->
+        <!--<property name="connectionFactory" ref="jedisConnectionFactory"></property>-->
+        <!--&lt;!&ndash;<property name="keySerializer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="valueSerializer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hashKeySerializer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="hashValueSerializer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</property>&ndash;&gt;-->
+    <!--</bean>-->
+    <bean id="rediTeplate" class="com.tsps.configuration.RedisConfig">
+        <constructor-arg ref="jedisConnectionFactory"/>
     </bean>
 
     <bean id="defaultCookieSerializer"
