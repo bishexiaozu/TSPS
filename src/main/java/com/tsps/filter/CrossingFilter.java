@@ -1,5 +1,7 @@
 package com.tsps.filter;
 
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,11 +30,17 @@ public class CrossingFilter implements Filter {
             HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
             HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
             System.out.println("拦截请求: " + httpServletRequest.getServletPath());
-            httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
-            httpServletResponse.setHeader("Access-Control-Allow-Methods", "*");
-            httpServletResponse.setHeader("Access-Control-Max-Age", "3600");
-            httpServletResponse.setHeader("Access-Control-Allow-Headers","token,Origin, X-Requested-With, Content-Type, Accept");
-//            httpServletResponse.setHeader("Access-Control-Allow-Credentials", "true");
+            String origin = httpServletRequest.getHeader("Origin");
+            if(origin == null) {
+                origin = httpServletRequest.getHeader("Referer");
+            }
+            httpServletResponse.setHeader("Access-Control-Allow-Origin", origin);
+            httpServletResponse.setHeader("Access-Control-Allow-Credentials", "true");
+            if(RequestMethod.OPTIONS.toString().equals(httpServletRequest.getMethod())) {
+                httpServletResponse.setHeader("Access-Control-Allow-Methods", "*");
+                httpServletResponse.setHeader("Access-Control-Max-Age", "3600");
+                httpServletResponse.setHeader("Access-Control-Allow-Headers", "token,Origin, X-Requested-With, Content-Type, Accept");
+            }
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
