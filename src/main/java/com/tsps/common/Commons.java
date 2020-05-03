@@ -37,6 +37,6 @@ public class Commons {
 
     public static final int REDIS_TIME = 60 * 60 * 24 * 15;
 
-    public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPS/login/company", "/TSPS/login/employee",
-            "/TSPS/login/driver", "/TSPS/login/regulator", "/TSPS/companyRegister"));
+    public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPSv3/login/company", "/TSPSv3/login/employee",
+            "/TSPSv3/login/driver", "/TSPSv3/login/regulator", "/TSPSv3/companyRegister"));
 }
