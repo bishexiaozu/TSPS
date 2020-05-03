@@ -6,90 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="添加删除标准文件接口，修改修改负责人接口">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-session.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/DriverInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/DriverInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/RegulatorInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/RegulatorInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/CompanyInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/DriverInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/DriverInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/RegulatorInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/entity/RegulatorInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/Commons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/Commons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/ErrorCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/ErrorCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/ErrorStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/common/ErrorStatusEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/CompanyInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/DriverInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/DriverInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/RegulatorInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/entity/RegulatorInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/common/Commons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/common/Commons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/common/ErrorCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/common/ErrorCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/common/ErrorStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/common/ErrorStatusEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,19 +22,6 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,29 +50,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorCodeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorStatusEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/DriverInformation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/RegulatorInformation.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      </list>
-    </option>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -168,90 +57,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="979" />
-    <option name="height" value="1049" />
-  </component>
   <component name="ProjectId" id="1aA0LTFjn66gt1Q7TTUGKCfTDjd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -304,18 +112,6 @@
       <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\dto" />
       <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps\material\vo" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat8">
     <configuration name="TSPS [mybatis-generator:generate,-e]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
@@ -564,54 +360,6 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1215000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info id="Alibaba Cloud Explorer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22386059" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Alibaba Cloud View" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40509915" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="CDI" weight="0.3297587" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Alibaba Log Console" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -620,14 +368,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -646,6 +387,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="登录" />
@@ -914,10 +656,10 @@
     <state x="208" y="23" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1588344005847" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1588344438992" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.815@0.23.1440.815" timestamp="1586416548061" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1588343305296">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1588489063322">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1588343305296" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1588489063322" />
     <state x="399" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1586411474581">
       <screen x="0" y="23" width="1440" height="815" />
     </state>
@@ -931,10 +673,10 @@
       <screen x="0" y="23" width="1440" height="817" />
     </state>
     <state x="497" y="201" key="extract.method.dialog/0.23.1440.817@0.23.1440.817" timestamp="1586431259111" />
-    <state x="438" y="221" key="git4idea.merge.GitPullDialog" timestamp="1588329750529">
+    <state x="438" y="221" key="git4idea.merge.GitPullDialog" timestamp="1588487658940">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
-    <state x="438" y="221" key="git4idea.merge.GitPullDialog/0.23.1440.814@0.23.1440.814" timestamp="1588329750529" />
+    <state x="438" y="221" key="git4idea.merge.GitPullDialog/0.23.1440.814@0.23.1440.814" timestamp="1588487658940" />
     <state x="459" y="162" width="670" height="676" key="search.everywhere.popup" timestamp="1586604586240">
       <screen x="0" y="23" width="1440" height="815" />
     </state>
@@ -950,150 +692,9 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java</url>
           <line>86</line>
-          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
-          <folding>
-            <element signature="e#1569#1590#0" expanded="true" />
-            <element signature="e#1632#1649#0" expanded="true" />
-            <element signature="e#1688#1702#0" expanded="true" />
-            <element signature="e#1745#1763#0" expanded="true" />
-            <element signature="n#bean#2;n#beans#0;n#!!top" />
-            <element signature="n#bean#3;n#beans#0;n#!!top" />
-            <element signature="n#bean#4;n#beans#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorCodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/DriverInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/RegulatorInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
