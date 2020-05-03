@@ -1,6 +1,8 @@
 package com.tsps.content.entity;
 
-public class AssessmentElement {
+import java.io.Serializable;
+
+public class AssessmentElement implements Serializable {
 
 
     private Integer id;

@@ -12,8 +12,16 @@
   <component name="ChangeListManager">
     <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="添加删除标准文件接口，修改修改负责人接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/util/todo_list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/training/PracticeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/entity/CompanyEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/EmployeeManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/EmployeeManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/ElementEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/ElementEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/GovernmentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/GovernmentFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/exam/entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/exam/entity/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/training/entity/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -673,9 +681,10 @@
       <screen x="0" y="23" width="1440" height="817" />
     </state>
     <state x="497" y="201" key="extract.method.dialog/0.23.1440.817@0.23.1440.817" timestamp="1586431259111" />
-    <state x="438" y="221" key="git4idea.merge.GitPullDialog" timestamp="1588487658940">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="438" y="219" key="git4idea.merge.GitPullDialog" timestamp="1588490769314">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="438" y="219" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1588490769314" />
     <state x="438" y="221" key="git4idea.merge.GitPullDialog/0.23.1440.814@0.23.1440.814" timestamp="1588487658940" />
     <state x="459" y="162" width="670" height="676" key="search.everywhere.popup" timestamp="1586604586240">
       <screen x="0" y="23" width="1440" height="815" />

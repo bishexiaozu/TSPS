@@ -1,8 +1,9 @@
 package com.tsps.content.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class AssessmentFile {
+public class AssessmentFile implements Serializable {
     private Integer id;
 
     private String amtFileTitle;

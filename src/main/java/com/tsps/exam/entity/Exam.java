@@ -1,6 +1,8 @@
 package com.tsps.exam.entity;
 
-public class Exam {
+import java.io.Serializable;
+
+public class Exam implements Serializable {
     private Integer id;
 
     private String examBegin;

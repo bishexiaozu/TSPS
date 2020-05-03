@@ -1,6 +1,8 @@
 package com.tsps.content.entity;
 
-public class ElementEmployee {
+import java.io.Serializable;
+
+public class ElementEmployee implements Serializable {
     private Integer elementId;
 
     private Integer employeeId;

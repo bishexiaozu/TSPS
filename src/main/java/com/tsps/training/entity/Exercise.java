@@ -1,6 +1,8 @@
 package com.tsps.training.entity;
 
-public class Exercise {
+import java.io.Serializable;
+
+public class Exercise implements Serializable {
     private Integer id;
 
     private String exerciseContent;

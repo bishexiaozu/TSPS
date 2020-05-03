@@ -1,6 +1,8 @@
 package com.tsps.training.entity;
 
-public class Practice {
+import java.io.Serializable;
+
+public class Practice implements Serializable {
     private Integer exerciseId;
 
     private Integer driverId;
