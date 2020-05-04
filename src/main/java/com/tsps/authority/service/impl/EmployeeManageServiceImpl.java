@@ -9,6 +9,7 @@ import com.tsps.authority.service.EmployeeManageService;
 import com.tsps.authority.vo.EmployeeListVO;
 import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
+import com.tsps.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -82,7 +83,7 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
     public ResultBean addEmployee(AddEmployeeDTO addEmployeeDTO) {
         CompanyEmployee companyEmployee = new CompanyEmployee();
         companyEmployee.setEmployeeAccount(addEmployeeDTO.getAccount());
-        companyEmployee.setEmployeePwd(addEmployeeDTO.getPwd());
+        companyEmployee.setEmployeePwd(MD5Util.toMD5(addEmployeeDTO.getPwd()));
         companyEmployee.setPosition(addEmployeeDTO.getPost());
         companyEmployee.setDepartment(addEmployeeDTO.getDepartment());
         companyEmployee.setEmployeeName(addEmployeeDTO.getName());
