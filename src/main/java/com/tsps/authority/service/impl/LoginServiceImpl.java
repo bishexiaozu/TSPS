@@ -45,7 +45,7 @@ public class LoginServiceImpl implements LoginService {
         if(CollectionUtils.isEmpty(result)){
             return ErrorStatusEnum.ACCOUNT_OR_PASSWORD_ERROR.toReturnValue();
         }
-        request.getSession().setAttribute("user",result.get(0));
+        request.getSession().setAttribute("user",result.get(0).getId());
         return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
@@ -59,7 +59,7 @@ public class LoginServiceImpl implements LoginService {
         if(CollectionUtils.isEmpty(result)){
             return ErrorStatusEnum.ACCOUNT_OR_PASSWORD_ERROR.toReturnValue();
         }
-        request.getSession().setAttribute("user",result.get(0));
+        request.getSession().setAttribute("user",result.get(0).getId());
         return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 
@@ -71,7 +71,7 @@ public class LoginServiceImpl implements LoginService {
         if(CollectionUtils.isEmpty(result)){
             return ErrorCodeEnum.ACCOUNT_OR_PASSWORD_ERROR.toReturnValue();
         }
-        request.getSession().setAttribute("user",result.get(0));
+        request.getSession().setAttribute("user",result.get(0).getId());
         return ErrorCodeEnum.SUCCESS.toReturnValue(result);
     }
 
@@ -85,7 +85,7 @@ public class LoginServiceImpl implements LoginService {
         if(CollectionUtils.isEmpty(result)){
             return ErrorStatusEnum.ACCOUNT_OR_PASSWORD_ERROR.toReturnValue();
         }
-        request.getSession().setAttribute("user",result.get(0));
+        request.getSession().setAttribute("user",result.get(0).getId());
         return ErrorStatusEnum.SUCCESS.toReturnValue(result);
     }
 

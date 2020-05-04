@@ -4,6 +4,8 @@ import com.tsps.authority.dto.AddEmployeeDTO;
 import com.tsps.authority.dto.ModifyEmployeeDTO;
 import com.tsps.common.ResultBean;
 
+import java.security.NoSuchAlgorithmException;
+
 /**
  * @author : luxinnan
  * @date : 2020/4/10/13:49
@@ -21,5 +23,5 @@ public interface EmployeeManageService {
     //根据员工ID删除员工
     ResultBean deleteEmployee(Integer employeeId);
     //新增员工
-    ResultBean addEmployee(AddEmployeeDTO addEmployeeDTO);
+    ResultBean addEmployee(AddEmployeeDTO addEmployeeDTO) throws NoSuchAlgorithmException;
 }

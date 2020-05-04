@@ -13,6 +13,7 @@ import com.tsps.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 /**
@@ -80,7 +81,7 @@ public class EmployeeManageServiceImpl implements EmployeeManageService {
     }
 
     @Override
-    public ResultBean addEmployee(AddEmployeeDTO addEmployeeDTO) {
+    public ResultBean addEmployee(AddEmployeeDTO addEmployeeDTO) throws NoSuchAlgorithmException {
         CompanyEmployee companyEmployee = new CompanyEmployee();
         companyEmployee.setEmployeeAccount(addEmployeeDTO.getAccount());
         companyEmployee.setEmployeePwd(MD5Util.toMD5(addEmployeeDTO.getPwd()));

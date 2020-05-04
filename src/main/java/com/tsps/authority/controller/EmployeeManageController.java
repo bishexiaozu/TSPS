@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *  * @author : luxinnan
@@ -39,7 +40,7 @@ public class EmployeeManageController {
 
     @PostMapping("/addEmployee")
     @ResponseBody
-    public ResultBean addEmployee(@RequestBody @Valid AddEmployeeDTO addEmployeeDTO, BindingResult bindingResult){
+    public ResultBean addEmployee(@RequestBody @Valid AddEmployeeDTO addEmployeeDTO, BindingResult bindingResult) throws NoSuchAlgorithmException {
         if(bindingResult.hasErrors()){
             return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
