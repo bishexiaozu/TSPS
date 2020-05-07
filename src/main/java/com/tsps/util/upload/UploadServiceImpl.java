@@ -50,7 +50,7 @@ public class UploadServiceImpl implements UploadService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        int lastIndex = rootPath.lastIndexOf("/");
+        int lastIndex = rootPath.lastIndexOf("/") + 1;
         int beginIndex = rootPath.lastIndexOf("/",lastIndex-1);
         fileUrl = Commons.FILE_URL + rootPath.substring(beginIndex,lastIndex + 1) + uuidName + fileType;
         return fileUrl;

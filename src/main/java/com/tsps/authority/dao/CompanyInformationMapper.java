@@ -25,7 +25,9 @@ public interface CompanyInformationMapper {
 
     List<CompanyInformation> selectByExample(CompanyInformationExample example);
 
-    List<CompanyListVO> getCompanyList(@Param("state") String state,@Param("page") Integer page);
+    List<CompanyListVO> getCompanyList(@Param("state") String state, @Param("page") Integer page);
+
+    List<CompanyListVO> getCompanyNameList();
 
     CompanyInformation selectByPrimaryKey(Integer id);
 

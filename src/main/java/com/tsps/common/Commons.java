@@ -39,4 +39,6 @@ public class Commons {
 
     public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPSv3/login/company", "/TSPSv3/login/employee",
             "/TSPSv3/login/driver", "/TSPSv3/login/regulator", "/TSPSv3/companyRegister"));
+
+    public static final String URL_START_WITH = "/TSPSv3/informationManage/upload";
 }

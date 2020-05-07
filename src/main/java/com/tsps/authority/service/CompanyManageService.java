@@ -11,7 +11,7 @@ import com.tsps.common.ResultBean;
 public interface CompanyManageService {
     ResultBean deleteCompany(Integer id);
     ResultBean setCompanyState(Integer id);
-    ResultBean getCompanyList(String state,Integer page);
+    ResultBean getCompanyList(String state, Integer page);
     ResultBean getTotalCompany(String state);
 
 }

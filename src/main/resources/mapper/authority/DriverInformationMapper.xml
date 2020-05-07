@@ -9,6 +9,39 @@
     <result column="driver_tel" jdbcType="CHAR" property="driverTel" />
     <result column="company_id" jdbcType="INTEGER" property="companyId" />
   </resultMap>
+
+  <select id="countNull" resultType="java.lang.Long">
+    select count(*) from driver_information
+    where companyId=#{companyId,jdbcType=INTEGER}
+    and driver_account is null
+  </select>
+  <select id="count" resultType="java.lang.Long">
+    select count(*) from driver_information
+    where companyId=#{companyId,jdbcType=INTEGER}
+    and driver_account is not null
+  </select>
+
+  <select id="getNullAccount" resultMap="BaseResultMap">
+    select id, driver_account, driver_pwd, driver_name, driver_tel, company_id
+    from driver_information
+    where driver_account is null
+    and company_id = #{companyId,jdbcType=INTEGER}
+    order by driver_name
+    limit 10
+    offset #{page,jdbcType=INTEGER}
+  </select>
+  <select id="getAccount" resultMap="BaseResultMap">
+    select id, driver_account, driver_pwd, driver_name, driver_tel, company_id
+    from driver_information
+    where driver_account is not null
+    and company_id = #{companyId,jdbcType=INTEGER}
+    order by driver_name
+    limit 10
+    offset #{page,jdbcType=INTEGER}
+  </select>
+
+
+
   <select id="login" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

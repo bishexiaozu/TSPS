@@ -16,7 +16,13 @@
     limit 10
     offset  #{page,jdbcType=INTEGER}
   </select>
-
+<select id="getCompanyNameList" resultMap="CompanyList">
+  select
+    id, company_abbreviation
+    from
+    company_information
+    where state = '1'
+</select>
 
 
   <resultMap id="BaseResultMap" type="com.tsps.authority.entity.CompanyInformation">

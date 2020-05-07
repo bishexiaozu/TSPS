@@ -24,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         HttpSession session = httpServletRequest.getSession();
         String url = httpServletRequest.getRequestURI();
-        if(Commons.URL.contains(url)){
+        if( (url != null && url.startsWith(Commons.URL_START_WITH)) || Commons.URL.contains(url)){
             return true;
         }else if(session.getAttribute("user") != null){
             return true;
