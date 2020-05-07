@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="TSPS:war" />
+      <artifact name="TSPS:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -12,21 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/controller/AssessmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/controller/AssessmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/AssessmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/AssessmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/controller/AssessmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/controller/AssessmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/AssessmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/AssessmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,20 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -104,8 +90,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
       </list>
     </option>
   </component>
@@ -149,6 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +201,13 @@
             <path>
               <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
               <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -221,7 +215,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -491,7 +484,7 @@
       <workItem from="1588428958993" duration="1215000" />
       <workItem from="1588774715664" duration="1455000" />
       <workItem from="1588777063340" duration="232000" />
-      <workItem from="1588837425476" duration="227000" />
+      <workItem from="1588837425476" duration="1046000" />
     </task>
     <task id="LOCAL-00001" summary="登录">
       <created>1587136408520</created>
@@ -563,15 +556,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588521880521</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1.查看历史考评">
+      <created>1588837730746</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588837730746</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14210000" />
+    <option name="totallyTimeSpent" value="15029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.21179625" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
@@ -584,7 +583,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47308782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47308782" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -596,7 +595,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -664,7 +663,8 @@
     <MESSAGE value="1.assessment模块加入redis" />
     <MESSAGE value="1.redis 服务器上配置更改" />
     <MESSAGE value="1.cookie 配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.cookie 配置" />
+    <MESSAGE value="1.查看历史考评" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.查看历史考评" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="82" key="#Project_Structure" timestamp="1586507687313">
