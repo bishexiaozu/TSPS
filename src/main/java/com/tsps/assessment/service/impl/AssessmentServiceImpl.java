@@ -253,6 +253,21 @@ public class AssessmentServiceImpl implements AssessmentService {
         return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
+    @Override
+    public ResultBean getPreviousAssessmentDetails(Integer id) {
+        AssessmentVO assessmentVO = (AssessmentVO) redisUtils.get(Commons.LAST_MONTH_ASSESSMENT_DETAILS + id);
+        if(assessmentVO != null){
+            return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+        }
+        Assessment assessment = assessmentMapper.selectById(id);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(assessment.getCreateTime());
+        assessmentVO = setAssessmentVO(id, calendar);
+        assessmentVO = setAssessmentVO(assessment.getId(), calendar);
+        redisUtils.set(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId(), assessmentVO, Commons.REDIS_TIME);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+    }
+
     AssessmentVO setAssessmentVO(Integer assessmentId,Calendar calendar){
         AssessmentVO assessmentVO = new AssessmentVO();
         List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();

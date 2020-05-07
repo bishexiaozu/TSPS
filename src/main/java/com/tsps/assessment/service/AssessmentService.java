@@ -53,7 +53,16 @@ public interface AssessmentService {
 
     ResultBean listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
 
+    /*
+     * 考评
+     * @author     ：YongBiao Liao
+     * @date       ：Created in 2020/5/6 22:30
+     * @param       id
+     * @return     : com.tsps.common.ResultBean
+     */
     ResultBean assessment(Integer id);
 
     ResultBean applyForAssessment(Integer assessmentId);
+
+    ResultBean getPreviousAssessmentDetails(Integer id);
 }

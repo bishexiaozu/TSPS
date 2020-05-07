@@ -94,5 +94,12 @@ public class AssessmentController {
         return assessmentService.applyForAssessment(assessmentId);
     }
 
+    @GetMapping(value = {"/previousAssessmentDetails/{id}"})
+    @ResponseBody
+    public ResultBean getPreviousAssessmentDetails(@PathVariable Integer id){
+        return assessmentService.getPreviousAssessmentDetails(id);
+    }
+
+
 
 }
