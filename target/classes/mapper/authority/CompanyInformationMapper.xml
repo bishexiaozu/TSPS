@@ -688,10 +688,11 @@
   <insert id="insertCompanyInformation" parameterType="com.tsps.register.dto.CompanyRegisterDTO">
     insert into company_information (company_full_name,company_credit_code,company_nature,company_industry,company_contact_identity_number,company_contact_person,
       company_contact_mob,company_contact_tel,company_email,company_website,company_address_province,company_address_city,company_address,company_business_license_photo_path,
-      company_contact_identity_photo_front_path,company_contact_identity_photo_back_path, state)
+      company_contact_identity_photo_front_path,company_contact_identity_photo_back_path,company_pwd,company_account,state)
     values (#{companyFullName,jdbcType=VARCHAR}, #{companyCreditCode,jdbcType=CHAR}, #{companyNature,jdbcType=VARCHAR},#{companyIndustry,jdbcType=VARCHAR},
       #{companyContactIdentityNumber,jdbcType=CHAR}, #{companyContactPerson,jdbcType=VARCHAR},#{companyContactMob,jdbcType=CHAR}, #{companyContactTel,jdbcType=CHAR},
       #{companyEmail,jdbcType=VARCHAR},#{companyWebsite,jdbcType=VARCHAR}, #{companyAddressProvince,jdbcType=VARCHAR}, #{companyAddressCity,jdbcType=VARCHAR},#{companyAddress,jdbcType=VARCHAR},
-      #{companyBusinessLicensePhotoPath,jdbcType=VARCHAR},#{companyContactIdentityPhotoFrontPath,jdbcType=VARCHAR}, #{companyContactIdentityPhotoBackPath,jdbcType=VARCHAR}, 0)
+      #{companyBusinessLicensePhotoPath,jdbcType=VARCHAR},#{companyContactIdentityPhotoFrontPath,jdbcType=VARCHAR}, #{companyContactIdentityPhotoBackPath,jdbcType=VARCHAR},
+      #{companyPwd,jdbcType=VARCHAR}, #{companyContactMob,jdbcType=VARCHAR},0)
   </insert>
 </mapper>

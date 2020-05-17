@@ -40,6 +40,9 @@ public class CompanyRegisterDTO implements Serializable {
     @NotBlank(message = "固定电话号码不能为空")
     private String companyContactTel;
 
+    @NotBlank(message = "密码不能为空")
+    private String companyPwd;
+
     private String companyEmail;
 
     private String companyWebsite;

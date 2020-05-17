@@ -237,12 +237,12 @@ public class AssessmentServiceImpl implements AssessmentService {
                     fileNameList.remove(fileNameList.indexOf(assessmentElementList.get(i).getAssessmentElementName()));
                 }
             }
-            assessment.setAssessmentStatus(AssessmentStatusEnum.ASSESSMENT.getStatus());
             assessment.setAssessmentTotalScore(assessmentScore);
             if(!CollectionUtils.isEmpty(assessmentDetailList)) {
                 assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
             }
         }
+        assessment.setAssessmentStatus(AssessmentStatusEnum.ASSESSMENT.getStatus());
         assessmentMapper.updateAssessment(assessment);
         return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
