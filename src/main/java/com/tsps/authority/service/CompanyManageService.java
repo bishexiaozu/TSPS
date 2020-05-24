@@ -13,5 +13,5 @@ public interface CompanyManageService {
     ResultBean setCompanyState(Integer id);
     ResultBean getCompanyList(String state, Integer page);
     ResultBean getTotalCompany(String state);
-
+    ResultBean getCompanyById(Integer id);
 }

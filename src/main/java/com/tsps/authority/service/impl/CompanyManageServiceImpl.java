@@ -24,6 +24,10 @@ public class CompanyManageServiceImpl implements CompanyManageService {
     @Autowired
     private CompanyInformationMapper mapper;
 
+    @Override
+    public ResultBean getCompanyById(Integer id) {
+        return ErrorStatusEnum.SUCCESS.toReturnValue(mapper.selectByPrimaryKey(id));
+    }
 
     @Override
     public ResultBean deleteCompany(Integer id) {

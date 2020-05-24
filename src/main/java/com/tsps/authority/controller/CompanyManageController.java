@@ -4,10 +4,7 @@ import com.tsps.authority.service.CompanyManageService;
 import com.tsps.common.ResultBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  *  * @author : luxinnan
@@ -22,6 +19,12 @@ public class CompanyManageController {
 
     @Autowired
     private CompanyManageService service;
+
+    @GetMapping("/selectById/{id}")
+    @ResponseBody
+    public ResultBean selectById(@PathVariable Integer id){
+        return service.getCompanyById(id);
+    }
 
     @PostMapping("/deleteCompany/{id}")
     @ResponseBody
