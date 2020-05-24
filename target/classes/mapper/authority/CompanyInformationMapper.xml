@@ -4,11 +4,11 @@
 
   <resultMap id="CompanyList" type="com.tsps.authority.vo.CompanyListVO">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="company_abbreviation" jdbcType="VARCHAR" property="abbreviation" />
+    <result column="company_full_name" jdbcType="VARCHAR" property="fullname" />
   </resultMap>
   <select id="getCompanyList" resultMap="CompanyList" >
     select
-    id, company_abbreviation
+    id, company_full_name
     from
     company_information
     where state = #{state,jdbcType=CHAR}
@@ -18,7 +18,7 @@
   </select>
 <select id="getCompanyNameList" resultMap="CompanyList">
   select
-    id, company_abbreviation
+    id, company_full_name
     from
     company_information
     where state = '1'

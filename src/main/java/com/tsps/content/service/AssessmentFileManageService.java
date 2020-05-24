@@ -23,7 +23,7 @@ public interface AssessmentFileManageService {
     ResultBean getTotalAssessmentFile(Integer elementId);
     ResultBean getEmployeeAssessmentFile(Integer employeeId,Integer elementId);
     ResultBean deleteAssessmentFile(Integer id);
-
+    ResultBean getElementFileList(Integer companyId,Integer elementId);
 
 
 }

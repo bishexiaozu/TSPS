@@ -61,12 +61,12 @@
     <!-- 启用注解驱动的定时任务,定时任务配置 scheduler 方式 注解 -->
     <task:annotation-driven executor="executor" scheduler="scheduler" />
 
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--&lt;!&ndash; 拦截所有mvc控制器 &ndash;&gt;-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--<bean class="com.tsps.interceptor.LoginInterceptor"></bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截所有mvc控制器 -->
+            <mvc:mapping path="/**"/>
+            <bean class="com.tsps.interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

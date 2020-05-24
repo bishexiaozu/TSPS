@@ -69,6 +69,11 @@ public class AssessmentFileManageController {
         return service.getItemByEmployeeId(id);
     }
 
+    @GetMapping("/getElementFileList/{companyId}/{elementId}")
+    @ResponseBody
+    public ResultBean getElementFileList(@PathVariable Integer companyId,@PathVariable Integer elementId){
+        return service.getElementFileList(companyId,elementId);
+    }
 
     @PostMapping("/addAssessmentEmployee")
     @ResponseBody

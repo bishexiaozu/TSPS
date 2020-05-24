@@ -156,6 +156,13 @@ public class AssessmentFileManageServiceImpl implements AssessmentFileManageServ
     }
 
     @Override
+    public ResultBean getElementFileList(Integer companyId, Integer elementId) {
+        List<AssessmentFileListVO> list = assessmentFileMapper.getElementFileList(companyId,elementId);
+        if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
+        return ErrorStatusEnum.SUCCESS.toReturnValue(list);
+    }
+
+    @Override
     public ResultBean deleteAssessmentFile(Integer id) {
         int result = assessmentFileMapper.deleteByPrimaryKey(id);
         if(result > 0)

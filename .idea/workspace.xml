@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="TSPS:war exploded" />
+      <artifact name="TSPS:war" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -10,13 +10,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="">
+    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="&#10;修改companyListVO，把简称改成全称，主要修改对应mapper；&#10;新增GET的AssessmentFile接口；&#10;开放cookie；">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/authority/vo/CompanyListVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/authority/vo/CompanyListVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/AssessmentFileManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/AssessmentFileManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/luxinnan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/luxinnan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/authority/DriverInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/authority/DriverInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/vo/CompanyListVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/authority/vo/CompanyListVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/controller/AssessmentFileManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/controller/AssessmentFileManageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/dao/AssessmentFileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/dao/AssessmentFileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/service/AssessmentFileManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/service/AssessmentFileManageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/authority/CompanyInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/authority/CompanyInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/authority/DriverInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/authority/DriverInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/content/AssessmentFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/content/AssessmentFileMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/authority/vo/CompanyListVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/authority/vo/CompanyListVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/controller/AssessmentFileManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/controller/AssessmentFileManageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/dao/AssessmentFileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/dao/AssessmentFileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/service/AssessmentFileManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/service/AssessmentFileManageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/authority/CompanyInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/authority/CompanyInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/authority/DriverInformationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/authority/DriverInformationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/content/AssessmentFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/content/AssessmentFileMapper.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,31 +49,6 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="TSPS" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/configuration/RedisConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="32" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,31 +84,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/filter/CrossingFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/LoginServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/register/dto/CompanyRegisterDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/configuration/RedisConfig.java" />
-      </list>
-    </option>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -116,154 +91,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="TSPS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="TSPS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="979" />
-    <option name="height" value="1030" />
-  </component>
   <component name="ProjectId" id="1aA0LTFjn66gt1Q7TTUGKCfTDjd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="assessment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -278,8 +108,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589971582511" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/毕业设计/TSPS" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589723352197" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -316,18 +146,6 @@
       <recent name="E:\qq下载\TSPS\TSPS\src\main\resources\mapper\ledger" />
       <recent name="E:\qq下载\TSPS\TSPS\src\main\java\com\tsps" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat8">
     <configuration name="TSPS [mybatis-generator:generate,-e]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
@@ -539,9 +357,8 @@
       <workItem from="1589004544492" duration="2950000" />
       <workItem from="1589045104570" duration="626000" />
       <workItem from="1589219890132" duration="3909000" />
-      <workItem from="1589722068858" duration="2322000" />
-      <workItem from="1589912296087" duration="405000" />
-      <workItem from="1589957558406" duration="9790000" />
+      <workItem from="1589722068858" duration="1209000" />
+      <workItem from="1590303334639" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="登录">
       <created>1587136408520</created>
@@ -634,88 +451,18 @@
       <option name="project" value="LOCAL" />
       <updated>1588912304649</updated>
     </task>
-    <task id="LOCAL-00014" summary="1.企业注册加入密码字段&#10;2.考评修改">
-      <created>1589723433661</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1589723433662</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54846000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18096514" />
-      <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Web" order="6" sideWeight="0.50141644" side_tool="true" weight="0.22386059" />
-      <window_info id="Alibaba Cloud Explorer" order="7" />
-      <window_info id="Image Layers" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42917848" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Alibaba Cloud View" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="JSF" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Alibaba Log Console" order="10" />
-      <window_info anchor="right" id="CDI" order="11" weight="0.3297587" />
-      <window_info anchor="right" id="Bean Validation" order="12" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -734,6 +481,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="登录" />
@@ -745,8 +493,8 @@
     <MESSAGE value="1.查看历史考评" />
     <MESSAGE value="修改" />
     <MESSAGE value="1.放开driver_manage/addDriver, /TSPSv3/driver_manage/getCompany请求" />
-    <MESSAGE value="1.企业注册加入密码字段&#10;2.考评修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.企业注册加入密码字段&#10;2.考评修改" />
+    <MESSAGE value="&#10;修改companyListVO，把简称改成全称，主要修改对应mapper；&#10;新增GET的AssessmentFile接口；&#10;开放cookie；" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;修改companyListVO，把简称改成全称，主要修改对应mapper；&#10;新增GET的AssessmentFile接口；&#10;开放cookie；" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="82" key="#Project_Structure" timestamp="1586507687313">
@@ -796,11 +544,12 @@
       <screen x="0" y="23" width="1440" height="815" />
     </state>
     <state x="348" y="126" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.23.1440.815@0.23.1440.815" timestamp="1586172054096" />
-    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1588323956989">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1590323549912">
+      <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.811@0.23.1440.811" timestamp="1588323956989" />
     <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.812@0.23.1440.812" timestamp="1586595227392" />
+    <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.814@0.23.1440.814" timestamp="1590323549912" />
     <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.815@0.23.1440.815" timestamp="1586606514986" />
     <state x="533" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.817@0.23.1440.817" timestamp="1586602654465" />
     <state x="533" y="123" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821@0.23.1440.821" timestamp="1586523089608" />
@@ -831,178 +580,199 @@
     <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.821@0.23.1440.821" timestamp="1586428512422" />
     <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1586533213791" />
     <state x="350" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.824@0.23.1440.824" timestamp="1586533316457" />
-    <state width="930" height="194" key="GridCell.Tab.0.bottom" timestamp="1588330011626">
+    <state width="958" height="249" key="GridCell.Tab.0.bottom" timestamp="1590326695051">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839561" />
     <state width="930" height="194" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1588324013599" />
-    <state width="930" height="194" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1588329490048" />
+    <state width="958" height="249" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1590319783958" />
     <state width="1398" height="229" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586446062354" />
-    <state width="930" height="194" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1588330011626" />
+    <state width="958" height="249" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1590326695051" />
     <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616369031" />
+    <state width="958" height="249" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1590326681552" />
     <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441841" />
-    <state width="1173" height="195" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="958" height="249" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1590324766806" />
     <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
     <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676962115" />
     <state width="800" height="282" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079807" />
-    <state width="930" height="194" key="GridCell.Tab.0.center" timestamp="1588330011625">
+    <state width="958" height="249" key="GridCell.Tab.0.center" timestamp="1590326695049">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839558" />
     <state width="930" height="194" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1588324013597" />
-    <state width="930" height="194" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1588329490046" />
+    <state width="958" height="249" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1590319783957" />
     <state width="1398" height="229" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1586446062352" />
-    <state width="930" height="194" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1588330011625" />
+    <state width="958" height="249" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1590326695049" />
     <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.815@0.23.1440.815" timestamp="1586616369030" />
+    <state width="958" height="249" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1590326681551" />
     <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441838" />
-    <state width="1173" height="195" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="958" height="249" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1590324766805" />
     <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672892" />
     <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1586676962114" />
     <state width="800" height="282" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079806" />
-    <state width="930" height="194" key="GridCell.Tab.0.left" timestamp="1588330011625">
+    <state width="958" height="249" key="GridCell.Tab.0.left" timestamp="1590326695047">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839557" />
     <state width="930" height="194" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1588324013596" />
-    <state width="930" height="194" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1588329490046" />
+    <state width="958" height="249" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1590319783957" />
     <state width="1398" height="229" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1586446062351" />
-    <state width="930" height="194" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1588330011625" />
+    <state width="958" height="249" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1590326695047" />
     <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.815@0.23.1440.815" timestamp="1586616369029" />
+    <state width="958" height="249" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1590326681550" />
     <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441837" />
-    <state width="1173" height="195" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1586522979720" />
+    <state width="958" height="249" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1590324766804" />
     <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672892" />
     <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1586676962113" />
     <state width="800" height="282" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079806" />
-    <state width="930" height="194" key="GridCell.Tab.0.right" timestamp="1588330011625">
+    <state width="958" height="249" key="GridCell.Tab.0.right" timestamp="1590326695050">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839560" />
     <state width="930" height="194" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1588324013598" />
-    <state width="930" height="194" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1588329490047" />
+    <state width="958" height="249" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1590319783958" />
     <state width="1398" height="229" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1586446062353" />
-    <state width="930" height="194" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1588330011625" />
+    <state width="958" height="249" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1590326695050" />
     <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.815@0.23.1440.815" timestamp="1586616369030" />
+    <state width="958" height="249" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1590326681552" />
     <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441840" />
-    <state width="1173" height="195" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1586522979721" />
+    <state width="958" height="249" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1590324766806" />
     <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
     <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1586676962115" />
     <state width="800" height="282" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079807" />
-    <state width="930" height="194" key="GridCell.Tab.1.bottom" timestamp="1588330011627">
+    <state width="958" height="249" key="GridCell.Tab.1.bottom" timestamp="1590326694841">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839332" />
     <state width="930" height="194" key="GridCell.Tab.1.bottom/0.23.1440.811@0.23.1440.811" timestamp="1588324013287" />
-    <state width="930" height="194" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1588329490050" />
+    <state width="958" height="249" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1590319783959" />
     <state width="958" height="244" key="GridCell.Tab.1.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586444485969" />
-    <state width="930" height="194" key="GridCell.Tab.1.bottom/0.23.1440.814@0.23.1440.814" timestamp="1588330011627" />
+    <state width="958" height="249" key="GridCell.Tab.1.bottom/0.23.1440.814@0.23.1440.814" timestamp="1590326694841" />
     <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616368840" />
+    <state width="958" height="249" key="GridCell.Tab.1.bottom/0.23.1440.816@0.23.1440.816" timestamp="1590326681553" />
     <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441845" />
-    <state width="800" height="284" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586521017337" />
+    <state width="958" height="249" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1590324766808" />
     <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672896" />
     <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676961971" />
     <state width="800" height="282" key="GridCell.Tab.1.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079682" />
-    <state width="930" height="194" key="GridCell.Tab.1.center" timestamp="1588330011627">
+    <state width="958" height="249" key="GridCell.Tab.1.center" timestamp="1590326694839">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839327" />
     <state width="930" height="194" key="GridCell.Tab.1.center/0.23.1440.811@0.23.1440.811" timestamp="1588324013285" />
-    <state width="930" height="194" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1588329490049" />
+    <state width="958" height="249" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1590319783959" />
     <state width="958" height="244" key="GridCell.Tab.1.center/0.23.1440.813@0.23.1440.813" timestamp="1586444485968" />
-    <state width="930" height="194" key="GridCell.Tab.1.center/0.23.1440.814@0.23.1440.814" timestamp="1588330011627" />
+    <state width="958" height="249" key="GridCell.Tab.1.center/0.23.1440.814@0.23.1440.814" timestamp="1590326694839" />
     <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.815@0.23.1440.815" timestamp="1586616368838" />
+    <state width="958" height="249" key="GridCell.Tab.1.center/0.23.1440.816@0.23.1440.816" timestamp="1590326681553" />
     <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441843" />
-    <state width="800" height="284" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1586521017336" />
+    <state width="958" height="249" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1590324766807" />
     <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672895" />
     <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.824@0.23.1440.824" timestamp="1586676961970" />
     <state width="800" height="282" key="GridCell.Tab.1.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079681" />
-    <state width="930" height="194" key="GridCell.Tab.1.left" timestamp="1588330011626">
+    <state width="958" height="249" key="GridCell.Tab.1.left" timestamp="1590326694839">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839326" />
     <state width="930" height="194" key="GridCell.Tab.1.left/0.23.1440.811@0.23.1440.811" timestamp="1588324013285" />
-    <state width="930" height="194" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1588329490048" />
+    <state width="958" height="249" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1590319783958" />
     <state width="958" height="244" key="GridCell.Tab.1.left/0.23.1440.813@0.23.1440.813" timestamp="1586444485968" />
-    <state width="930" height="194" key="GridCell.Tab.1.left/0.23.1440.814@0.23.1440.814" timestamp="1588330011626" />
+    <state width="958" height="249" key="GridCell.Tab.1.left/0.23.1440.814@0.23.1440.814" timestamp="1590326694839" />
     <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.815@0.23.1440.815" timestamp="1586616368837" />
+    <state width="958" height="249" key="GridCell.Tab.1.left/0.23.1440.816@0.23.1440.816" timestamp="1590326681552" />
     <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441842" />
-    <state width="800" height="284" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1586521017336" />
+    <state width="958" height="249" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1590324766807" />
     <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672895" />
     <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.824@0.23.1440.824" timestamp="1586676961969" />
     <state width="800" height="282" key="GridCell.Tab.1.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079681" />
-    <state width="930" height="194" key="GridCell.Tab.1.right" timestamp="1588330011627">
+    <state width="958" height="249" key="GridCell.Tab.1.right" timestamp="1590326694840">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839329" />
     <state width="930" height="194" key="GridCell.Tab.1.right/0.23.1440.811@0.23.1440.811" timestamp="1588324013286" />
-    <state width="930" height="194" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1588329490049" />
+    <state width="958" height="249" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1590319783959" />
     <state width="958" height="244" key="GridCell.Tab.1.right/0.23.1440.813@0.23.1440.813" timestamp="1586444485969" />
-    <state width="930" height="194" key="GridCell.Tab.1.right/0.23.1440.814@0.23.1440.814" timestamp="1588330011627" />
+    <state width="958" height="249" key="GridCell.Tab.1.right/0.23.1440.814@0.23.1440.814" timestamp="1590326694840" />
     <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.815@0.23.1440.815" timestamp="1586616368839" />
+    <state width="958" height="249" key="GridCell.Tab.1.right/0.23.1440.816@0.23.1440.816" timestamp="1590326681553" />
     <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441844" />
-    <state width="800" height="284" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1586521017337" />
+    <state width="958" height="249" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1590324766807" />
     <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672896" />
     <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.824@0.23.1440.824" timestamp="1586676961971" />
     <state width="800" height="282" key="GridCell.Tab.1.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079682" />
-    <state width="930" height="194" key="GridCell.Tab.2.bottom" timestamp="1588330011629">
+    <state width="958" height="249" key="GridCell.Tab.2.bottom" timestamp="1590326694844">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586508839357" />
     <state width="930" height="194" key="GridCell.Tab.2.bottom/0.23.1440.811@0.23.1440.811" timestamp="1588324013289" />
-    <state width="930" height="194" key="GridCell.Tab.2.bottom/0.23.1440.812@0.23.1440.812" timestamp="1588329490051" />
+    <state width="958" height="249" key="GridCell.Tab.2.bottom/0.23.1440.812@0.23.1440.812" timestamp="1590319783960" />
     <state width="958" height="244" key="GridCell.Tab.2.bottom/0.23.1440.813@0.23.1440.813" timestamp="1586444485971" />
-    <state width="930" height="194" key="GridCell.Tab.2.bottom/0.23.1440.814@0.23.1440.814" timestamp="1588330011629" />
+    <state width="958" height="249" key="GridCell.Tab.2.bottom/0.23.1440.814@0.23.1440.814" timestamp="1590326694844" />
     <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.815@0.23.1440.815" timestamp="1586616368844" />
+    <state width="958" height="249" key="GridCell.Tab.2.bottom/0.23.1440.816@0.23.1440.816" timestamp="1590326681554" />
     <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.817@0.23.1440.817" timestamp="1586614441849" />
-    <state width="800" height="284" key="GridCell.Tab.2.bottom/0.23.1440.821@0.23.1440.821" timestamp="1586521017339" />
+    <state width="958" height="249" key="GridCell.Tab.2.bottom/0.23.1440.821@0.23.1440.821" timestamp="1590324766809" />
     <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
     <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.824@0.23.1440.824" timestamp="1586676961968" />
     <state width="800" height="282" key="GridCell.Tab.2.bottom/0.23.1440.825@0.23.1440.825" timestamp="1586671079686" />
-    <state width="930" height="194" key="GridCell.Tab.2.center" timestamp="1588330011628">
+    <state width="958" height="249" key="GridCell.Tab.2.center" timestamp="1590326694842">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1586508839346" />
     <state width="930" height="194" key="GridCell.Tab.2.center/0.23.1440.811@0.23.1440.811" timestamp="1588324013288" />
-    <state width="930" height="194" key="GridCell.Tab.2.center/0.23.1440.812@0.23.1440.812" timestamp="1588329490051" />
+    <state width="958" height="249" key="GridCell.Tab.2.center/0.23.1440.812@0.23.1440.812" timestamp="1590319783960" />
     <state width="958" height="244" key="GridCell.Tab.2.center/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
-    <state width="930" height="194" key="GridCell.Tab.2.center/0.23.1440.814@0.23.1440.814" timestamp="1588330011628" />
+    <state width="958" height="249" key="GridCell.Tab.2.center/0.23.1440.814@0.23.1440.814" timestamp="1590326694842" />
     <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.815@0.23.1440.815" timestamp="1586616368842" />
+    <state width="958" height="249" key="GridCell.Tab.2.center/0.23.1440.816@0.23.1440.816" timestamp="1590326681554" />
     <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.817@0.23.1440.817" timestamp="1586614441847" />
-    <state width="800" height="284" key="GridCell.Tab.2.center/0.23.1440.821@0.23.1440.821" timestamp="1586521017338" />
+    <state width="958" height="249" key="GridCell.Tab.2.center/0.23.1440.821@0.23.1440.821" timestamp="1590324766808" />
     <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
     <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.824@0.23.1440.824" timestamp="1586676961967" />
     <state width="800" height="282" key="GridCell.Tab.2.center/0.23.1440.825@0.23.1440.825" timestamp="1586671079685" />
-    <state width="930" height="194" key="GridCell.Tab.2.left" timestamp="1588330011628">
+    <state width="958" height="249" key="GridCell.Tab.2.left" timestamp="1590326694841">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1586508839343" />
     <state width="930" height="194" key="GridCell.Tab.2.left/0.23.1440.811@0.23.1440.811" timestamp="1588324013287" />
-    <state width="930" height="194" key="GridCell.Tab.2.left/0.23.1440.812@0.23.1440.812" timestamp="1588329490050" />
+    <state width="958" height="249" key="GridCell.Tab.2.left/0.23.1440.812@0.23.1440.812" timestamp="1590319783959" />
     <state width="958" height="244" key="GridCell.Tab.2.left/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
-    <state width="930" height="194" key="GridCell.Tab.2.left/0.23.1440.814@0.23.1440.814" timestamp="1588330011628" />
+    <state width="958" height="249" key="GridCell.Tab.2.left/0.23.1440.814@0.23.1440.814" timestamp="1590326694841" />
     <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.815@0.23.1440.815" timestamp="1586616368841" />
+    <state width="958" height="249" key="GridCell.Tab.2.left/0.23.1440.816@0.23.1440.816" timestamp="1590326681553" />
     <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.817@0.23.1440.817" timestamp="1586614441846" />
-    <state width="800" height="284" key="GridCell.Tab.2.left/0.23.1440.821@0.23.1440.821" timestamp="1586521017338" />
+    <state width="958" height="249" key="GridCell.Tab.2.left/0.23.1440.821@0.23.1440.821" timestamp="1590324766808" />
     <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.823@0.23.1440.823" timestamp="1586681672893" />
     <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.824@0.23.1440.824" timestamp="1586676961964" />
     <state width="800" height="282" key="GridCell.Tab.2.left/0.23.1440.825@0.23.1440.825" timestamp="1586671079684" />
-    <state width="930" height="194" key="GridCell.Tab.2.right" timestamp="1588330011629">
+    <state width="958" height="249" key="GridCell.Tab.2.right" timestamp="1590326694843">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="958" height="284" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1586508839351" />
     <state width="930" height="194" key="GridCell.Tab.2.right/0.23.1440.811@0.23.1440.811" timestamp="1588324013288" />
-    <state width="930" height="194" key="GridCell.Tab.2.right/0.23.1440.812@0.23.1440.812" timestamp="1588329490051" />
+    <state width="958" height="249" key="GridCell.Tab.2.right/0.23.1440.812@0.23.1440.812" timestamp="1590319783960" />
     <state width="958" height="244" key="GridCell.Tab.2.right/0.23.1440.813@0.23.1440.813" timestamp="1586444485970" />
-    <state width="930" height="194" key="GridCell.Tab.2.right/0.23.1440.814@0.23.1440.814" timestamp="1588330011629" />
+    <state width="958" height="249" key="GridCell.Tab.2.right/0.23.1440.814@0.23.1440.814" timestamp="1590326694843" />
     <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.815@0.23.1440.815" timestamp="1586616368843" />
+    <state width="958" height="249" key="GridCell.Tab.2.right/0.23.1440.816@0.23.1440.816" timestamp="1590326681554" />
     <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.817@0.23.1440.817" timestamp="1586614441848" />
-    <state width="800" height="284" key="GridCell.Tab.2.right/0.23.1440.821@0.23.1440.821" timestamp="1586521017339" />
+    <state width="958" height="249" key="GridCell.Tab.2.right/0.23.1440.821@0.23.1440.821" timestamp="1590324766809" />
     <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.823@0.23.1440.823" timestamp="1586681672894" />
     <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.824@0.23.1440.824" timestamp="1586676961968" />
     <state width="800" height="282" key="GridCell.Tab.2.right/0.23.1440.825@0.23.1440.825" timestamp="1586671079686" />
-    <state x="258" y="93" key="Maven.ArtifactSearchDialog" timestamp="1586415720987">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="258" y="93" key="Maven.ArtifactSearchDialog" timestamp="1590319186461">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
+    <state x="258" y="93" key="Maven.ArtifactSearchDialog/0.23.1440.812@0.23.1440.812" timestamp="1590319186461" />
     <state x="258" y="93" key="Maven.ArtifactSearchDialog/0.23.1440.815@0.23.1440.815" timestamp="1586415720987" />
+    <state x="144" y="91" key="MergeDialog" timestamp="1590315963399">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="144" y="91" key="MergeDialog/0.23.1440.812@0.23.1440.812" timestamp="1590315963399" />
+    <state x="611" y="301" width="406" height="252" key="MultipleFileMergeDialog" timestamp="1590315935358">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="611" y="301" width="406" height="252" key="MultipleFileMergeDialog/0.23.1440.812@0.23.1440.812" timestamp="1590315935358" />
     <state x="208" y="44" key="SettingsEditor" timestamp="1588344438992">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
@@ -1022,6 +792,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="432" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1440.900@0.0.1440.900" timestamp="1586411239693" />
+    <state x="523" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590327809291">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="523" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1590327809291" />
+    <state x="523" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1590315920498" />
     <state x="497" y="201" key="extract.method.dialog" timestamp="1586431259111">
       <screen x="0" y="23" width="1440" height="817" />
     </state>
@@ -1046,8 +821,12 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java</url>
           <line>86</line>
-          <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tsps/authority/dto/AddDriverDTO.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1060,447 +839,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyEmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/authority/DriverInformationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/vo/CompanyListVO.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/dao/DriverInformationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/controller/GovernmentFileManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/service/DriverManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/DriverManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/dto/AddDriverDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/service/impl/DriverManageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="53" column="66" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/RedisUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListPreviousAssessmentDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.tsps.assessment.entity.Assessment">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.tsps.assessment.entity.Assessment</OriginalElement>
-          <nodes>
-            <node x="" y="">com.tsps.assessment.entity.Assessment</node>
-            <node x="" y="">com.tsps.content.entity.AssessmentItem</node>
-            <node x="" y="">lombok.Data</node>
-            <node x="" y="">com.tsps.assessment.entity.SelfAssessmentNote</node>
-            <node x="" y="">com.tsps.assessment.entity.AssessmentDetail</node>
-            <node x="" y="">com.tsps.content.entity.AssessmentElement</node>
-            <node x="" y="">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9812499999999996" x="415.0" y="875.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/entity/Assessment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.tsps.content.entity.AssessmentElement">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.tsps.content.entity.AssessmentElement</OriginalElement>
-          <nodes>
-            <node x="" y="">com.tsps.assessment.entity.Assessment</node>
-            <node x="" y="">com.tsps.content.entity.AssessmentItem</node>
-            <node x="" y="">com.tsps.assessment.entity.SelfAssessmentNote</node>
-            <node x="" y="">com.tsps.assessment.entity.AssessmentDetail</node>
-            <node x="" y="">com.tsps.content.entity.AssessmentElement</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.155283307810107" x="413.0" y="271.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/entity/AssessmentElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" selection-start-line="15" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.tsps.assessment.controller.AssessmentController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.tsps.assessment.controller.AssessmentController</OriginalElement>
-          <nodes>
-            <node x="" y="">com.tsps.assessment.controller.AssessmentController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="274.0" y="252.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ResultBeanCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/exception/ControllerExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/register/dto/CompanyRegisterDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/CompanyInformationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/register/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="93" column="92" selection-start-line="93" selection-start-column="75" selection-end-line="93" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/enums/AssessmentStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/authority/CompanyInformationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="619" column="2" selection-start-line="619" selection-start-column="2" selection-end-line="619" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/dao/CompanyInformationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/BasicInformationDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="47" column="75" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/authority/controller/CompanyManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="31" column="57" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ResultBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorCodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/QueryAssessmentDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListUnAssessmentDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/ErrorStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="51" column="64" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/filter/CrossingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="37" column="86" selection-start-line="37" selection-start-column="86" selection-end-line="37" selection-end-column="86" />
-          <folding>
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#2050#2051#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcherServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="71" column="8" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="62" column="74" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="249" column="13" lean-forward="true" selection-start-line="249" selection-start-column="13" selection-end-line="249" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#listUnAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/configuration/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

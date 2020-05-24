@@ -16,7 +16,12 @@
     limit 10
     offset #{page,jdbcType=INTEGER}
   </select>
-
+<select id="getElementFileList" resultMap="FileList">
+  select id, amt_file_title, amt_file_path, amt_file_upload_time
+    from assessment_file
+    where assessment_element_id = #{elementId,jdbcType=INTEGER}
+    and company_id = #{companyId,jdbcType=INTEGER}
+</select>
 
 
  <select id="getFileID" resultType="java.lang.Integer">

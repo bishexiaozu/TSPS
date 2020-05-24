@@ -20,6 +20,7 @@ public interface AssessmentFileMapper {
 
     int insertSelective(AssessmentFile record);
 
+    List<AssessmentFileListVO> getElementFileList(@Param("companyId") Integer companyId,@Param("elementId")Integer elementId);
     List<AssessmentFileListVO> getAssessmentFileList(@Param("elementId") Integer elementId,@Param("page" )Integer page);
     List<AssessmentFile> selectByExample(AssessmentFileExample example);
 

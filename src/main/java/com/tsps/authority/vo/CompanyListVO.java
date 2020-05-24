@@ -14,5 +14,5 @@ import java.io.Serializable;
 public class CompanyListVO implements Serializable {
     private static final long serialVersionUID = 1;
     private Integer id;
-    private String abbreviation;
+    private String fullname;
 }

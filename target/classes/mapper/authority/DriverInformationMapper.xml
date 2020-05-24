@@ -12,12 +12,12 @@
 
   <select id="countNull" resultType="java.lang.Long">
     select count(*) from driver_information
-    where companyId=#{companyId,jdbcType=INTEGER}
+    where company_id=#{companyId,jdbcType=INTEGER}
     and driver_account is null
   </select>
   <select id="count" resultType="java.lang.Long">
     select count(*) from driver_information
-    where companyId=#{companyId,jdbcType=INTEGER}
+    where company_id=#{companyId,jdbcType=INTEGER}
     and driver_account is not null
   </select>
 

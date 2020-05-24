@@ -42,4 +42,12 @@ public class Commons {
     public static final String URL_START_WITH = "/TSPSv3/informationManage/upload";
 
     public static final String LOGIN_URL_START_WITH = "/TSPSv3/login";
+
+    public static final String EXAM_URL_START_WITH = "/TSPSv3/exam";
+
+    public static final String PRACTICE_URL_START_WITH = "/TSPSv3/practice";
+
+    public static final String EXERCISE_URL_START_WITH = "/TSPSv3/exercise";
+
+
 }
