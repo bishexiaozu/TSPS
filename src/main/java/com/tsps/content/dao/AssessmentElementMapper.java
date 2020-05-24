@@ -35,4 +35,6 @@ public interface AssessmentElementMapper {
     int updateByPrimaryKey(AssessmentElement record);
 
     List<AssessmentElement> getAllElements();
+
+    List<AssessmentElement> getElementsByItemId(Integer assessmentItemId);
 }

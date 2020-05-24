@@ -62,21 +62,21 @@
     </foreach>
   </update>
 
-  <select id="getUnAssessmentTotalNumber" resultType="java.lang.Integer" parameterType="com.tsps.assessment.dto.ListUnAssessmentDTO">
+  <select id="getAssessmentTotalNumber" resultType="java.lang.Integer" parameterType="com.tsps.assessment.dto.ListAssessmentDTO">
     select count(assessment.id)
     from assessment left join company_information on (assessment.company_id = company_information.id)
-    where assessment_status = 2
+    where assessment_status = #{assessmentState}
     <if test="companyFullName != '' and companyFullName != null">
       and company_full_name like concat(concat('%',#{companyFullName}),'%')
     </if>
   </select>
 
-  <select id="listUnAssessment" resultType="com.tsps.assessment.vo.UnAssessmentVO" parameterType="com.tsps.assessment.dto.ListUnAssessmentDTO">
-    select assessment.id,assessment_status, self_assessment_total_score,assessment.create_time,company_full_name
+  <select id="listAssessment" resultType="com.tsps.assessment.vo.ListAssessmentVO" parameterType="com.tsps.assessment.dto.ListAssessmentDTO">
+    select assessment.id,assessment_status, self_assessment_total_score,assessment_total_score,assessment.create_time,company_full_name
     from assessment left join company_information on (assessment.company_id = company_information.id)
-    where assessment_status = 2
+    where assessment_status = #{assessmentState,jdbcType=INTEGER}
     <if test="companyFullName != '' and companyFullName != null">
-     and company_full_name like concat(concat('%',#{companyFullName}),'%')
+      and company_full_name like concat(concat('%',#{companyFullName}),'%')
     </if>
     order by create_time asc
     limit #{beginIndex},#{pageSize}
@@ -94,6 +94,7 @@
      set assessment_total_score = #{assessmentTotalScore,jdbcType=INTEGER},assessment_status = #{assessmentStatus,jdbcType=INTEGER}
      where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="applyForAssessment">
     update assessment
     set assessment_status = #{assessmentStatus,jdbcType=INTEGER}

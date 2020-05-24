@@ -8,21 +8,20 @@ import java.util.List;
 
 /**
  * @author : YongBiao Liao
- * @date : 2020/4/8 20:55
+ * @date : 2020/5/24 23:11
  * @description:
  * @modified :
  */
 @Data
-public class SelfAssessmentItemDetailDTO implements Serializable{
+public class SelfAssessmentItemDetailDTO implements Serializable {
 
         private static final long serialVersionUID = 1;
 
-        @NotNull(message = "考核项目id不能为空")
+        @NotNull(message = "考核要素id不能为空")
         private Integer assessmentItemId;
 
-        @NotNull(message = "每项考核项目对应的考核要素自评情况不能为空")
-        private List<SelfAssessmentElementDetailDTO> selfAssessmentElementDetailDTOList;
-
+        @NotNull(message = "考核要素自评内容不能为空")
         private String selfAssessmentNote;
 
+        private List<SelfAssessmentElementDetailDTO> selfAssessmentElementDetailDTOList;
 }

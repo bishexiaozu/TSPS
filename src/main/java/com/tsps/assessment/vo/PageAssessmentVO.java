@@ -12,11 +12,11 @@ import java.util.List;
  * @modified :
  */
 @Data
-public class ListUnAssessmentVO implements Serializable {
+public class PageAssessmentVO implements Serializable {
 
     private static final long serialVersionUID = 1;
 
-    private List<UnAssessmentVO> list;
+    private List<ListAssessmentVO> list;
 
     private Integer total;
 

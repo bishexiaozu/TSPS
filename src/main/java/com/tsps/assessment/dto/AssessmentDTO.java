@@ -4,17 +4,16 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 /**
  * @author : YongBiao Liao
- * @date : 2020/4/8 20:49
+ * @date : 2020/5/24 22:26
  * @description:
  * @modified :
  */
 @Data
-public class SelfAssessmentDTO implements Serializable {
+public class AssessmentDTO implements Serializable {
 
     private static final long serialVersionUID = 1;
 
@@ -24,7 +23,6 @@ public class SelfAssessmentDTO implements Serializable {
     @NotNull(message = "企业id不能为空")
     private Integer companyId;
 
-    private Date selfAssessmentTime;
+    private List<AssessmentItemDetailDTO> assessmentItemDetailDTOList;
 
-    private List<SelfAssessmentItemDetailDTO> selfAssessmentItemDetailDTOList;
 }

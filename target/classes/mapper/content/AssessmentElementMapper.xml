@@ -214,4 +214,11 @@
     from assessment_element
   </select>
 
+  <select id="getElementsByItemId" resultType="com.tsps.content.entity.AssessmentElement">
+    select
+    <include refid="Base_Column_List" />
+    from assessment_element
+    where assessment_item_id = #{assessmentItemId,jdbcType=INTEGER}
+  </select>
+
 </mapper>

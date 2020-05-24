@@ -11,4 +11,6 @@ public class SelfAssessmentNote {
     private Integer assessmentItemId;
 
     private String selfAssessmentNote;
+
+    private String assessmentNote;
 }

@@ -1,8 +1,8 @@
 package com.tsps.assessment.dao;
 
-import com.tsps.assessment.dto.ListUnAssessmentDTO;
+import com.tsps.assessment.dto.ListAssessmentDTO;
 import com.tsps.assessment.entity.Assessment;
-import com.tsps.assessment.vo.UnAssessmentVO;
+import com.tsps.assessment.vo.ListAssessmentVO;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -26,9 +26,9 @@ public interface AssessmentMapper {
 
     int updateAssessmentTotalScore(@Param("list") List<Assessment> list);
 
-    int getUnAssessmentTotalNumber(ListUnAssessmentDTO listUnAssessmentDTO);
+    int getAssessmentTotalNumber(ListAssessmentDTO listAssessmentDTO);
 
-    List<UnAssessmentVO> listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
+    List<ListAssessmentVO> listAssessment(ListAssessmentDTO listAssessmentDTO);
 
     Assessment selectById(Integer id);
 

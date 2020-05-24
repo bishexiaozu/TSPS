@@ -6,13 +6,14 @@
     <result column="assessment_id" jdbcType="INTEGER" property="assessmentId" />
     <result column="assessment_item_id" jdbcType="INTEGER" property="assessmentItemId" />
     <result column="self_assessment_note" jdbcType="VARCHAR" property="selfAssessmentNote" />
+    <result column="assessment_note" jdbcType="VARCHAR" property="assessmentNote" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, assessment_id, assessment_item_id, self_assessment_note
+    id, assessment_id, assessment_item_id, self_assessment_note,assessment_note
   </sql>
 
-  <select id="getSelfAssessmentNotes" parameterType="java.lang.Integer" resultType="java.lang.String">
-    select self_assessment_note
+  <select id="getSelfAssessmentNotes" parameterType="java.lang.Integer" resultType="com.tsps.assessment.entity.SelfAssessmentNote">
+    select <include refid="Base_Column_List"/>
     from self_assessment_note
     where assessment_id = #{assessmentId,jdbcType=INTEGER}
     order by assessment_item_id asc
@@ -34,5 +35,13 @@
       #{item.selfAssessmentNote,jdbcType=VARCHAR})
     </foreach>
   </insert>
+
+  <update id="updateAssessmentNote">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update self_assessment_note
+      set assessment_note = #{item.assessmentNote,jdbcType=VARCHAR}
+      where assessment_id = #{item.assessmentId,jdbcType=INTEGER} and assessment_item_id = #{item.assessmentItemId,jdbcType=INTEGER}
+    </foreach>
+  </update>
 
 </mapper>

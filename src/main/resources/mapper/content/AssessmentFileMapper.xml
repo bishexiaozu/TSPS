@@ -274,4 +274,10 @@
     from assessment_file
     where company_id = #{companyId, jdbcType=INTEGER}
   </select>
+
+  <select id="countFiles" resultType="java.lang.Integer">
+    select count(id)
+    from assessment_file
+    where company_id = #{companyId, jdbcType=INTEGER} and assessment_element_id = #{assessmentElementId, jdbcType=INTEGER}
+  </select>
 </mapper>

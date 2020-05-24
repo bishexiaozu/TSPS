@@ -1,6 +1,7 @@
 package com.tsps.assessment.controller;
 
-import com.tsps.assessment.dto.ListUnAssessmentDTO;
+import com.tsps.assessment.dto.AssessmentDTO;
+import com.tsps.assessment.dto.ListAssessmentDTO;
 import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.assessment.service.AssessmentService;
@@ -69,20 +70,20 @@ public class AssessmentController {
 
     @PostMapping(value = "/listUnAssessment")
     @ResponseBody
-    public ResultBean listUnAssessment(@Valid @RequestBody ListUnAssessmentDTO listUnAssessmentDTO, BindingResult bindingResult){
+    public ResultBean listUnAssessment(@Valid @RequestBody ListAssessmentDTO listAssessmentDTO, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
-        return assessmentService.listUnAssessment(listUnAssessmentDTO);
+        return assessmentService.listAssessment(listAssessmentDTO);
     }
 
-    @GetMapping(value = {"/assessment/{id}", "/assessment/"})
+    @PostMapping(value = "/assessment")
     @ResponseBody
-    public ResultBean assessment(@PathVariable(required = false) Integer id){
-        if(id == null){
-            return ErrorStatusEnum.ID_IS_EMPTY.toReturnValue();
+    public ResultBean assessment(@Valid @RequestBody AssessmentDTO assessmentDTO, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return ErrorStatusEnum.FAIL.toReturnValue(bindingResult);
         }
-        return assessmentService.assessment(id);
+        return assessmentService.assessment(assessmentDTO);
     }
 
     @GetMapping(value = {"/applyForAssessment/{assessmentId}", "/applyForAssessment/"})

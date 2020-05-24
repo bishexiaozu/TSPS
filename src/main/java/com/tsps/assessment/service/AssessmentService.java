@@ -1,6 +1,7 @@
 package com.tsps.assessment.service;
 
-import com.tsps.assessment.dto.ListUnAssessmentDTO;
+import com.tsps.assessment.dto.AssessmentDTO;
+import com.tsps.assessment.dto.ListAssessmentDTO;
 import com.tsps.assessment.dto.QueryAssessmentDTO;
 import com.tsps.assessment.dto.SelfAssessmentDTO;
 import com.tsps.common.ResultBean;
@@ -51,7 +52,7 @@ public interface AssessmentService {
      */
     ResultBean selfAssessment(SelfAssessmentDTO selfAssessmentDTO);
 
-    ResultBean listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO);
+    ResultBean listAssessment(ListAssessmentDTO listAssessmentDTO);
 
     /*
      * 考评
@@ -60,7 +61,7 @@ public interface AssessmentService {
      * @param       id
      * @return     : com.tsps.common.ResultBean
      */
-    ResultBean assessment(Integer id);
+    ResultBean assessment(AssessmentDTO assessmentDTO);
 
     ResultBean applyForAssessment(Integer assessmentId);
 

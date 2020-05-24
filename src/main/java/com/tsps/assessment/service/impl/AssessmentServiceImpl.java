@@ -84,6 +84,7 @@ public class AssessmentServiceImpl implements AssessmentService {
         return ErrorStatusEnum.SUCCESS.toReturnValue(previousAssessmentVOList);
     }
 
+    @Transactional
     @Override
     public ResultBean getSelfAssessmentDetails(QueryAssessmentDTO queryAssessmentDTO){
         Calendar calendar = Calendar.getInstance();
@@ -92,18 +93,66 @@ public class AssessmentServiceImpl implements AssessmentService {
         int dayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         Date lastDay = DateUtil.toDate(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1,dayOfMonth);
         Assessment assessment = assessmentMapper.getAssessment(queryAssessmentDTO.getCompanyId(), firstDay, lastDay);
-        Integer assessmentId = assessment == null ? null : assessment.getId();
-        AssessmentVO assessmentVO = null;
-        if(assessmentId != null){
-            assessmentVO = (AssessmentVO) redisUtils.get(Commons.SELF_ASSESSMENT_DETAILS + assessmentId);
+
+        AssessmentVO assessmentVO = new AssessmentVO();
+        List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
+        List<AssessmentDetail> assessmentDetailList = null;
+        int selfTotalScore = 0;
+
+        List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
+        assessmentDetailList = new ArrayList<>();
+        for(int i = 0; i < assessmentItemList.size(); i++){
+            AssessmentItemDetailVO assessmentItemDetailVO = new AssessmentItemDetailVO();
+            assessmentItemDetailVO.setAssessmentItemId(assessmentItemList.get(i).getId());
+            assessmentItemDetailVO.setAssessmentItemName(assessmentItemList.get(i).getAssessmentItemName());
+            assessmentItemDetailVO.setAssessmentItemScore(assessmentItemList.get(i).getScore());
+            List<AssessmentElementDetailVO> assessmentElementDetailVOList = new ArrayList<>();
+            List<AssessmentElement> assessmentElementList = assessmentElementMapper.getElementsByItemId(assessmentItemList.get(i).getId());
+            for(int j = 0; j < assessmentElementList.size(); j++){
+                AssessmentDetail assessmentDetail = new AssessmentDetail();
+                assessmentDetail.setAssessmentItemId(assessmentItemList.get(i).getId());
+                assessmentDetail.setAssessmentElementId(assessmentElementList.get(j).getId());
+                int selfScore = assessmentFileMapper.countFiles(queryAssessmentDTO.getCompanyId(),assessmentElementList.get(j).getId()) > 0
+                        ? assessmentElementList.get(j).getScore() : 0;
+                selfTotalScore += selfScore;
+                assessmentDetail.setSelfAssessmentScore(selfScore);
+                assessmentDetailList.add(assessmentDetail);
+                //
+                AssessmentElementDetailVO assessmentElementDetailVO= new AssessmentElementDetailVO();
+                assessmentElementDetailVO.setAssessmentElementId(assessmentElementList.get(j).getId());
+                assessmentElementDetailVO.setAssessmentElementName(assessmentElementList.get(j).getAssessmentElementName());
+                assessmentElementDetailVO.setScore(assessmentElementList.get(j).getScore());
+                assessmentElementDetailVO.setSelfAssessmentScore(selfScore);
+                assessmentElementDetailVOList.add(assessmentElementDetailVO);
+            }
+            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentElementDetailVOList);
+            assessmentItemDetailVOList.add(assessmentItemDetailVO);
         }
-        if(assessmentVO != null){
-            return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+        assessmentVO.setAssessmentItemDetailVOList(assessmentItemDetailVOList);
+
+        Map<String, Object> assessmentDetailMap = new HashMap<>();
+        assessmentDetailMap.put("list",assessmentDetailList);
+        if(assessment == null){
+            assessment = new Assessment();
+            assessment.setSelfAssessmentTotalScore(selfTotalScore);
+            assessment.setCompanyId(queryAssessmentDTO.getCompanyId());
+            assessment.setCreateTime(queryAssessmentDTO.getDate());
+            assessment.setAssessmentStatus(AssessmentStatusEnum.SELF_ASSESSMENT.getStatus());
+            assessmentMapper.insertAssessment(assessment);
+            assessmentDetailMap.put("assessmentId",assessment.getId());
+            assessmentDetailMapper.insertAssessmentDetails(assessmentDetailMap);
+        }else {
+            assessmentMapper.updateSelfAssessmentTotalScore(assessment.getId(), selfTotalScore);
+            assessmentDetailMap.put("assessmentId",assessment.getId());
+            assessmentDetailMapper.updateAssessmentDetails(assessmentDetailMap);
+            List<SelfAssessmentNote> selfAssessmentNoteList = selfAssessmentNoteMapper.getSelfAssessmentNotes(assessment.getId());
+            for(int i = 0 ; i < selfAssessmentNoteList.size(); i++){
+                assessmentItemDetailVOList.get(i).setSelfAssessmentNote(selfAssessmentNoteList.get(i).getSelfAssessmentNote());
+            }
         }
-        assessmentVO = setAssessmentVO(assessmentId, calendar);
-        if(assessmentId != null){
-            redisUtils.set(Commons.SELF_ASSESSMENT_DETAILS + assessmentId, assessmentVO,Commons.REDIS_TIME);
-        }
+        assessmentVO.setAssessmentId(assessment.getId());
+        assessmentVO.setSelfAssessmentTotalScore(selfTotalScore);
+        assessmentVO.setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月");
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
@@ -124,7 +173,7 @@ public class AssessmentServiceImpl implements AssessmentService {
         if(assessmentVO != null){
             return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
         }
-        assessmentVO = setAssessmentVO(assessment.getId(), calendar);
+        assessmentVO = setAssessmentVO(assessment, calendar);
         redisUtils.set(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId(), assessmentVO, Commons.REDIS_TIME);
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
@@ -132,116 +181,75 @@ public class AssessmentServiceImpl implements AssessmentService {
     @Transactional
     @Override
     public ResultBean selfAssessment(SelfAssessmentDTO selfAssessmentDTO) {
-        List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
         List<SelfAssessmentNote> selfAssessmentNoteList = new ArrayList<>();
-        List<SelfAssessmentItemDetailDTO> itemDetailDTOList = selfAssessmentDTO.getSelfAssessmentItemDetailDTOList();
-        int selfTotalScore = 0;
-        for(int i = 0; i < itemDetailDTOList.size(); i++){
-            List<SelfAssessmentElementDetailDTO> elementDetailDTOList = itemDetailDTOList.get(i).getSelfAssessmentElementDetailDTOList();
-            //自评描述
+        List<SelfAssessmentItemDetailDTO> list = selfAssessmentDTO.getSelfAssessmentItemDetailDTOList();
+        for(int i = 0; i < list.size(); i++){
             SelfAssessmentNote selfAssessmentNote = new SelfAssessmentNote();
-            selfAssessmentNote.setAssessmentItemId(itemDetailDTOList.get(i).getAssessmentItemId());
-            selfAssessmentNote.setSelfAssessmentNote(itemDetailDTOList.get(i).getSelfAssessmentNote());
+            selfAssessmentNote.setAssessmentItemId(list.get(i).getAssessmentItemId());
+            selfAssessmentNote.setSelfAssessmentNote(list.get(i).getSelfAssessmentNote());
             selfAssessmentNoteList.add(selfAssessmentNote);
-            //每项考核项目对应考核要素的细节
-            for(int j = 0; j < elementDetailDTOList.size(); j++){
-                AssessmentDetail assessmentDetail = new AssessmentDetail();
-                assessmentDetail.setAssessmentItemId(itemDetailDTOList.get(i).getAssessmentItemId());
-                assessmentDetail.setAssessmentElementId(elementDetailDTOList.get(j).getAssessmentElementId());
-                assessmentDetail.setSelfAssessmentScore(elementDetailDTOList.get(j).getSelfAssessmentScore());
-                selfTotalScore += elementDetailDTOList.get(j).getSelfAssessmentScore();
-                assessmentDetailList.add(assessmentDetail);
-            }
         }
-        Integer assessmentId = selfAssessmentDTO.getAssessmentId();
-        Map<String, Object> assessmentDetailMap = new HashMap<>();
-        assessmentDetailMap.put("list",assessmentDetailList);
-
         Map<String, Object> selfAssessmentNoteMap = new HashMap<>();
         selfAssessmentNoteMap.put("list",selfAssessmentNoteList);
-
-        if(assessmentId == null) {
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(selfAssessmentDTO.getSelfAssessmentTime());
-            Date firstDay = DateUtil.toDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, 1);
-            Date lastDay = DateUtil.toDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
-            Assessment assessment = assessmentMapper.getAssessment(selfAssessmentDTO.getCompanyId(), firstDay, lastDay);
-            assessmentId = assessment == null ? null : assessment.getId();
-        }
-
-        if(assessmentId != null){
-            assessmentMapper.updateSelfAssessmentTotalScore(assessmentId, selfTotalScore);
-            assessmentDetailMap.put("assessmentId",assessmentId);
-            assessmentDetailMapper.updateAssessmentDetails(assessmentDetailMap);
-            selfAssessmentNoteMap.put("assessmentId",assessmentId);
-            selfAssessmentNoteMapper.updateSelfAssessmentNotes(selfAssessmentNoteMap);
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(selfAssessmentDTO.getSelfAssessmentTime());
-            AssessmentVO assessmentVO = setAssessmentVO(assessmentId, calendar);
-            redisUtils.set(Commons.SELF_ASSESSMENT_DETAILS + assessmentId, assessmentVO, Commons.REDIS_TIME);
-        }else {
-            Assessment assessment = new Assessment();
-            assessment.setCompanyId(selfAssessmentDTO.getCompanyId());
-            assessment.setAssessmentStatus(AssessmentStatusEnum.SELF_ASSESSMENT.getStatus());
-            assessment.setSelfAssessmentTotalScore(selfTotalScore);
-            assessment.setCreateTime(selfAssessmentDTO.getSelfAssessmentTime());
-            assessmentMapper.insertAssessment(assessment);
-            assessmentDetailMap.put("assessmentId",assessment.getId());
-            assessmentDetailMapper.insertAssessmentDetails(assessmentDetailMap);
-            selfAssessmentNoteMap.put("assessmentId",assessment.getId());
+        selfAssessmentNoteMap.put("assessmentId",selfAssessmentDTO.getAssessmentId());
+        if(CollectionUtils.isEmpty(selfAssessmentNoteMapper.getSelfAssessmentNotes(selfAssessmentDTO.getAssessmentId()))) {
             selfAssessmentNoteMapper.insertSelfAssessmentNotes(selfAssessmentNoteMap);
+        }else {
+            selfAssessmentNoteMapper.updateSelfAssessmentNotes(selfAssessmentNoteMap);
         }
         return ErrorStatusEnum.SUCCESS.toReturnValue();
     }
 
     @Override
-    public ResultBean listUnAssessment(ListUnAssessmentDTO listUnAssessmentDTO) {
-        int total = assessmentMapper.getUnAssessmentTotalNumber(listUnAssessmentDTO);
-        ListUnAssessmentVO listUnAssessmentVO = new ListUnAssessmentVO();
-        listUnAssessmentVO.setTotal(total);
+    public ResultBean listAssessment(ListAssessmentDTO listAssessmentDTO) {
+        int total = assessmentMapper.getAssessmentTotalNumber(listAssessmentDTO);
+        PageAssessmentVO pageAssessmentVO = new PageAssessmentVO();
+        pageAssessmentVO.setTotal(total);
         if(total == 0){
-            return ErrorStatusEnum.SUCCESS.toReturnValue(listUnAssessmentVO);
+            return ErrorStatusEnum.SUCCESS.toReturnValue(pageAssessmentVO);
         }
-        List<UnAssessmentVO> unAssessmentVOList = assessmentMapper.listUnAssessment(listUnAssessmentDTO);
-        if(CollectionUtils.isEmpty(unAssessmentVOList)){
-            return ErrorStatusEnum.SUCCESS.toReturnValue(listUnAssessmentVO);
+        List<ListAssessmentVO> listAssessmentVOList = assessmentMapper.listAssessment(listAssessmentDTO);
+        if(CollectionUtils.isEmpty(listAssessmentVOList)){
+            return ErrorStatusEnum.SUCCESS.toReturnValue(pageAssessmentVO);
         }
         Calendar calendar = Calendar.getInstance();
-        for(int i = 0; i < unAssessmentVOList.size(); i++){
-            unAssessmentVOList.get(i).setAssessmentItem("十六项");
-            calendar.setTime(unAssessmentVOList.get(i).getCreateTime());
-            unAssessmentVOList.get(i).setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1 ) + "月");
+        for(int i = 0; i < listAssessmentVOList.size(); i++){
+            listAssessmentVOList.get(i).setAssessmentItem("十六项");
+            calendar.setTime(listAssessmentVOList.get(i).getCreateTime());
+            listAssessmentVOList.get(i).setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1 ) + "月");
         }
-        listUnAssessmentVO.setList(unAssessmentVOList);
-        return ErrorStatusEnum.SUCCESS.toReturnValue(listUnAssessmentVO);
+        pageAssessmentVO.setList(listAssessmentVOList);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(pageAssessmentVO);
     }
 
+    @Transactional
     @Override
-    public ResultBean assessment(Integer id) {
-        Assessment assessment = assessmentMapper.selectById(id);
-        List<AssessmentElement> assessmentElementList = assessmentElementMapper.getAllElements();
-        List<String> fileNameList = assessmentFileMapper.assessmentFileNameList(assessment.getCompanyId());
-        if(CollectionUtils.isEmpty(fileNameList)){
-            assessment.setAssessmentTotalScore(0);
-        }else {
-            int assessmentScore = 0;
-            List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
-            for(int i = 0; i < assessmentElementList.size(); i++){
-                if(fileNameList.contains(assessmentElementList.get(i).getAssessmentElementName())){
-                    AssessmentDetail assessmentDetail = new AssessmentDetail();
-                    assessmentDetail.setAssessmentId(assessment.getId());
-                    assessmentDetail.setAssessmentScore(assessmentElementList.get(i).getScore());
-                    assessmentDetail.setAssessmentElementId(assessmentElementList.get(i).getId());
-                    assessmentDetailList.add(assessmentDetail);
-                    assessmentScore += assessmentElementList.get(i).getScore();
-                    fileNameList.remove(fileNameList.indexOf(assessmentElementList.get(i).getAssessmentElementName()));
-                }
+    public ResultBean assessment(AssessmentDTO assessmentDTO) {
+        Assessment assessment = assessmentMapper.selectById(assessmentDTO.getAssessmentId());
+        int assessmentTotalScore = 0;
+        List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
+        List<SelfAssessmentNote> selfAssessmentNoteList = new ArrayList<>();
+
+        List<AssessmentItemDetailDTO> itemDetailDTOList = assessmentDTO.getAssessmentItemDetailDTOList();
+        for(int i = 0; i < itemDetailDTOList.size(); i++){
+            List<AssessmentElementDetailDTO> elementDetailDTOList = itemDetailDTOList.get(i).getAssessmentElementDetailDTOList();
+            for(int j = 0; j < elementDetailDTOList.size(); j++){
+                AssessmentDetail assessmentDetail = new AssessmentDetail();
+                assessmentDetail.setAssessmentId(assessment.getId());
+                assessmentDetail.setAssessmentScore(elementDetailDTOList.get(j).getAssessmentScore());
+                assessmentDetail.setAssessmentElementId(elementDetailDTOList.get(j).getAssessmentElementId());
+                assessmentDetailList.add(assessmentDetail);
+                assessmentTotalScore += elementDetailDTOList.get(j).getAssessmentScore();
             }
-            assessment.setAssessmentTotalScore(assessmentScore);
-            if(!CollectionUtils.isEmpty(assessmentDetailList)) {
-                assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
-            }
+            SelfAssessmentNote selfAssessmentNote = new SelfAssessmentNote();
+            selfAssessmentNote.setAssessmentItemId(itemDetailDTOList.get(i).getAssessmentItemId());
+            selfAssessmentNote.setAssessmentNote(itemDetailDTOList.get(i).getAssessmentNote());
+            selfAssessmentNote.setAssessmentId(assessment.getId());
+            selfAssessmentNoteList.add(selfAssessmentNote);
         }
+        selfAssessmentNoteMapper.updateAssessmentNote(selfAssessmentNoteList);
+        assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
+        assessment.setAssessmentTotalScore(assessmentTotalScore);
         assessment.setAssessmentStatus(AssessmentStatusEnum.ASSESSMENT.getStatus());
         assessmentMapper.updateAssessment(assessment);
         return ErrorStatusEnum.SUCCESS.toReturnValue();
@@ -262,13 +270,12 @@ public class AssessmentServiceImpl implements AssessmentService {
         Assessment assessment = assessmentMapper.selectById(id);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(assessment.getCreateTime());
-        assessmentVO = setAssessmentVO(id, calendar);
-        assessmentVO = setAssessmentVO(assessment.getId(), calendar);
+        assessmentVO = setAssessmentVO(assessment, calendar);
         redisUtils.set(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId(), assessmentVO, Commons.REDIS_TIME);
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
-    AssessmentVO setAssessmentVO(Integer assessmentId,Calendar calendar){
+    AssessmentVO setAssessmentVO(Assessment assessment,Calendar calendar){
         AssessmentVO assessmentVO = new AssessmentVO();
         List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
         List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
@@ -277,16 +284,17 @@ public class AssessmentServiceImpl implements AssessmentService {
             assessmentItemDetailVO.setAssessmentItemId(assessmentItemList.get(i).getId());
             assessmentItemDetailVO.setAssessmentItemName(assessmentItemList.get(i).getAssessmentItemName());
             assessmentItemDetailVO.setAssessmentItemScore(assessmentItemList.get(i).getScore());
-            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentDetailMapper.getAssessmentElementDetailVOs(assessmentId, assessmentItemList.get(i).getId()));
+            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentDetailMapper.getAssessmentElementDetailVOs(assessment.getId(), assessmentItemList.get(i).getId()));
             assessmentItemDetailVOList.add(assessmentItemDetailVO);
         }
-        if(assessmentId != null){
-            List<String> selfAssessmentNoteList = selfAssessmentNoteMapper.getSelfAssessmentNotes(assessmentId);
-            for(int i = 0 ; i < selfAssessmentNoteList.size(); i++){
-                assessmentItemDetailVOList.get(i).setSelfAssessmentNote(selfAssessmentNoteList.get(i));
-            }
+        List<SelfAssessmentNote> selfAssessmentNoteList = selfAssessmentNoteMapper.getSelfAssessmentNotes(assessment.getId());
+        for(int i = 0 ; i < selfAssessmentNoteList.size(); i++){
+            assessmentItemDetailVOList.get(i).setAssessmentNote(selfAssessmentNoteList.get(i).getAssessmentNote());
+            assessmentItemDetailVOList.get(i).setSelfAssessmentNote(selfAssessmentNoteList.get(i).getSelfAssessmentNote());
         }
-        assessmentVO.setAssessmentId(assessmentId);
+        assessmentVO.setSelfAssessmentTotalScore(assessment.getSelfAssessmentTotalScore());
+        assessmentVO.setAssessmentTotalScore(assessment.getAssessmentTotalScore());
+        assessmentVO.setAssessmentId(assessment.getId());
         assessmentVO.setAssessmentItemDetailVOList(assessmentItemDetailVOList);
         assessmentVO.setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月");
         return assessmentVO;

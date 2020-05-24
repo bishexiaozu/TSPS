@@ -24,6 +24,8 @@ public class AssessmentItemDetailVO implements Serializable {
 
     private String selfAssessmentNote;
 
+    private String assessmentNote;
+
     private List<AssessmentElementDetailVO> assessmentElementDetailVOList;
 
 }
