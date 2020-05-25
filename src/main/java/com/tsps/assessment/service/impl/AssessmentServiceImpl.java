@@ -173,6 +173,9 @@ public class AssessmentServiceImpl implements AssessmentService {
 
     @Override
     public ResultBean listAssessment(ListAssessmentDTO listAssessmentDTO) {
+        if(listAssessmentDTO.getAssessmentState() == null){
+            listAssessmentDTO.setAssessmentState(2);
+        }
         int total = assessmentMapper.getAssessmentTotalNumber(listAssessmentDTO);
         PageAssessmentVO pageAssessmentVO = new PageAssessmentVO();
         pageAssessmentVO.setTotal(total);
@@ -200,7 +203,6 @@ public class AssessmentServiceImpl implements AssessmentService {
         int assessmentTotalScore = 0;
         List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
         List<SelfAssessmentNote> selfAssessmentNoteList = new ArrayList<>();
-
         List<AssessmentItemDetailDTO> itemDetailDTOList = assessmentDTO.getAssessmentItemDetailDTOList();
         for(int i = 0; i < itemDetailDTOList.size(); i++){
             List<AssessmentElementDetailDTO> elementDetailDTOList = itemDetailDTOList.get(i).getAssessmentElementDetailDTOList();
@@ -277,7 +279,8 @@ public class AssessmentServiceImpl implements AssessmentService {
             assessmentItemDetailVO.setAssessmentItemId(assessmentItemList.get(i).getId());
             assessmentItemDetailVO.setAssessmentItemName(assessmentItemList.get(i).getAssessmentItemName());
             assessmentItemDetailVO.setAssessmentItemScore(assessmentItemList.get(i).getScore());
-            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentDetailMapper.getAssessmentElementDetailVOs(assessment.getId(), assessmentItemList.get(i).getId()));
+            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentDetailMapper.getAssessmentElementDetailVOs(assessment.getId(),
+                    assessmentItemList.get(i).getId()));
             assessmentItemDetailVOList.add(assessmentItemDetailVO);
         }
         List<SelfAssessmentNote> selfAssessmentNoteList = selfAssessmentNoteMapper.getSelfAssessmentNotes(assessment.getId());

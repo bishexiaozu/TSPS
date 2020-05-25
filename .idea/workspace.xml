@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="TSPS:war exploded" />
+      <artifact name="TSPS:war" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -12,27 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/task/AssessmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/assessment/task/AssessmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/controller/AssessmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/controller/AssessmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/dao/AssessmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/dao/AssessmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/AssessmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/AssessmentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/task/AssessmentTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/com/tsps/assessment/task/AssessmentTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/assessment/AssessmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/mapper/assessment/AssessmentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/controller/AssessmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/controller/AssessmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/dao/AssessmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/dao/AssessmentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/AssessmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/AssessmentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/TSPS-1.0-SNAPSHOT/WEB-INF/classes/redis.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tsps/assessment/task/AssessmentTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsps/assessment/task/AssessmentTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/assessment/AssessmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/assessment/AssessmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redis.properties" afterDir="false" />
     </list>
     <ignored path="E:\Spring\TSPS\.idea\shelf/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,31 +34,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="103" column="46" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="297" column="88" selection-start-line="297" selection-start-column="88" selection-end-line="297" selection-end-column="88" />
+            <state relative-caret-position="1407">
+              <caret line="282" column="20" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
               <folding>
                 <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#getSelfAssessmentDetails#0;class#AssessmentServiceImpl#0" />
                 <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
                 <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#listAssessment#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#getPreviousAssessmentDetails#0;class#AssessmentServiceImpl#0" />
                 <element signature="method#getUnAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#setAssessmentVO#0;class#AssessmentServiceImpl#0" />
-                <element signature="method#getTotalScore#0;class#AssessmentServiceImpl#0" />
               </folding>
             </state>
           </provider>
@@ -86,11 +58,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
               <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentItemDetailVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentElementDetailVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -138,7 +155,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/SelfAssessmentNoteMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/AssessmentItemDetailDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentElementDetailDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/SelfAssessmentItemDetailDTO.java" />
@@ -159,9 +175,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentTaskServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/assessment/AssessmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -180,10 +197,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1048" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectId" id="1aA0LTFjn66gt1Q7TTUGKCfTDjd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -283,7 +299,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590384062642" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590394128659" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -546,7 +562,7 @@
       <workItem from="1589219890132" duration="3909000" />
       <workItem from="1589722068858" duration="1209000" />
       <workItem from="1590303334639" duration="1183000" />
-      <workItem from="1590346001438" duration="6937000" />
+      <workItem from="1590346001438" duration="14742000" />
     </task>
     <task id="LOCAL-00001" summary="登录">
       <created>1587136408520</created>
@@ -674,14 +690,22 @@
       <option name="project" value="LOCAL" />
       <updated>1590348175007</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="1.自动考评实现">
+      <created>1590384098454</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1590384098454</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6937000" />
+    <option name="totallyTimeSpent" value="14742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -690,7 +714,7 @@
       <window_info id="Capture Tool" />
       <window_info id="Alibaba Cloud Explorer" />
       <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2761394" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27479893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" />
       <window_info anchor="bottom" id="Spring" />
@@ -703,7 +727,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.3286119" />
       <window_info anchor="bottom" id="Alibaba Cloud View" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32803467" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.46458924" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -791,7 +815,8 @@
     <MESSAGE value="增加根据ID获取公司信息接口" />
     <MESSAGE value="重新提交" />
     <MESSAGE value="1.自评考评实现逻辑修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.自评考评实现逻辑修改" />
+    <MESSAGE value="1.自动考评实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.自动考评实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="82" key="#Project_Structure" timestamp="1586507687313">
@@ -1158,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentItemDetailVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/UnAssessmentVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1214,13 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/QueryAssessmentDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1252,13 +1263,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1323,20 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="103" column="46" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dao/AssessmentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -1365,22 +1355,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentElementDetailVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="297" column="88" selection-start-line="297" selection-start-column="88" selection-end-line="297" selection-end-column="88" />
-          <folding>
-            <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getSelfAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#listAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getPreviousAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getUnAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#setAssessmentVO#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getTotalScore#0;class#AssessmentServiceImpl#0" />
-          </folding>
+        <state relative-caret-position="215">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentItemDetailVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/controller/AssessmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/AssessmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1395,6 +1401,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/dto/ListAssessmentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="282" column="20" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
+          <folding>
+            <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getUnAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+          </folding>
         </state>
       </provider>
     </entry>
