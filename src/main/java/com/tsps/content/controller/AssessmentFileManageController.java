@@ -29,6 +29,8 @@ public class AssessmentFileManageController {
     @Autowired
     private UploadService uploadService;
 
+
+
     @PostMapping("/upload")
     @ResponseBody
     public ResultBean uploadAssessmentFile(MultipartFile multipartFile){
@@ -111,6 +113,10 @@ public class AssessmentFileManageController {
         return service.getTotalAssessmentFile(elementId);
     }
 
-
+    @GetMapping("/getElementIdList/{companyId}")
+    @ResponseBody
+    public ResultBean getElementIdList(@PathVariable Integer companyId){
+        return service.getElementIdList(companyId);
+    }
 
 }

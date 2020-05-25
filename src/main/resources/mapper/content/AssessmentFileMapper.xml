@@ -23,6 +23,17 @@
     and company_id = #{companyId,jdbcType=INTEGER}
 </select>
 
+  <resultMap id="ItemElement" type="com.tsps.content.vo.ItemElement">
+    <result column="assessment_element_id" jdbcType="INTEGER" property="elementId" />
+    <result column="assessment_item_id" jdbcType="INTEGER" property="itemId" />
+  </resultMap>
+
+  <select id="getElementIdList" resultMap="ItemElement">
+    select distinct assessment_element_id , assessment_item_id
+    from assessment_file as a ,assessment_element as b
+    where a.company_id = #{companyId,jdbcType=INTEGER}
+    and a.assessment_element_id = b.id
+  </select>
 
  <select id="getFileID" resultType="java.lang.Integer">
    select LAST_INSERT_ID()

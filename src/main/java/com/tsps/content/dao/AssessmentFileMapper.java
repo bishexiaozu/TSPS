@@ -3,6 +3,7 @@ package com.tsps.content.dao;
 import com.tsps.content.entity.AssessmentFile;
 import com.tsps.content.entity.AssessmentFileExample;
 import com.tsps.content.vo.AssessmentFileListVO;
+import com.tsps.content.vo.ItemElement;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -39,4 +40,6 @@ public interface AssessmentFileMapper {
     List<String> assessmentFileNameList(Integer companyId);
 
     int countFiles(@Param("companyId") Integer companyId, @Param("assessmentElementId")Integer assessmentElementId);
+
+    List<ItemElement> getElementIdList(@Param("companyId") Integer companyId);
 }

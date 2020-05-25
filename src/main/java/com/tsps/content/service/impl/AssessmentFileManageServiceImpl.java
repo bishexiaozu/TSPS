@@ -15,11 +15,11 @@ import com.tsps.content.service.AssessmentFileManageService;
 import com.tsps.content.vo.AssessmentElementVO;
 import com.tsps.content.vo.AssessmentFileListVO;
 import com.tsps.content.vo.AssessmentItemVO;
+import com.tsps.content.vo.ItemElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  *  * @author : luxinnan
@@ -168,5 +168,22 @@ public class AssessmentFileManageServiceImpl implements AssessmentFileManageServ
         if(result > 0)
             return ErrorStatusEnum.SUCCESS.toReturnValue();
         return ErrorStatusEnum.FAIL.toReturnValue();
+    }
+
+    @Override
+    public ResultBean getElementIdList(Integer companyId) {
+        List<ItemElement> list = assessmentFileMapper.getElementIdList(companyId);
+        if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
+        Set<Integer> element = new HashSet<Integer>();
+        Set<Integer> item = new HashSet<Integer>();
+        for(int i=0;i<list.size();i++){
+            item.add(list.get(i).getItemId());
+            element.add(list.get(i).getElementId());
+        }
+        Map<String,Set<Integer>> result = new HashMap<>();
+        result.put("item",item);
+        result.put("element",element);
+        return ErrorStatusEnum.SUCCESS.toReturnValue(result);
+
     }
 }
