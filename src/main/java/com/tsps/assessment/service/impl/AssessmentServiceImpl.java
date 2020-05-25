@@ -252,6 +252,7 @@ public class AssessmentServiceImpl implements AssessmentService {
         assessmentVO = setAssessmentVO(assessment, calendar);
         CompanyInformation companyInformation = companyInformationMapper.selectByPrimaryKey(assessment.getCompanyId());
         assessmentVO.setCompanyName(companyInformation.getCompanyFullName());
+        assessmentVO.setCompanyId(companyInformation.getId());
         redisUtils.set(Commons.LAST_MONTH_ASSESSMENT_DETAILS + assessment.getId(), assessmentVO, Commons.REDIS_TIME);
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
@@ -262,6 +263,8 @@ public class AssessmentServiceImpl implements AssessmentService {
         CompanyInformation companyInformation = companyInformationMapper.selectByPrimaryKey(assessment.getCompanyId());
         AssessmentVO assessmentVO = new AssessmentVO();
         assessmentVO.setCompanyName(companyInformation.getCompanyFullName());
+        assessmentVO.setCompanyId(companyInformation.getId());
+
         List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
         List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
         int totalScore = getTotalScore(assessment.getId(),assessment.getCompanyId(),assessmentDetailList,assessmentItemDetailVOList,2);

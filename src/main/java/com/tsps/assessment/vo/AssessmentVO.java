@@ -26,6 +26,8 @@ public class AssessmentVO implements Serializable {
 
     private String companyName;
 
+    private Integer companyId;
+
     private List<AssessmentItemDetailVO> assessmentItemDetailVOList;
 
 }
