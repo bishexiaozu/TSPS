@@ -10,6 +10,8 @@ import com.tsps.assessment.entity.SelfAssessmentNote;
 import com.tsps.assessment.enums.AssessmentStatusEnum;
 import com.tsps.assessment.service.AssessmentService;
 import com.tsps.assessment.vo.*;
+import com.tsps.authority.dao.CompanyInformationMapper;
+import com.tsps.authority.entity.CompanyInformation;
 import com.tsps.common.Commons;
 import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
@@ -56,6 +58,9 @@ public class AssessmentServiceImpl implements AssessmentService {
 
     @Autowired
     private RedisUtils redisUtils;
+
+    @Autowired
+    private CompanyInformationMapper companyInformationMapper;
 
     @Override
     public ResultBean getAssessmentNumber(Integer companyId) {
@@ -251,7 +256,9 @@ public class AssessmentServiceImpl implements AssessmentService {
     @Override
     public ResultBean getUnAssessmentDetails(Integer id) {
         Assessment assessment = assessmentMapper.selectById(id);
+        CompanyInformation companyInformation = companyInformationMapper.selectByPrimaryKey(assessment.getCompanyId());
         AssessmentVO assessmentVO = new AssessmentVO();
+        assessmentVO.setCompanyName(companyInformation.getCompanyFullName());
         List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
         List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
         int totalScore = getTotalScore(assessment.getId(),assessment.getCompanyId(),assessmentDetailList,assessmentItemDetailVOList,2);

@@ -24,4 +24,5 @@ public enum  AssessmentStatusEnum {
 
     public Integer getStatus() {
         return this.status;
-    }}
+    }
+}

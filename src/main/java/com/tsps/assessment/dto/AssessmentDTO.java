@@ -20,9 +20,6 @@ public class AssessmentDTO implements Serializable {
     @NotNull(message = "id不能为空")
     private Integer assessmentId;
 
-    @NotNull(message = "企业id不能为空")
-    private Integer companyId;
-
     private List<AssessmentItemDetailDTO> assessmentItemDetailDTOList;
 
 }

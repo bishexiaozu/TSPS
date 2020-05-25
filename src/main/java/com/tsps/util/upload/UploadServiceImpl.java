@@ -2,6 +2,7 @@ package com.tsps.util.upload;
 
 import com.tsps.common.Commons;
 import com.tsps.common.ErrorStatusEnum;
+import com.tsps.util.toPDFUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -52,6 +53,16 @@ public class UploadServiceImpl implements UploadService {
         }
         int lastIndex = rootPath.lastIndexOf("/");
         int beginIndex = rootPath.lastIndexOf("/",lastIndex-1) + 1;
+
+        //转成pdf并保存
+        if(Commons.DOC.equals(fileType) || Commons.DOCX.equals(fileType)){
+            toPDFUtil.transDOC(fileUrl, rootPath + uuidName + Commons.PDF);
+        }else if(Commons.PPT.equals(fileType) || Commons.PPTX.equals(fileType)){
+            toPDFUtil.transPPT(fileUrl, rootPath + uuidName + Commons.PDF);
+        }if(Commons.XLS.equals(fileType) || Commons.XLSX.equals(fileType)){
+            toPDFUtil.transXLS(fileUrl, rootPath + uuidName + Commons.PDF);
+        }
+
         fileUrl = Commons.FILE_URL + rootPath.substring(beginIndex,lastIndex + 1) + uuidName + fileType;
         return fileUrl;
     }
