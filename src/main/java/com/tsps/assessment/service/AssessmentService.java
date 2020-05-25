@@ -66,4 +66,6 @@ public interface AssessmentService {
     ResultBean applyForAssessment(Integer assessmentId);
 
     ResultBean getPreviousAssessmentDetails(Integer id);
+
+    ResultBean getUnAssessmentDetails(Integer id);
 }

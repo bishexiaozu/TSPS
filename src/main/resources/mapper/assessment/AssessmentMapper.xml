@@ -41,6 +41,12 @@
     where id = #{assessmentId, jdbcType=INTEGER}
   </update>
 
+  <update id="updateAssessmentTotalScore">
+    update assessment
+    set assessment_total_score = #{assessmentTotalScore, jdbcType=INTEGER}
+    where id = #{assessmentId, jdbcType=INTEGER}
+  </update>
+
   <select id="getAssessmentNumber" resultType="java.lang.Integer">
     select count(id)
     from assessment
@@ -54,13 +60,13 @@
     where assessment_status = 0
   </select>
 
-  <update id="updateAssessmentTotalScore">
-    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
-      update assessment
-      set assessment_total_score = #{item.assessmentTotalScore,jdbcType=INTEGER},assessment_status = #{item.assessmentStatus,jdbcType=INTEGER}
-      where id = #{item.id,jdbcType=INTEGER}
-    </foreach>
-  </update>
+  <!--<update id="updateAssessmentTotalScore">-->
+    <!--<foreach collection="list" item="item" index="index" open="" close="" separator=";">-->
+      <!--update assessment-->
+      <!--set assessment_total_score = #{item.assessmentTotalScore,jdbcType=INTEGER},assessment_status = #{item.assessmentStatus,jdbcType=INTEGER}-->
+      <!--where id = #{item.id,jdbcType=INTEGER}-->
+    <!--</foreach>-->
+  <!--</update>-->
 
   <select id="getAssessmentTotalNumber" resultType="java.lang.Integer" parameterType="com.tsps.assessment.dto.ListAssessmentDTO">
     select count(assessment.id)

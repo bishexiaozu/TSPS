@@ -69,7 +69,7 @@ public class AssessmentTaskServiceImpl implements AssessmentTaskService {
                     }
                 }
             }
-            assessmentMapper.updateAssessmentTotalScore(assessmentList);
+//            assessmentMapper.updateAssessmentTotalScore(assessmentList);
         }
     }
 

@@ -20,11 +20,13 @@ public interface AssessmentMapper {
 
     int updateSelfAssessmentTotalScore(@Param("assessmentId") Integer assessmentId, @Param("selfTotalScore") Integer selfTotalScore);
 
+    int updateAssessmentTotalScore(@Param("assessmentId") Integer assessmentId, @Param("assessmentTotalScore") Integer assessmentTotalScore);
+
     Integer getAssessmentNumber(Integer companyId);
 
     List<Assessment> getAssessments();
 
-    int updateAssessmentTotalScore(@Param("list") List<Assessment> list);
+//    int updateAssessmentTotalScore(@Param("list") List<Assessment> list);
 
     int getAssessmentTotalNumber(ListAssessmentDTO listAssessmentDTO);
 

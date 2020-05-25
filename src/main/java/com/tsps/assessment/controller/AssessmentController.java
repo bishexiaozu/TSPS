@@ -101,6 +101,12 @@ public class AssessmentController {
         return assessmentService.getPreviousAssessmentDetails(id);
     }
 
+    @GetMapping(value = {"/unAssessmentDetails/{id}"})
+    @ResponseBody
+    public ResultBean getUnAssessmentDetails(@PathVariable Integer id){
+        return assessmentService.getUnAssessmentDetails(id);
+    }
+
 
 
 }

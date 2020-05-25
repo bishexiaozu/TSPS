@@ -96,38 +96,9 @@ public class AssessmentServiceImpl implements AssessmentService {
 
         AssessmentVO assessmentVO = new AssessmentVO();
         List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
-        List<AssessmentDetail> assessmentDetailList = null;
-        int selfTotalScore = 0;
+        List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
+        int selfTotalScore = getTotalScore(0,queryAssessmentDTO.getCompanyId(), assessmentDetailList, assessmentItemDetailVOList,1);
 
-        List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
-        assessmentDetailList = new ArrayList<>();
-        for(int i = 0; i < assessmentItemList.size(); i++){
-            AssessmentItemDetailVO assessmentItemDetailVO = new AssessmentItemDetailVO();
-            assessmentItemDetailVO.setAssessmentItemId(assessmentItemList.get(i).getId());
-            assessmentItemDetailVO.setAssessmentItemName(assessmentItemList.get(i).getAssessmentItemName());
-            assessmentItemDetailVO.setAssessmentItemScore(assessmentItemList.get(i).getScore());
-            List<AssessmentElementDetailVO> assessmentElementDetailVOList = new ArrayList<>();
-            List<AssessmentElement> assessmentElementList = assessmentElementMapper.getElementsByItemId(assessmentItemList.get(i).getId());
-            for(int j = 0; j < assessmentElementList.size(); j++){
-                AssessmentDetail assessmentDetail = new AssessmentDetail();
-                assessmentDetail.setAssessmentItemId(assessmentItemList.get(i).getId());
-                assessmentDetail.setAssessmentElementId(assessmentElementList.get(j).getId());
-                int selfScore = assessmentFileMapper.countFiles(queryAssessmentDTO.getCompanyId(),assessmentElementList.get(j).getId()) > 0
-                        ? assessmentElementList.get(j).getScore() : 0;
-                selfTotalScore += selfScore;
-                assessmentDetail.setSelfAssessmentScore(selfScore);
-                assessmentDetailList.add(assessmentDetail);
-                //
-                AssessmentElementDetailVO assessmentElementDetailVO= new AssessmentElementDetailVO();
-                assessmentElementDetailVO.setAssessmentElementId(assessmentElementList.get(j).getId());
-                assessmentElementDetailVO.setAssessmentElementName(assessmentElementList.get(j).getAssessmentElementName());
-                assessmentElementDetailVO.setScore(assessmentElementList.get(j).getScore());
-                assessmentElementDetailVO.setSelfAssessmentScore(selfScore);
-                assessmentElementDetailVOList.add(assessmentElementDetailVO);
-            }
-            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentElementDetailVOList);
-            assessmentItemDetailVOList.add(assessmentItemDetailVO);
-        }
         assessmentVO.setAssessmentItemDetailVOList(assessmentItemDetailVOList);
 
         Map<String, Object> assessmentDetailMap = new HashMap<>();
@@ -275,6 +246,28 @@ public class AssessmentServiceImpl implements AssessmentService {
         return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
     }
 
+    @Override
+    public ResultBean getUnAssessmentDetails(Integer id) {
+        Assessment assessment = assessmentMapper.selectById(id);
+        AssessmentVO assessmentVO = new AssessmentVO();
+        List<AssessmentItemDetailVO> assessmentItemDetailVOList = new ArrayList<>();
+        List<AssessmentDetail> assessmentDetailList = new ArrayList<>();
+        int totalScore = getTotalScore(assessment.getId(),assessment.getCompanyId(),assessmentDetailList,assessmentItemDetailVOList,2);
+        assessmentVO.setAssessmentItemDetailVOList(assessmentItemDetailVOList);
+        Map<String, Object> assessmentDetailMap = new HashMap<>();
+        assessmentDetailMap.put("list",assessmentDetailList);
+
+        assessmentMapper.updateAssessmentTotalScore(assessment.getId(), totalScore);
+        assessmentDetailMapper.updateAssessmentScore(assessmentDetailList);
+
+        assessmentVO.setAssessmentId(assessment.getId());
+        assessmentVO.setSelfAssessmentTotalScore(assessment.getSelfAssessmentTotalScore());
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(assessment.getCreateTime());
+        assessmentVO.setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月");
+        return ErrorStatusEnum.SUCCESS.toReturnValue(assessmentVO);
+    }
+
     AssessmentVO setAssessmentVO(Assessment assessment,Calendar calendar){
         AssessmentVO assessmentVO = new AssessmentVO();
         List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
@@ -299,4 +292,52 @@ public class AssessmentServiceImpl implements AssessmentService {
         assessmentVO.setAssessmentTime(calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月");
         return assessmentVO;
     }
+
+    //1 自评 2考评
+    int getTotalScore(Integer assessmentId, Integer companyId, List<AssessmentDetail> assessmentDetailList,
+                      List<AssessmentItemDetailVO> assessmentItemDetailVOList, int flag){
+        int totalScore = 0;
+        List<AssessmentItem> assessmentItemList = assessmentItemMapper.getAssessmentItemList();
+        for(int i = 0; i < assessmentItemList.size(); i++){
+            AssessmentItemDetailVO assessmentItemDetailVO = new AssessmentItemDetailVO();
+            assessmentItemDetailVO.setAssessmentItemId(assessmentItemList.get(i).getId());
+            assessmentItemDetailVO.setAssessmentItemName(assessmentItemList.get(i).getAssessmentItemName());
+            assessmentItemDetailVO.setAssessmentItemScore(assessmentItemList.get(i).getScore());
+            List<AssessmentElementDetailVO> assessmentElementDetailVOList = new ArrayList<>();
+            List<AssessmentElement> assessmentElementList = assessmentElementMapper.getElementsByItemId(assessmentItemList.get(i).getId());
+            for(int j = 0; j < assessmentElementList.size(); j++){
+                AssessmentDetail assessmentDetail = new AssessmentDetail();
+                assessmentDetail.setAssessmentItemId(assessmentItemList.get(i).getId());
+                assessmentDetail.setAssessmentElementId(assessmentElementList.get(j).getId());
+                int score = assessmentFileMapper.countFiles(companyId,assessmentElementList.get(j).getId()) > 0
+                        ? assessmentElementList.get(j).getScore() : 0;
+                totalScore += score;
+
+                AssessmentElementDetailVO assessmentElementDetailVO= new AssessmentElementDetailVO();
+                assessmentElementDetailVO.setAssessmentElementId(assessmentElementList.get(j).getId());
+                assessmentElementDetailVO.setAssessmentElementName(assessmentElementList.get(j).getAssessmentElementName());
+                assessmentElementDetailVO.setScore(assessmentElementList.get(j).getScore());
+                assessmentElementDetailVO.setSelfAssessmentScore(score);
+                if(flag == 1){
+                    assessmentDetail.setSelfAssessmentScore(score);
+                    assessmentElementDetailVO.setSelfAssessmentScore(score);
+                }
+                if(flag == 2){
+                    assessmentDetail.setAssessmentId(assessmentId);
+                    assessmentDetail.setAssessmentScore(score);
+                    assessmentElementDetailVO.setAssessmentScore(score);
+                }
+                assessmentDetailList.add(assessmentDetail);
+                assessmentElementDetailVOList.add(assessmentElementDetailVO);
+            }
+            assessmentItemDetailVO.setAssessmentElementDetailVOList(assessmentElementDetailVOList);
+            assessmentItemDetailVOList.add(assessmentItemDetailVO);
+        }
+        List<SelfAssessmentNote> selfAssessmentNoteList = selfAssessmentNoteMapper.getSelfAssessmentNotes(assessmentId);
+        for(int i = 0 ; i < selfAssessmentNoteList.size(); i++){
+            assessmentItemDetailVOList.get(i).setSelfAssessmentNote(selfAssessmentNoteList.get(i).getSelfAssessmentNote());
+        }
+        return totalScore;
+    }
+
 }
