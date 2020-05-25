@@ -70,6 +70,7 @@
                 <target>7</target>
             </configuration>
         </plugin>
+    <!--  导aspose    -->
 
 
     </plugins>
@@ -269,6 +270,29 @@
       <version>2.9.0</version>
     </dependency>
     <!-- jedis依赖的JAR配置end -->
+
+    <!-- aspose第三方JAR配置   -->
+    <dependency>
+      <groupId>com.aspose.cells</groupId>
+      <artifactId>cells-jdk16</artifactId>
+      <version>19.11.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/aspose/aspose-cells-19.11.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.aspose.slides</groupId>
+      <artifactId>slides-jdk16</artifactId>
+      <version>19.10.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/aspose/aspose-slides-19.10-jdk16.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.aspose.words</groupId>
+      <artifactId>words-jdk17</artifactId>
+      <version>19.11.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/aspose/aspose-words-19.11-jdk17.jar</systemPath>
+    </dependency>
 
   </dependencies>
 
