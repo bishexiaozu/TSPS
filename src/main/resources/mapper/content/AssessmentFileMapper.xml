@@ -291,4 +291,10 @@
     from assessment_file
     where company_id = #{companyId, jdbcType=INTEGER} and assessment_element_id = #{assessmentElementId, jdbcType=INTEGER}
   </select>
+
+  <select id="getAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from assessment_file
+  </select>
 </mapper>

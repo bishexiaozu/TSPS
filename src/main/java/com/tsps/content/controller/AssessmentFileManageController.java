@@ -1,20 +1,24 @@
 package com.tsps.content.controller;
 
 
+import com.tsps.common.Commons;
 import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
+import com.tsps.content.dao.AssessmentFileMapper;
 import com.tsps.content.dto.AddAssessmentFileDTO;
 import com.tsps.content.dto.AssessmentEmployeeDTO;
+import com.tsps.content.entity.AssessmentFile;
 import com.tsps.content.service.AssessmentFileManageService;
+import com.tsps.util.toPDFUtil;
 import com.tsps.util.upload.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import com.tsps.common.Commons;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  *  * @author : luxinnan
@@ -117,6 +121,39 @@ public class AssessmentFileManageController {
     @ResponseBody
     public ResultBean getElementIdList(@PathVariable Integer companyId){
         return service.getElementIdList(companyId);
+    }
+
+    @Autowired
+    private AssessmentFileMapper assessmentFileMapper;
+    @GetMapping("/toPDF")
+    @ResponseBody
+    public ResultBean get(){
+        List<AssessmentFile> list = assessmentFileMapper.getAll();
+        int count = 0;
+        if(!list.isEmpty()){
+            String fileType = null;
+            String path = null;
+            for(int i = 0; i < list.size(); i++){
+                path = list.get(i).getAmtFilePath();
+                fileType = path.substring(path.lastIndexOf("."));
+                if(!Commons.PDF.equals(fileType)) {
+                    count ++;
+                    String from = Commons.ASSESSMENT_FILE_DIRECTORY_URL + path.substring(path.lastIndexOf("/") + 1);
+                    String to = from.substring(0,from.lastIndexOf(".")) + Commons.PDF;
+                    if(!Commons.PDF.equals(fileType)) {
+                        if (Commons.DOC.equals(fileType) || Commons.DOCX.equals(fileType)) {
+                            toPDFUtil.transDOC(from, to);
+                        } else if (Commons.PPT.equals(fileType) || Commons.PPTX.equals(fileType)) {
+                            toPDFUtil.transPPT(from, to);
+                        }
+                        if (Commons.XLS.equals(fileType) || Commons.XLSX.equals(fileType)) {
+                            toPDFUtil.transXLS(from, to);
+                        }
+                    }
+                }
+            }
+        }
+        return ErrorStatusEnum.SUCCESS.toReturnValue(count);
     }
 
 }

@@ -54,15 +54,17 @@ public class UploadServiceImpl implements UploadService {
         int lastIndex = rootPath.lastIndexOf("/");
         int beginIndex = rootPath.lastIndexOf("/",lastIndex-1) + 1;
 
-        //转成pdf并保存
-        if(Commons.DOC.equals(fileType) || Commons.DOCX.equals(fileType)){
-            toPDFUtil.transDOC(fileUrl, rootPath + uuidName + Commons.PDF);
-        }else if(Commons.PPT.equals(fileType) || Commons.PPTX.equals(fileType)){
-            toPDFUtil.transPPT(fileUrl, rootPath + uuidName + Commons.PDF);
-        }if(Commons.XLS.equals(fileType) || Commons.XLSX.equals(fileType)){
-            toPDFUtil.transXLS(fileUrl, rootPath + uuidName + Commons.PDF);
+        //不是pdf转成pdf并保存
+        if(!Commons.PDF.equals(fileType)) {
+            if (Commons.DOC.equals(fileType) || Commons.DOCX.equals(fileType)) {
+                toPDFUtil.transDOC(fileUrl, rootPath + uuidName + Commons.PDF);
+            } else if (Commons.PPT.equals(fileType) || Commons.PPTX.equals(fileType)) {
+                toPDFUtil.transPPT(fileUrl, rootPath + uuidName + Commons.PDF);
+            }
+            if (Commons.XLS.equals(fileType) || Commons.XLSX.equals(fileType)) {
+                toPDFUtil.transXLS(fileUrl, rootPath + uuidName + Commons.PDF);
+            }
         }
-
         fileUrl = Commons.FILE_URL + rootPath.substring(beginIndex,lastIndex + 1) + uuidName + fileType;
         return fileUrl;
     }

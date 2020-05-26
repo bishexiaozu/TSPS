@@ -2,6 +2,7 @@ package com.tsps.content.service.impl;
 
 import com.tsps.authority.dao.CompanyEmployeeMapper;
 import com.tsps.authority.entity.CompanyEmployee;
+import com.tsps.common.Commons;
 import com.tsps.common.ErrorStatusEnum;
 import com.tsps.common.ResultBean;
 import com.tsps.content.dao.AssessmentElementMapper;
@@ -159,6 +160,18 @@ public class AssessmentFileManageServiceImpl implements AssessmentFileManageServ
     public ResultBean getElementFileList(Integer companyId, Integer elementId) {
         List<AssessmentFileListVO> list = assessmentFileMapper.getElementFileList(companyId,elementId);
         if(list.isEmpty()) return ErrorStatusEnum.SUCCESS.toReturnValue();
+        String fileType = null;
+        String path = null;
+        for(int i = 0; i < list.size(); i++){
+            path = list.get(i).getPath();
+            if(path != null && path.length() != 0) {
+                fileType = path.substring(path.lastIndexOf("."));
+                if (!Commons.PDF.equals(fileType) && !Commons.JPEG.equals(fileType) && !Commons.JPG.equals(fileType)
+                        && !Commons.PNG.equals(fileType) && !Commons.TXT.equals(fileType)) {
+                    list.get(i).setPath(path.substring(0, path.lastIndexOf(".")) + Commons.PDF);
+                }
+            }
+        }
         return ErrorStatusEnum.SUCCESS.toReturnValue(list);
     }
 

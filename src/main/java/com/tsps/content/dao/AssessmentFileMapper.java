@@ -42,4 +42,6 @@ public interface AssessmentFileMapper {
     int countFiles(@Param("companyId") Integer companyId, @Param("assessmentElementId")Integer assessmentElementId);
 
     List<ItemElement> getElementIdList(@Param("companyId") Integer companyId);
+
+    List<AssessmentFile> getAll();
 }
