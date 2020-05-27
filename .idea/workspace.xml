@@ -10,16 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="1.pom.xml加了依赖aspose&#10;2.main/aspose路径存放jar包&#10;3.toPDFUtil转换工具类">
+    <list default="true" id="04fb1adc-096a-4cfd-86f1-1c343f083cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="C:\Users\liaoyongbiao\Desktop\TSPS\.idea\shelf/" />
@@ -38,7 +32,53 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-205">
+              <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+              <folding>
+                <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#getSelfAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#getPreviousAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#getUnAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#setAssessmentVO#0;class#AssessmentServiceImpl#0" />
+                <element signature="method#getTotalScore#0;class#AssessmentServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/CompanyInformationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -47,68 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/AssessmentFileManageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2134">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding>
-                <element signature="e#2125#2126#0" expanded="true" />
-                <element signature="e#2180#2181#0" expanded="true" />
-                <element signature="e#2598#2599#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
-                <element signature="e#3784#3785#0" expanded="true" />
-                <element signature="e#3834#3835#0" expanded="true" />
-                <element signature="e#4649#4650#0" expanded="true" />
-                <element signature="e#4707#4708#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="58" column="80" lean-forward="true" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="299" column="9" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
-              <folding>
-                <element signature="n#select#4;n#mapper#0;n#!!top" />
-                <element signature="n#insert#0;n#mapper#0;n#!!top" />
-                <element signature="n#insert#1;n#mapper#0;n#!!top" />
-                <element signature="n#select#6;n#mapper#0;n#!!top" />
-              </folding>
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -135,13 +114,13 @@
       <find>redisUtils.set</find>
       <find>Time</find>
       <find>LoginServiceImpl</find>
-      <find>Commo</find>
       <find>Commons</find>
       <find>driver manage/addDriver</find>
       <find>simpleDateFormat</find>
       <find>getAssessmentFileList</find>
       <find>select id, amt_file_title, amt_file_path, amt_file_upload_time</find>
       <find>resource</find>
+      <find>Commo</find>
     </findStrings>
     <replaceStrings>
       <replace>company_address_province</replace>
@@ -162,11 +141,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/vo/AssessmentVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/util/upload/UploadServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/service/impl/AssessmentFileManageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/dao/AssessmentFileMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/content/AssessmentFileMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
       </list>
@@ -263,7 +243,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +252,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,7 +262,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
@@ -291,8 +272,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tsps" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tsps" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,7 +312,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590484129446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590572356677" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../毕业设计/代码/TSPS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -577,7 +576,7 @@
       <workItem from="1589722068858" duration="1209000" />
       <workItem from="1590303334639" duration="1183000" />
       <workItem from="1590346001438" duration="14742000" />
-      <workItem from="1590423471696" duration="11496000" />
+      <workItem from="1590423471696" duration="16824000" />
     </task>
     <task id="LOCAL-00001" summary="登录">
       <created>1587136408520</created>
@@ -733,11 +732,18 @@
       <option name="project" value="LOCAL" />
       <updated>1590428386184</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1.上传文件时转pdf&#10;2.将服务器所有文件转pdf接口">
+      <created>1590484209063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1590484209063</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17741000" />
+    <option name="totallyTimeSpent" value="23069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -752,7 +758,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20107238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -763,7 +769,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3654391" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3654391" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -864,7 +870,8 @@
     <MESSAGE value="1.pom.xml加了依赖aspose&#10;2.main/aspose路径存放jar包&#10;3.toPDFUtil转换工具类" />
     <MESSAGE value="1.考评接口" />
     <MESSAGE value="1.考评详情加 企业id字段" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.考评详情加 企业id字段" />
+    <MESSAGE value="1.上传文件时转pdf&#10;2.将服务器所有文件转pdf接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.上传文件时转pdf&#10;2.将服务器所有文件转pdf接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="82" key="#Project_Structure" timestamp="1586507687313">
@@ -1309,34 +1316,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="266" selection-start-line="266" selection-end-line="266" />
-          <folding>
-            <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getSelfAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getLastMonthAssessmentDetails#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#listAssessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#setAssessmentVO#0;class#AssessmentServiceImpl#0" />
-            <element signature="method#getTotalScore#0;class#AssessmentServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/vo/AssessmentFileListVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1374,27 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/AssessmentFileManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/controller/AssessmentFileManageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2134">
@@ -1409,6 +1371,79 @@
             <element signature="e#4649#4650#0" expanded="true" />
             <element signature="e#4707#4708#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/content/service/AssessmentFileManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/common/Commons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/dto/BasicInformationDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/assessment/service/impl/AssessmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+          <folding>
+            <element signature="method#getPreviousAssessments#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getSelfAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#selfAssessment#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#assessment#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getPreviousAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getUnAssessmentDetails#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#setAssessmentVO#0;class#AssessmentServiceImpl#0" />
+            <element signature="method#getTotalScore#0;class#AssessmentServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/controller/CompanyInformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/CompanyInformationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsps/material/service/impl/CompanyInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

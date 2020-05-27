@@ -44,6 +44,10 @@ public class Commons {
 
     public static final String LAST_MONTH_ASSESSMENT_DETAILS = "lastMonthSelfAssessmentDetails:";
 
+    public static final String BASIC_INFORMATION = "basicInformation:";
+
+    public static final String COMPANY_INFORMATION = "companyInformation:";
+
     public static final int REDIS_TIME = 60 * 60 * 24 * 15;
 
     public static final ArrayList<String> URL = new ArrayList<>(Arrays.asList("/TSPSv3/companyRegister", "/TSPSv3/driver_manage/addDriver", "/TSPSv3/driver_manage/getCompany"));
